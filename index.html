@@ -17,6 +17,19 @@
             padding: 2rem;
             background-color: #000000;
         }
+        nav {
+            background-color: #111;
+            padding: 1rem;
+        }
+        nav a {
+            color: #00aaff;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
         img {
             max-width: 300px;
             height: auto;
@@ -26,18 +39,47 @@
             font-size: 2.5rem;
             color: #00aaff;
         }
-        p {
-            font-size: 1.2rem;
-            margin: 1rem auto;
-            max-width: 600px;
+        main {
+            padding: 2rem;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 2rem auto;
+            background-color: #1a1a1a;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+        input, textarea {
+            padding: 1rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            padding: 1rem;
+            background-color: #00aaff;
+            color: white;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
         }
         footer {
-            background-color: #111111;
+            background-color: #111;
             padding: 1rem;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
             color: #777;
+            margin-top: 2rem;
+        }
+        footer a {
+            color: #777;
+            margin: 0 0.5rem;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -47,12 +89,35 @@
         <h1>Berben Engineering GmbH</h1>
         <p>Innovative Lösungen für moderne Ingenieurprojekte – Made in Germany.</p>
     </header>
+
+    <nav>
+        <a href="index.html">Start</a>
+        <a href="ueber-uns.html">Über uns</a>
+        <a href="leistungen.html">Leistungen</a>
+        <a href="#kontakt">Kontakt</a>
+    </nav>
+
     <main>
-        <p>Wir sind spezialisiert auf Dienstleistungen in den Bereichen Maschinenbau, Elektrotechnik und Automatisierung.</p>
-        <p>Kontaktieren Sie uns für maßgeschneiderte technische Lösungen.</p>
+        <section>
+            <p>Wir sind spezialisiert auf Engineering-Dienstleistungen in den Bereichen Maschinenbau, Elektrotechnik und Automatisierung.</p>
+            <p>Kontaktieren Sie uns für maßgeschneiderte technische Lösungen.</p>
+        </section>
+
+        <section id="kontakt">
+            <h2>Kontaktformular</h2>
+            <form action="https://formspree.io/f/yourID" method="POST">
+                <input type="text" name="name" placeholder="Ihr Name" required>
+                <input type="email" name="email" placeholder="Ihre E-Mail-Adresse" required>
+                <textarea name="message" placeholder="Ihre Nachricht" required></textarea>
+                <button type="submit">Senden</button>
+            </form>
+        </section>
     </main>
+
     <footer>
-        &copy; 2025 Berben Engineering GmbH – Alle Rechte vorbehalten.
+        &copy; 2025 Berben Engineering GmbH – Alle Rechte vorbehalten. |
+        <a href="impressum.html">Impressum</a> |
+        <a href="datenschutz.html">Datenschutz</a>
     </footer>
 </body>
 </html>
