@@ -2,210 +2,64 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Berben Engineering GmbH</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Berben Engineering – Kontakt</title>
+  <link rel="icon" href="logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
       background-color: #0a0a0a;
-      color: #ffffff;
-      line-height: 1.6;
+      color: white;
+      padding: 2rem;
     }
-    header {
-      background: linear-gradient(to right, #001f3f, #003f6b);
-      padding: 3rem 1rem;
-      text-align: center;
-    }
-    header img {
-      max-width: 200px;
-      animation: fadeIn 1.5s ease-in-out;
-    }
-    header h1 {
-      margin-top: 1rem;
-      font-size: 2.5rem;
-      color: #00c3ff;
-      animation: fadeIn 2s ease-in-out;
-    }
-    nav {
-      background-color: #111;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      padding: 1rem;
-    }
-    nav a {
-      color: #00aaff;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-    }
-    nav a:hover {
-      background-color: #222;
-    }
-    main {
-      padding: 2rem 1rem;
-      max-width: 900px;
+    form {
+      max-width: 600px;
       margin: auto;
-    }
-    section {
-      margin-bottom: 3rem;
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeUp 1s ease forwards;
-    }
-    section:nth-child(1) { animation-delay: 0.2s; }
-    section:nth-child(2) { animation-delay: 0.4s; }
-    section:nth-child(3) { animation-delay: 0.6s; }
-    h2 {
-      color: #00aaff;
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-    }
-    .form-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
       background-color: #1a1a1a;
       padding: 2rem;
       border-radius: 10px;
     }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
     input, textarea {
       padding: 1rem;
-      border: none;
-      border-radius: 5px;
       font-size: 1rem;
+      border-radius: 5px;
+      border: none;
     }
     button {
       background-color: #00aaff;
       color: white;
-      padding: 1rem;
       border: none;
-      font-size: 1rem;
+      padding: 1rem;
       border-radius: 5px;
+      font-size: 1rem;
       cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.3s ease;
+      transition: background-color 0.3s ease;
     }
     button:hover {
       background-color: #008fcc;
-      transform: scale(1.03);
     }
-    footer {
-      background-color: #111;
-      padding: 1.5rem 1rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #999;
-    }
-    footer a {
-      color: #999;
-      text-decoration: none;
-      margin: 0 0.5rem;
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
-    blockquote {
-      background-color: #1a1a1a;
-      padding: 1rem 2rem;
-      border-left: 5px solid #00aaff;
-      border-radius: 8px;
-      margin: 1rem 0;
-    }
-
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: scale(0.95);
-      }
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
+    .note {
+      font-size: 0.8rem;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="Berben Engineering Logo">
-    <h1>Berben Engineering GmbH</h1>
-    <p>Innovative Lösungen für moderne Ingenieurprojekte – Made in Germany.</p>
-  </header>
-
-  <nav>
-    <a href="index.html">Start</a>
-    <a href="ueber-uns.html">Über uns</a>
-    <a href="leistungen.html">Leistungen</a>
-    <a href="galerie.html">Galerie</a>
-    <a href="#kontakt">Kontakt</a>
-  </nav>
-
-  <main>
-    <section>
-      <h2>Über uns</h2>
-      <p>Wir sind spezialisiert auf Engineering-Dienstleistungen in den Bereichen Maschinenbau, Elektrotechnik und Automatisierung. Kontaktieren Sie uns für maßgeschneiderte technische Lösungen.</p>
-    </section>
-
-    <section id="testimonials">
-      <h2>Kundenmeinungen</h2>
-      <blockquote>
-        „Berben Engineering hat unser Automatisierungsprojekt schnell, effizient und mit viel Fachwissen umgesetzt.“
-        <footer>– Sandra Klein, Projektleiterin Maschinenbau AG</footer>
-      </blockquote>
-      <blockquote>
-        „Zuverlässiger Partner in der Elektrokonstruktion. Wir arbeiten gerne wieder mit Ihnen!“
-        <footer>– Jens Bauer, CTO ElektroTech GmbH</footer>
-      </blockquote>
-    </section>
-
-    <section id="kontakt">
-      <h2>Kontakt</h2>
-      <div class="form-container">
-        <form action="https://formspree.io/f/xanjepyz" method="POST">
-          <input type="text" name="name" placeholder="Ihr Name" required>
-          <input type="email" name="email" placeholder="Ihre E-Mail-Adresse" required>
-          <textarea name="message" rows="5" placeholder="Ihre Nachricht" required></textarea>
-          <button type="submit">Senden</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    &copy; 2025 Berben Engineering GmbH – Alle Rechte vorbehalten.
-    <br>
-    <a href="impressum.html">Impressum</a> |
-    <a href="datenschutz.html">Datenschutz</a>
-    <p style="margin-top: 1rem;">
-      Hinweis: Diese Website ist ein Übungsprojekt. Die Firma „Berben Engineering GmbH“ existiert nicht.
+  <h1>Kontaktformular</h1>
+  <form action="https://formspree.io/f/xanjepyz" method="POST">
+    <input type="text" name="name" placeholder="Ihr Name" required>
+    <input type="email" name="email" placeholder="Ihre E-Mail-Adresse" required>
+    <textarea name="message" rows="5" placeholder="Ihre Nachricht" required></textarea>
+    <p class="note">
+      Ihre Daten werden ausschließlich zur Kontaktaufnahme verwendet. <a href="datenschutz.html">Mehr erfahren</a>
     </p>
-  </footer>
+    <button type="submit">Senden</button>
+  </form>
 </body>
 </html>
