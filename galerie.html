@@ -2,58 +2,84 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <title>Galerie – Berben Engineering GmbH</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #0a0a0a;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-        }
-        h1 {
-            color: #00aaff;
-        }
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: center;
-            margin-top: 2rem;
-        }
-        .gallery img {
-            width: 300px;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 0 10px #000;
-            transition: transform 0.3s ease;
-        }
-        .gallery img:hover {
-            transform: scale(1.05);
-        }
-        a {
-            display: inline-block;
-            margin-top: 2rem;
-            color: #00aaff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerie – Berben Engineering GmbH</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #0a0a0a;
+      color: #ffffff;
+    }
+    header {
+      background-color: #001f3f;
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      color: #00c3ff;
+      font-size: 2.2rem;
+    }
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    h2 {
+      color: #00aaff;
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    a {
+      color: #00aaff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+      color: #888;
+      padding: 1rem;
+    }
+  </style>
 </head>
 <body>
-    <h1>Projekt-Galerie</h1>
-    <p>Einblicke in unsere abgeschlossenen Engineering-Projekte.</p>
+  <header>
+    <h1>Projektgalerie</h1>
+  </header>
 
+  <main>
+    <h2>Einblicke in unsere Arbeit</h2>
     <div class="gallery">
-        <img src="projekt1.jpg" alt="Projekt 1">
-        <img src="projekt2.jpg" alt="Projekt 2">
-        <img src="projekt3.jpg" alt="Projekt 3">
-        <img src="projekt4.jpg" alt="Projekt 4">
+      <img src="projekt1.jpg" alt="Projekt 1">
+      <img src="projekt2.jpg" alt="Projekt 2">
+      <img src="projekt3.jpg" alt="Projekt 3">
+      <img src="projekt4.jpg" alt="Projekt 4">
     </div>
 
-    <a href="index.html">← Zurück zur Startseite</a>
+    <p style="margin-top: 2rem;"><a href="index.html">← Zurück zur Startseite</a></p>
+  </main>
+
+  <footer>
+    Hinweis: Diese Website ist ein Übungsprojekt. Die Firma „Berben Engineering GmbH“ existiert nicht.
+  </footer>
 </body>
 </html>
