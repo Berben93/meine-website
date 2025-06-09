@@ -2,38 +2,69 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Über uns – Berben Engineering GmbH</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Erfahren Sie mehr über die Werte, Vision und das Team von Berben Engineering." />
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
       background-color: #0a0a0a;
       color: #ffffff;
-      line-height: 1.6;
-      padding: 1rem;
+      padding: 0;
     }
     header {
       background-color: #001f3f;
       padding: 2rem;
       text-align: center;
+      animation: fadeIn 1.2s ease-in;
     }
     header h1 {
       color: #00c3ff;
       font-size: 2.2rem;
     }
+    nav {
+      background-color: #111;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
+    }
+    nav a {
+      color: #00aaff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    nav a:hover {
+      background-color: #222;
+    }
     main {
-      max-width: 800px;
+      max-width: 900px;
       margin: 2rem auto;
+      padding: 0 1rem;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 1s ease forwards;
     }
     h2 {
       color: #00aaff;
       font-size: 1.6rem;
+      margin-top: 2rem;
     }
-    p {
-      margin-bottom: 1rem;
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+      color: #888;
+      padding: 1rem;
     }
     a {
       color: #00aaff;
@@ -42,11 +73,21 @@
     a:hover {
       text-decoration: underline;
     }
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      margin-top: 3rem;
-      color: #888;
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
   </style>
 </head>
@@ -55,19 +96,27 @@
     <h1>Über uns</h1>
   </header>
 
+  <nav>
+    <a href="index.html">Start</a>
+    <a href="ueber-uns.html">Über uns</a>
+    <a href="leistungen.html">Leistungen</a>
+    <a href="galerie.html">Galerie</a>
+    <a href="datenschutz.html">Datenschutz</a>
+    <a href="impressum.html">Impressum</a>
+  </nav>
+
   <main>
-    <h2>Unser Unternehmen</h2>
-    <p>Berben Engineering GmbH ist ein innovatives Ingenieurbüro mit Fokus auf technische Spitzenlösungen. Unser interdisziplinäres Team arbeitet an maßgeschneiderten Projekten in den Bereichen Maschinenbau, Elektrotechnik und Automatisierung.</p>
 
-    <h2>Werte & Vision</h2>
-    <p>Unsere Philosophie basiert auf Qualität, Effizienz und Nachhaltigkeit. Wir glauben an partnerschaftliche Zusammenarbeit und entwickeln Lösungen, die nicht nur technisch, sondern auch wirtschaftlich überzeugen.</p>
+<h2>Unser Unternehmen</h2>
+<p>Berben Engineering GmbH ist ein innovatives Ingenieurbüro mit Fokus auf technische Spitzenlösungen. Unser interdisziplinäres Team arbeitet an maßgeschneiderten Projekten in den Bereichen Maschinenbau, Elektrotechnik und Automatisierung.</p>
 
-    <h2>Unser Team</h2>
-    <p>Mit einem Team aus erfahrenen Ingenieuren, Projektmanagern und Technikexperten begleiten wir Projekte von der Planung bis zur Inbetriebnahme.</p>
+<h2>Werte & Vision</h2>
+<p>Unsere Philosophie basiert auf Qualität, Effizienz und Nachhaltigkeit. Wir glauben an partnerschaftliche Zusammenarbeit und entwickeln Lösungen, die nicht nur technisch, sondern auch wirtschaftlich überzeugen.</p>
 
-    <p><a href="index.html">← Zurück zur Startseite</a></p>
+<h2>Unser Team</h2>
+<p>Mit einem Team aus erfahrenen Ingenieuren, Projektmanagern und Technikexperten begleiten wir Projekte von der Planung bis zur Inbetriebnahme.</p>
+
   </main>
-
   <footer>
     Hinweis: Diese Website ist ein Übungsprojekt. Die Firma „Berben Engineering GmbH“ existiert nicht.
   </footer>
