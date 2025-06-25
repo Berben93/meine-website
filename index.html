@@ -5,48 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Berben Engineering GmbH</title>
   <link rel="icon" href="logo.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header class="hero">
-    <img src="logo.png" alt="Berben Engineering Logo" class="logo" />
-    <h1>Berben Engineering GmbH</h1>
-    <p>Präzision in CNC-Fertigung, CAD/CAM und Montage</p>
-    <a href="kontakt.html" class="cta-button">Jetzt Anfrage stellen</a>
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- Header -->
+  <header class="bg-gradient-to-br from-blue-900 to-black text-center py-16 px-4">
+    <img src="logo.png" alt="Berben Engineering Logo" class="mx-auto w-28 mb-4">
+    <h1 class="text-4xl md:text-5xl font-bold mb-2">Berben Engineering GmbH</h1>
+    <p class="text-xl md:text-2xl text-blue-200">High-Precision CNC Manufacturing · CAD/CAM · System Assembly</p>
+    <a href="kontakt.html" class="mt-6 inline-block bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 px-6 rounded transition">Jetzt Kontakt aufnehmen</a>
   </header>
 
-  <nav>
-    <a href="index.html">Startseite</a>
-    <a href="leistungen.html">Leistungen</a>
-    <a href="referenzen.html">Referenzen</a>
-    <a href="ueber-uns.html">Über uns</a>
-    <a href="kontakt.html">Kontakt</a>
+  <!-- Navigation -->
+  <nav class="bg-black text-center py-4 sticky top-0 z-50 shadow-md">
+    <a href="index.html" class="mx-4 text-blue-400 hover:underline">Start</a>
+    <a href="leistungen.html" class="mx-4 text-blue-400 hover:underline">Leistungen</a>
+    <a href="technologien.html" class="mx-4 text-blue-400 hover:underline">Technologien</a>
+    <a href="referenzen.html" class="mx-4 text-blue-400 hover:underline">Referenzen</a>
+    <a href="unternehmen.html" class="mx-4 text-blue-400 hover:underline">Unternehmen</a>
+    <a href="kontakt.html" class="mx-4 text-blue-400 hover:underline">Kontakt</a>
   </nav>
 
-  <div class="content">
-    <h2>Unsere Kompetenzen</h2>
-    <div class="services">
-      <div class="service-card">
-        <img src="cnc.jpg" alt="CNC Fertigung" />
-        <h3>CNC-Fertigung</h3>
-        <p>Höchste Präzision in Fräsen, Drehen und Zerspanung – Einzel- und Serienfertigung nach Kundenvorgabe.</p>
+  <!-- Content -->
+  <main class="px-6 py-12 max-w-7xl mx-auto">
+    <section class="grid md:grid-cols-3 gap-8 text-center">
+      <div class="bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
+        <img src="cnc.jpg" alt="CNC Fertigung" class="w-full h-48 object-cover rounded mb-4">
+        <h3 class="text-2xl font-bold mb-2 text-blue-400">CNC-Fertigung</h3>
+        <p>5-Achs-Simultanbearbeitung, mikrometergenaue Fräs- & Drehteile für Luftfahrt, Medizintechnik & Maschinenbau.</p>
       </div>
-      <div class="service-card">
-        <img src="cadcam.jpg" alt="CAD/CAM Konstruktion" />
-        <h3>CAD/CAM Konstruktion</h3>
-        <p>Professionelle 3D-Konstruktion und effiziente Fertigungsplanung mit modernster Software.</p>
+      <div class="bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
+        <img src="cadcam.jpg" alt="CAD/CAM" class="w-full h-48 object-cover rounded mb-4">
+        <h3 class="text-2xl font-bold mb-2 text-blue-400">CAD/CAM</h3>
+        <p>Entwicklung komplexer Baugruppen, simulationsgestützte Konstruktion, nahtlose Integration in CAM-Prozesse.</p>
       </div>
-      <div class="service-card">
-        <img src="montage.jpg" alt="Montage" />
-        <h3>Montage</h3>
-        <p>Komplette Baugruppenmontage, Systemintegration und Funktionsprüfung aus einer Hand.</p>
+      <div class="bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
+        <img src="montage.jpg" alt="Montage" class="w-full h-48 object-cover rounded mb-4">
+        <h3 class="text-2xl font-bold mb-2 text-blue-400">Montage</h3>
+        <p>Systemmontage unter Reinraumbedingungen, Endprüfung, Dokumentation & Rückverfolgbarkeit nach ISO 9001.</p>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 Berben Engineering GmbH</p>
+    <section class="mt-16 text-center">
+      <h2 class="text-3xl font-bold mb-4">Technologievorsprung durch Präzision</h2>
+      <p class="text-gray-300 max-w-3xl mx-auto">Berben Engineering GmbH ist spezialisiert auf hochkomplexe Fertigungsaufträge in der Einzel- und Kleinserienfertigung. Mit einem modernen Maschinenpark, digitaler Prozesskette und fundiertem Engineering liefern wir nicht nur Bauteile – wir liefern Lösungen.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black text-center py-6 text-gray-500 text-sm mt-12">
+    &copy; 2025 Berben Engineering GmbH · Made with Präzision & Leidenschaft
   </footer>
+
 </body>
 </html>

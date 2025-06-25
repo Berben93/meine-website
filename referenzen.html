@@ -3,37 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Referenzen - Berben Engineering GmbH</title>
+  <title>Referenzen – Berben Engineering</title>
   <link rel="icon" href="logo.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <nav>
-    <a href="index.html">Startseite</a>
-    <a href="leistungen.html">Leistungen</a>
-    <a href="referenzen.html">Referenzen</a>
-    <a href="ueber-uns.html">Über uns</a>
-    <a href="kontakt.html">Kontakt</a>
+<body class="bg-gray-900 text-white font-sans">
+  <nav class="bg-black text-center py-4 sticky top-0 z-50 shadow-md">
+    <a href="index.html" class="mx-4 text-blue-400 hover:underline">Start</a>
+    <a href="leistungen.html" class="mx-4 text-blue-400 hover:underline">Leistungen</a>
+    <a href="technologien.html" class="mx-4 text-blue-400 hover:underline">Technologien</a>
+    <a href="referenzen.html" class="mx-4 text-blue-400 hover:underline">Referenzen</a>
+    <a href="unternehmen.html" class="mx-4 text-blue-400 hover:underline">Unternehmen</a>
+    <a href="kontakt.html" class="mx-4 text-blue-400 hover:underline">Kontakt</a>
   </nav>
 
-  <div class="content">
-    <h1>Referenzen</h1>
-    <p>Eine Auswahl erfolgreich umgesetzter Projekte:</p>
-
-    <ul style="text-align: left; max-width: 700px; margin: auto;">
-      <li>Präzisionsteile für Sondermaschinenbau</li>
-      <li>Komplette CAD/CAM-Entwicklung für Automobilzulieferer</li>
-      <li>Prototypenbau für Medizintechnik</li>
-      <li>Baugruppenmontage komplexer Fertigungsanlagen</li>
-      <li>Engineering-Beratung bei Fertigungsoptimierungen</li>
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    <h1 class="text-4xl font-bold text-center mb-8">Referenzen</h1>
+    <p class="text-gray-300 mb-6 text-center">Ein Auszug realisierter Projekte unserer Kunden aus Industrie, Medizintechnik, Maschinen- und Anlagenbau:</p>
+    <ul class="text-gray-300 space-y-4 list-disc list-inside">
+      <li>Serienfertigung rotationssymmetrischer Edelstahlteile für die Pharmaindustrie</li>
+      <li>Prototypenbau für medizintechnische Handgeräte (5-Achs-gefräst aus Titan)</li>
+      <li>Konstruktive Auslegung und Herstellung von Prüfadapterlösungen für Elektroniktests</li>
+      <li>Systemmontage inkl. elektrischer Funktionstestung in Kleinserien</li>
+      <li>Engineering-Partnerschaft mit OEM aus dem Sondermaschinenbau (CAD-Entwicklung & Fertigung)</li>
     </ul>
+  </main>
 
-    <p>Gerne senden wir Ihnen auf Anfrage weitere Projektbeispiele zu.</p>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 Berben Engineering GmbH</p>
+  <footer class="bg-black text-center py-6 text-gray-500 text-sm mt-12">
+    &copy; 2025 Berben Engineering GmbH
   </footer>
 </body>
 </html>
