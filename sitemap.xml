@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.berben-engineering.de/</loc><lastmod>2026-10-16</lastmod></url>
-  <url><loc>https://www.berben-engineering.de/leistungen.html</loc><lastmod>2026-10-16</lastmod></url>
-  <url><loc>https://www.berben-engineering.de/technologien.html</loc><lastmod>2026-10-16</lastmod></url>
-  <url><loc>https://www.berben-engineering.de/referenzen.html</loc><lastmod>2026-10-16</lastmod></url>
-  <url><loc>https://www.berben-engineering.de/unternehmen.html</loc><lastmod>2026-10-16</lastmod></url>
-  <url><loc>https://www.berben-engineering.de/kontakt.html</loc><lastmod>2026-10-16</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://www.berben-engineering.de/</loc><lastmod>2026-10-16</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://www.berben-engineering.de/"/><xhtml:link rel="alternate" hreflang="en" href="https://www.berben-engineering.de/en/"/></url>
+  <url><loc>https://www.berben-engineering.de/en/</loc><lastmod>2026-10-16</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://www.berben-engineering.de/"/><xhtml:link rel="alternate" hreflang="en" href="https://www.berben-engineering.de/en/"/></url>
+  <url><loc>https://www.berben-engineering.de/leistungen.html</loc><lastmod>2026-10-16</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://www.berben-engineering.de/leistungen.html"/><xhtml:link rel="alternate" hreflang="en" href="https://www.berben-engineering.de/en/services.html"/></url>
+  <url><loc>https://www.berben-engineering.de/en/services.html</loc><lastmod>2026-10-16</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://www.berben-engineering.de/leistungen.html"/><xhtml:link rel="alternate" hreflang="en" href="https://www.berben-engineering.de/en/services.html"/></url>
+  <url><loc>https://www.berben-engineering.de/technologien.html</loc><lastmod>2026-10-16</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://www.berben-engineering.de/technologien.html"/><xhtml:link rel="alternate" hreflang="en" href="https://www.berben-engineering.de/en/technologies.html"/></url>
+  <url><loc>https://www.berben-engineering.de/en/technologies.html</loc><lastmod>2026-10-16</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://www.berben-engineering.de/technologien.html"/><xhtml:link rel="alternate" hreflang="en" href="https://www.berben-engineering.de/en/technologies.html"/></url>
+  <url><loc>https://www.berben-engineering.de/referenzen.html</loc><lastmod>2026-10-16</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://www.berben-engineering.de/referenzen.html"/><xhtml:link rel="alternate" hreflang="en" href="https://www.berben-engineering.de/en/references.html"/></url>
+  <url><loc>https://www.berben-engineering.de/en/references.html</loc><lastmod>2026-10-16</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://www.berben-engineering.de/referenzen.html"/><xhtml:link rel="alternate" hreflang="en" href="https://www.berben-engineering.de/en/references.html"/></url>
+  <url><loc>https://www.berben-engineering.de/wissen.html</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://www.berben-engineering.de/passungsrechner.html</loc><lastmod>2026-10-16</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://www.berben-engineering.de/passungsrechner.html"/><xhtml:link rel="alternate" hreflang="en" href="https://www.berben-engineering.de/en/fit-calculator.html"/></url>
+  <url><loc>https://www.berben-engineering.de/en/fit-calculator.html</loc><lastmod>2026-10-16</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://www.berben-engineering.de/passungsrechner.html"/><xhtml:link rel="alternate" hreflang="en" href="https://www.berben-engineering.de/en/fit-calculator.html"/></url>
+  <url><loc>https://www.berben-engineering.de/unternehmen.html</loc><lastmod>2026-10-16</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://www.berben-engineering.de/unternehmen.html"/><xhtml:link rel="alternate" hreflang="en" href="https://www.berben-engineering.de/en/company.html"/></url>
+  <url><loc>https://www.berben-engineering.de/en/company.html</loc><lastmod>2026-10-16</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://www.berben-engineering.de/unternehmen.html"/><xhtml:link rel="alternate" hreflang="en" href="https://www.berben-engineering.de/en/company.html"/></url>
+  <url><loc>https://www.berben-engineering.de/karriere.html</loc><lastmod>2026-10-16</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://www.berben-engineering.de/karriere.html"/><xhtml:link rel="alternate" hreflang="en" href="https://www.berben-engineering.de/en/careers.html"/></url>
+  <url><loc>https://www.berben-engineering.de/en/careers.html</loc><lastmod>2026-10-16</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://www.berben-engineering.de/karriere.html"/><xhtml:link rel="alternate" hreflang="en" href="https://www.berben-engineering.de/en/careers.html"/></url>
+  <url><loc>https://www.berben-engineering.de/kontakt.html</loc><lastmod>2026-10-16</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://www.berben-engineering.de/kontakt.html"/><xhtml:link rel="alternate" hreflang="en" href="https://www.berben-engineering.de/en/contact.html"/></url>
+  <url><loc>https://www.berben-engineering.de/en/contact.html</loc><lastmod>2026-10-16</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://www.berben-engineering.de/kontakt.html"/><xhtml:link rel="alternate" hreflang="en" href="https://www.berben-engineering.de/en/contact.html"/></url>
+  <url><loc>https://www.berben-engineering.de/anfrage.html</loc><lastmod>2026-10-16</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://www.berben-engineering.de/anfrage.html"/><xhtml:link rel="alternate" hreflang="en" href="https://www.berben-engineering.de/en/request.html"/></url>
+  <url><loc>https://www.berben-engineering.de/en/request.html</loc><lastmod>2026-10-16</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://www.berben-engineering.de/anfrage.html"/><xhtml:link rel="alternate" hreflang="en" href="https://www.berben-engineering.de/en/request.html"/></url>
   <url><loc>https://www.berben-engineering.de/impressum.html</loc><lastmod>2026-10-16</lastmod></url>
   <url><loc>https://www.berben-engineering.de/datenschutz.html</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://www.berben-engineering.de/wissen-5-achs-fraesen.html</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://www.berben-engineering.de/wissen-werkstoffe.html</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://www.berben-engineering.de/wissen-passungen.html</loc><lastmod>2026-10-16</lastmod></url>
 </urlset>

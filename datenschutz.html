@@ -27,9 +27,13 @@
 <body class="flex min-h-screen flex-col">
   <a href="#inhalt" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-brand-700 focus:px-4 focus:py-2 focus:text-white">Zum Inhalt springen</a>
 
+  <div class="bg-amber-100 text-amber-950 dark:bg-amber-950 dark:text-amber-100">
+    <p class="container-x flex items-start gap-2 py-2 text-xs sm:items-center sm:text-sm"><svg class="h-4 w-4 flex-none mt-0.5 sm:mt-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg><span><strong>Demo-Website:</strong> Die Berben Engineering GmbH ist ein fiktives Unternehmen. Alle Inhalte dienen ausschließlich zu Test- und Präsentationszwecken.</span></p>
+  </div>
+
   <header data-header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur-md transition-shadow dark:border-ink-700 dark:bg-ink-950/90">
-    <div class="container-x flex h-16 items-center justify-between gap-6 lg:h-20">
-      <a href="index.html" class="flex items-center gap-3" aria-label="Berben Engineering – zur Startseite">
+    <div class="container-x flex h-16 items-center justify-between gap-4 lg:h-20">
+      <a href="index.html" class="flex flex-none items-center gap-3" aria-label="Berben Engineering – zur Startseite">
         <img src="assets/img/logo-mark.png" alt="" width="34" height="38" class="h-9 w-auto dark:hidden" />
         <img src="assets/img/logo-mark-white.png" alt="" width="34" height="38" class="hidden h-9 w-auto dark:block" />
         <span class="leading-tight">
@@ -37,32 +41,35 @@
           <span class="block text-[0.62rem] font-semibold tracking-[0.2em] text-slate-500 dark:text-slate-400">ENGINEERING GMBH</span>
         </span>
       </a>
-      <nav class="hidden items-center gap-1 lg:flex" aria-label="Hauptnavigation">
+      <nav class="hidden items-center gap-0.5 xl:flex" aria-label="Hauptnavigation">
           <a href="leistungen.html" class="nav-link">Leistungen</a>
           <a href="technologien.html" class="nav-link">Technologien</a>
           <a href="referenzen.html" class="nav-link">Referenzen</a>
+          <a href="wissen.html" class="nav-link">Wissen</a>
           <a href="unternehmen.html" class="nav-link">Unternehmen</a>
           <a href="kontakt.html" class="nav-link">Kontakt</a>
       </nav>
-      <div class="flex items-center gap-2">
-        <button type="button" data-theme-toggle class="inline-flex h-11 w-11 items-center justify-center rounded-lg text-slate-600 transition hover:bg-slate-100 hover:text-brand-700 dark:text-slate-300 dark:hover:bg-ink-700 dark:hover:text-accent-400" aria-label="Dunkles Design aktivieren" aria-pressed="false" title="Hell/Dunkel umschalten">
+      <div class="flex items-center gap-1 sm:gap-2">
+        <a href="en/index.html" hreflang="en" lang="en" class="inline-flex h-11 items-center gap-1.5 rounded-lg px-2.5 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-brand-700 dark:text-slate-400 dark:hover:bg-ink-700 dark:hover:text-accent-400" aria-label="English version" title="English version"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>EN</a>
+        <button type="button" data-theme-toggle class="inline-flex h-11 w-11 items-center justify-center rounded-lg text-slate-600 transition hover:bg-slate-100 hover:text-brand-700 dark:text-slate-400 dark:hover:bg-ink-700 dark:hover:text-accent-400" aria-label="Dunkles Design aktivieren" aria-pressed="false" title="Hell/Dunkel umschalten">
           <span class="dark:hidden"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span><span class="hidden dark:block"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></span>
         </button>
-        <a href="kontakt.html" class="btn-primary hidden sm:inline-flex">Anfrage stellen <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        <button type="button" data-menu-toggle class="inline-flex h-11 w-11 items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 lg:hidden dark:text-slate-300 dark:hover:bg-ink-700" aria-controls="mobile-menu" aria-expanded="false" aria-label="Menü öffnen">
+        <a href="anfrage.html" class="btn-primary hidden md:inline-flex">Anfrage stellen <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <button type="button" data-menu-toggle class="inline-flex h-11 w-11 items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 xl:hidden dark:text-slate-300 dark:hover:bg-ink-700" aria-controls="mobile-menu" aria-expanded="false" aria-label="Menü öffnen">
           <span data-icon-open><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></span><span data-icon-close class="hidden"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span>
         </button>
       </div>
     </div>
-    <nav id="mobile-menu" class="hidden border-t border-slate-200 bg-white lg:hidden dark:border-ink-700 dark:bg-ink-800" aria-label="Mobile Navigation">
+    <nav id="mobile-menu" class="hidden border-t border-slate-200 bg-white xl:hidden dark:border-ink-700 dark:bg-ink-800" aria-label="Mobile Navigation">
       <div class="container-x space-y-1 py-4">
         <a href="index.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Start</a>
         <a href="leistungen.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Leistungen</a>
         <a href="technologien.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Technologien</a>
         <a href="referenzen.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Referenzen</a>
+        <a href="wissen.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Wissen</a>
         <a href="unternehmen.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Unternehmen</a>
         <a href="kontakt.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Kontakt</a>
-        <a href="kontakt.html" class="btn-primary mt-3 w-full">Anfrage stellen</a>
+        <a href="anfrage.html" class="btn-primary mt-3 w-full">Anfrage stellen</a>
       </div>
     </nav>
   </header>
@@ -77,12 +84,12 @@
         <p>Berben Engineering GmbH, Musterstraße 1, 12345 Musterstadt<br />E-Mail: <a href="mailto:info@berben-engineering.de">info@berben-engineering.de</a></p>
         <h2>2. Hosting (GitHub Pages)</h2>
         <p>Diese Website wird über GitHub Pages bereitgestellt (GitHub Inc., 88 Colin P. Kelly Jr. St, San Francisco, CA 94107, USA). Beim Aufruf der Seiten verarbeitet GitHub technisch notwendige Daten wie Ihre IP-Adresse, Datum und Uhrzeit des Zugriffs sowie Browser-Informationen in Server-Logfiles. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer sicheren und stabilen Bereitstellung der Website). Eine Übermittlung in die USA erfolgt auf Grundlage des EU-U.S. Data Privacy Framework bzw. von Standardvertragsklauseln.</p>
-        <h2>3. Kontaktformular (Formspree)</h2>
-        <p>Wenn Sie uns über das Kontaktformular eine Anfrage senden, werden Ihre Angaben (Name, Firma, E-Mail-Adresse, Telefonnummer, Anliegen, Nachricht) über den Dienst Formspree (Formspree Inc., USA) an uns übermittelt und zur Bearbeitung Ihrer Anfrage gespeichert. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen) bzw. Art. 6 Abs. 1 lit. a DSGVO (Einwilligung). Die Daten werden gelöscht, sobald sie für die Bearbeitung nicht mehr erforderlich sind und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
-        <h2>4. Kontakt per E-Mail oder Telefon</h2>
-        <p>Wenn Sie uns per E-Mail oder Telefon kontaktieren, verarbeiten wir Ihre Angaben ausschließlich zur Bearbeitung Ihres Anliegens (Art. 6 Abs. 1 lit. b bzw. f DSGVO).</p>
+        <h2>3. Kontaktformular und Anfrage-Assistent (Formspree)</h2>
+        <p>Wenn Sie uns über das Kontaktformular oder den Anfrage-Assistenten eine Anfrage senden, werden Ihre Angaben (z.&nbsp;B. Name, Firma, E-Mail-Adresse, Telefonnummer, Projektangaben, Nachricht) über den Dienst Formspree (Formspree Inc., USA) an uns übermittelt und zur Bearbeitung Ihrer Anfrage gespeichert. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen) bzw. Art. 6 Abs. 1 lit. a DSGVO (Einwilligung). Die Daten werden gelöscht, sobald sie für die Bearbeitung nicht mehr erforderlich sind und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+        <h2>4. Kontakt per E-Mail oder Telefon, Bewerbungen</h2>
+        <p>Wenn Sie uns per E-Mail oder Telefon kontaktieren oder sich bei uns bewerben, verarbeiten wir Ihre Angaben ausschließlich zur Bearbeitung Ihres Anliegens bzw. Ihrer Bewerbung (Art. 6 Abs. 1 lit. b DSGVO, § 26 BDSG). Bewerbungsunterlagen werden spätestens sechs Monate nach Abschluss des Verfahrens gelöscht, sofern Sie keiner längeren Speicherung zugestimmt haben.</p>
         <h2>5. Schriftarten, Cookies und Tracking</h2>
-        <p>Alle Schriftarten, Grafiken und Skripte werden direkt von unserem Server geladen – es werden keine Inhalte von Drittanbietern eingebunden. Diese Website setzt keine Cookies und verwendet keine Analyse- oder Tracking-Werkzeuge. Wenn Sie zwischen hellem und dunklem Design umschalten, wird diese Auswahl ausschließlich lokal in Ihrem Browser gespeichert (localStorage) und nicht an uns übertragen.</p>
+        <p>Alle Schriftarten, Grafiken und Skripte werden direkt von unserem Server geladen – es werden keine Inhalte von Drittanbietern eingebunden. Diese Website setzt keine Cookies und verwendet keine Analyse- oder Tracking-Werkzeuge. Wenn Sie zwischen hellem und dunklem Design umschalten, wird diese Auswahl ausschließlich lokal in Ihrem Browser gespeichert (localStorage) und nicht an uns übertragen. Der Passungsrechner rechnet vollständig in Ihrem Browser; Eingaben werden nicht übertragen.</p>
         <h2>6. Ihre Rechte</h2>
         <p>Sie haben das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) sowie Widerspruch (Art. 21). Eine erteilte Einwilligung können Sie jederzeit mit Wirkung für die Zukunft widerrufen. Zudem haben Sie das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren.</p>
         <p class="text-sm text-slate-500 dark:text-slate-400">Stand: Oktober 2026</p>
@@ -92,12 +99,13 @@
 
   <footer class="bg-brand-950 text-slate-400">
     <div class="container-x grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
-      <div class="lg:col-span-1">
+      <div>
         <a href="index.html" class="flex items-center gap-3">
           <img src="assets/img/logo-mark-white.png" alt="" width="34" height="38" class="h-9 w-auto" />
           <span class="leading-tight text-white"><span class="block font-extrabold tracking-wide">BERBEN</span><span class="block text-[0.62rem] font-semibold tracking-[0.2em] text-slate-400">ENGINEERING GMBH</span></span>
         </a>
         <p class="mt-5 text-sm leading-relaxed">Präzisionsfertigung, CAD/CAM-Engineering und Systemmontage für anspruchsvolle Branchen – aus einer Hand.</p>
+        <a href="assets/downloads/berben-firmenprofil.pdf" class="mt-5 inline-flex items-center gap-2 text-sm font-medium text-accent-400 hover:text-white" download><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg> Firmenprofil (PDF)</a>
       </div>
       <div>
         <h2 class="text-sm font-semibold uppercase tracking-wider text-white">Leistungen</h2>
@@ -113,10 +121,10 @@
         <h2 class="text-sm font-semibold uppercase tracking-wider text-white">Unternehmen</h2>
         <ul class="mt-4 space-y-2.5 text-sm">
           <li><a href="unternehmen.html" class="hover:text-white">Über uns</a></li>
-          <li><a href="technologien.html" class="hover:text-white">Technologien</a></li>
+          <li><a href="karriere.html" class="hover:text-white">Karriere</a></li>
           <li><a href="referenzen.html" class="hover:text-white">Referenzen</a></li>
-          <li><a href="unternehmen.html#karriere" class="hover:text-white">Karriere</a></li>
-          <li><a href="kontakt.html#faq" class="hover:text-white">Häufige Fragen</a></li>
+          <li><a href="passungsrechner.html" class="hover:text-white">Passungsrechner</a></li>
+          <li><a href="wissen.html" class="hover:text-white">Fachwissen</a></li>
         </ul>
       </div>
       <div>
