@@ -3,50 +3,86 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Referenzen – Berben Engineering</title>
-  <link rel="icon" href="logo.png" />
+  <title>Referenzen – Berben Engineering GmbH</title>
+  <meta name="description" content="Ausgewählte Projekte von Berben Engineering: Pharma-Serienteile, Titan-Frästeile für die Medizintechnik, Prüfadapter, Engineering-Support und Express-Prototypen." />
+  <link rel="canonical" href="https://www.berben-engineering.de/referenzen.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Berben Engineering GmbH" />
+  <meta property="og:title" content="Referenzen – Berben Engineering GmbH" />
+  <meta property="og:description" content="Ausgewählte Projekte von Berben Engineering: Pharma-Serienteile, Titan-Frästeile für die Medizintechnik, Prüfadapter, Engineering-Support und Express-Prototypen." />
+  <meta property="og:url" content="https://www.berben-engineering.de/referenzen.html" />
+  <meta property="og:image" content="https://www.berben-engineering.de/cnc.jpg" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-950 text-white font-sans">
+<body class="bg-gray-900 text-white font-sans antialiased flex flex-col min-h-screen">
+  <a href="#inhalt" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] bg-blue-600 px-4 py-2 rounded">Zum Inhalt springen</a>
 
-  <nav class="bg-black text-center py-4 sticky top-0 z-50 shadow-md">
-    <a href="index.html" class="mx-4 text-blue-400 hover:underline">Start</a>
-    <a href="leistungen.html" class="mx-4 text-blue-400 hover:underline">Leistungen</a>
-    <a href="technologien.html" class="mx-4 text-blue-400 hover:underline">Technologien</a>
-    <a href="referenzen.html" class="mx-4 text-blue-400 hover:underline font-bold">Referenzen</a>
-    <a href="unternehmen.html" class="mx-4 text-blue-400 hover:underline">Unternehmen</a>
-    <a href="kontakt.html" class="mx-4 text-blue-400 hover:underline">Kontakt</a>
-  </nav>
-
-  <main class="max-w-6xl mx-auto px-6 py-16">
-    <h1 class="text-4xl font-bold text-center mb-12">Projektauswahl & Referenzen</h1>
-
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-      <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-blue-500 transition duration-300">
-        <h3 class="text-xl font-semibold text-blue-400 mb-2">Pharma-Edelstahl-Serie</h3>
-        <p class="text-gray-300 text-sm">Mehrere 1000 rotationssymmetrische Präzisionsteile für Injektionssysteme – Serienfertigung mit SPC & 100%-Prüfung.</p>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-blue-500 transition duration-300">
-        <h3 class="text-xl font-semibold text-blue-400 mb-2">Titan-Frästeile für MedTech</h3>
-        <p class="text-gray-300 text-sm">Hochkomplexe Einzelteile für OP-Werkzeuge – 5-Achs-Strategie, Entgratung & Oberflächenfinish inklusive.</p>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-blue-500 transition duration-300">
-        <h3 class="text-xl font-semibold text-blue-400 mb-2">Montageprüfung im Maschinenbau</h3>
-        <p class="text-gray-300 text-sm">Prüfadapter, Fixtures & ESD-Baugruppen in Serie – Elektroniktestung integriert mit Dokumentation.</p>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-blue-500 transition duration-300">
-        <h3 class="text-xl font-semibold text-blue-400 mb-2">Engineering-Support</h3>
-        <p class="text-gray-300 text-sm">Partnerentwicklung mit OEM – Bauraumdefinition, Festigkeitsnachweis, fertigungsgerechtes Redesign.</p>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-blue-500 transition duration-300">
-        <h3 class="text-xl font-semibold text-blue-400 mb-2">CNC-Prototyping Express</h3>
-        <p class="text-gray-300 text-sm">24-Stunden-Fertigung für High-End-Musterteile – Bearbeitung von Sonderlegierungen & Kunststoffverbunden.</p>
+  <!-- Navigation -->
+  <nav class="bg-black/95 backdrop-blur sticky top-0 z-50 shadow-md" aria-label="Hauptnavigation">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center justify-between gap-2">
+      <a href="index.html" class="flex items-center gap-2 font-bold">
+        <img src="logo.png" alt="" width="32" height="32" class="w-8 h-8" />
+        <span>Berben Engineering</span>
+      </a>
+      <div class="flex flex-wrap justify-center gap-x-5 gap-y-1 text-sm md:text-base">
+        <a href="index.html" class="px-1 py-1 text-blue-300 hover:text-white transition">Start</a>
+        <a href="leistungen.html" class="px-1 py-1 text-blue-300 hover:text-white transition">Leistungen</a>
+        <a href="technologien.html" class="px-1 py-1 text-blue-300 hover:text-white transition">Technologien</a>
+        <a href="referenzen.html" class="px-1 py-1 text-white font-semibold border-b-2 border-blue-500 transition" aria-current="page">Referenzen</a>
+        <a href="unternehmen.html" class="px-1 py-1 text-blue-300 hover:text-white transition">Unternehmen</a>
+        <a href="kontakt.html" class="px-1 py-1 text-blue-300 hover:text-white transition">Kontakt</a>
       </div>
     </div>
+  </nav>
+
+  <main id="inhalt" class="max-w-6xl mx-auto px-6 py-16 w-full">
+    <header class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold">Projektauswahl &amp; Referenzen</h1>
+      <p class="text-gray-400 mt-3 max-w-2xl mx-auto">Ein Auszug aus Projekten, die wir für unsere Kunden umgesetzt haben.</p>
+    </header>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <article class="bg-gray-800 p-6 rounded-xl shadow-lg border-t-4 border-blue-600 hover:-translate-y-1 hover:shadow-blue-900/50 transition duration-300">
+        <h2 class="text-xl font-semibold text-blue-400 mb-2">Pharma-Edelstahl-Serie</h2>
+        <p class="text-gray-300">Mehrere 1000 rotationssymmetrische Präzisionsteile für Injektionssysteme – Serienfertigung mit SPC &amp; 100%-Prüfung.</p>
+      </article>
+      <article class="bg-gray-800 p-6 rounded-xl shadow-lg border-t-4 border-blue-600 hover:-translate-y-1 hover:shadow-blue-900/50 transition duration-300">
+        <h2 class="text-xl font-semibold text-blue-400 mb-2">Titan-Frästeile für MedTech</h2>
+        <p class="text-gray-300">Hochkomplexe Einzelteile für OP-Werkzeuge – 5-Achs-Strategie, Entgratung &amp; Oberflächenfinish inklusive.</p>
+      </article>
+      <article class="bg-gray-800 p-6 rounded-xl shadow-lg border-t-4 border-blue-600 hover:-translate-y-1 hover:shadow-blue-900/50 transition duration-300">
+        <h2 class="text-xl font-semibold text-blue-400 mb-2">Montageprüfung im Maschinenbau</h2>
+        <p class="text-gray-300">Prüfadapter, Fixtures &amp; ESD-Baugruppen in Serie – Elektroniktestung integriert mit Dokumentation.</p>
+      </article>
+      <article class="bg-gray-800 p-6 rounded-xl shadow-lg border-t-4 border-blue-600 hover:-translate-y-1 hover:shadow-blue-900/50 transition duration-300">
+        <h2 class="text-xl font-semibold text-blue-400 mb-2">Engineering-Support</h2>
+        <p class="text-gray-300">Partnerentwicklung mit OEM – Bauraumdefinition, Festigkeitsnachweis, fertigungsgerechtes Redesign.</p>
+      </article>
+      <article class="bg-gray-800 p-6 rounded-xl shadow-lg border-t-4 border-blue-600 hover:-translate-y-1 hover:shadow-blue-900/50 transition duration-300">
+        <h2 class="text-xl font-semibold text-blue-400 mb-2">CNC-Prototyping Express</h2>
+        <p class="text-gray-300">24-Stunden-Fertigung für High-End-Musterteile – Bearbeitung von Sonderlegierungen &amp; Kunststoffverbunden.</p>
+      </article>
+    </div>
+    <section class="mt-16 bg-gradient-to-r from-blue-900 to-gray-800 rounded-2xl p-8 md:p-12 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold mb-3">Sie haben ein Projekt?</h2>
+      <p class="text-gray-300 mb-6 max-w-2xl mx-auto">Senden Sie uns Ihre Zeichnung oder Ihr 3D-Modell – wir melden uns schnell mit einer Einschätzung und einem Angebot.</p>
+      <a href="kontakt.html" class="inline-block bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 px-8 rounded-lg transition">Anfrage stellen</a>
+    </section>
   </main>
 
-  <footer class="bg-black text-center py-6 text-gray-500 text-sm mt-12">
-    &copy; 2025 Berben Engineering GmbH
+  <!-- Footer -->
+  <footer class="bg-black text-gray-400 text-sm mt-auto">
+    <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row gap-4 justify-between items-center text-center md:text-left">
+      <p>&copy; <span id="jahr">2025</span> Berben Engineering GmbH · Made with Präzision &amp; Leidenschaft</p>
+      <p class="flex gap-4">
+        <a href="kontakt.html" class="hover:text-white">Kontakt</a>
+        <a href="impressum.html" class="hover:text-white">Impressum</a>
+        <a href="datenschutz.html" class="hover:text-white">Datenschutz</a>
+      </p>
+    </div>
   </footer>
+  <script>document.getElementById('jahr').textContent = new Date().getFullYear();</script>
 </body>
 </html>

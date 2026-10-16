@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="CAD-Modell eines Bauteils">
+  <defs>
+    <pattern id="g" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#1e3a5f" stroke-width="1"/></pattern>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1a2e"/><stop offset="1" stop-color="#05080f"/></linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg)"/>
+  <rect width="800" height="400" fill="url(#g)"/>
+  <g fill="none" stroke="#60a5fa" stroke-width="2.5" stroke-linejoin="round">
+    <path d="M250 260 L400 330 L590 250 L440 180 Z" fill="#1d4ed8" fill-opacity=".25"/>
+    <path d="M250 260 V180 L440 100 L590 170 V250"/>
+    <path d="M400 330 V250 L250 180 M400 250 L590 170"/>
+    <path d="M250 180 L440 100" />
+    <ellipse cx="420" cy="175" rx="55" ry="25" fill="#0b1a2e"/>
+    <path d="M365 175 V215 A55 25 0 0 0 475 215 V175"/>
+  </g>
+  <g stroke="#93c5fd" stroke-width="1" stroke-dasharray="6 4" fill="none" opacity=".7">
+    <path d="M250 290 L400 360 M250 280 V300 M400 350 V370"/>
+    <path d="M420 120 V230 M350 175 H490"/>
+  </g>
+  <g fill="#93c5fd" font-family="monospace" font-size="14">
+    <text x="300" y="345" transform="rotate(25 300 345)">120,00 ±0,01</text>
+    <text x="500" y="125">Ø 40 H7</text>
+  </g>
+  <g fill="#60a5fa" font-family="monospace" font-size="13" opacity=".8">
+    <text x="24" y="36">G54 G90 G17</text><text x="24" y="56">T12 M06 (FRAESER D10)</text><text x="24" y="76">S12000 M03</text><text x="24" y="96">G00 X0. Y0. Z5.</text>
+  </g>
+</svg>

@@ -3,36 +3,94 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kontakt – Berben Engineering</title>
-  <link rel="icon" href="logo.png" />
+  <title>Kontakt – Berben Engineering GmbH</title>
+  <meta name="description" content="Kontaktieren Sie Berben Engineering GmbH für Anfragen zu CNC-Fertigung, CAD/CAM und Montage." />
+  <link rel="canonical" href="https://www.berben-engineering.de/kontakt.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Berben Engineering GmbH" />
+  <meta property="og:title" content="Kontakt – Berben Engineering GmbH" />
+  <meta property="og:description" content="Kontaktieren Sie Berben Engineering GmbH für Anfragen zu CNC-Fertigung, CAD/CAM und Montage." />
+  <meta property="og:url" content="https://www.berben-engineering.de/kontakt.html" />
+  <meta property="og:image" content="https://www.berben-engineering.de/cnc.jpg" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-900 text-white font-sans">
-  <nav class="bg-black text-center py-4 sticky top-0 z-50 shadow-md">
-    <a href="index.html" class="mx-4 text-blue-400 hover:underline">Start</a>
-    <a href="leistungen.html" class="mx-4 text-blue-400 hover:underline">Leistungen</a>
-    <a href="technologien.html" class="mx-4 text-blue-400 hover:underline">Technologien</a>
-    <a href="referenzen.html" class="mx-4 text-blue-400 hover:underline">Referenzen</a>
-    <a href="unternehmen.html" class="mx-4 text-blue-400 hover:underline">Unternehmen</a>
-    <a href="kontakt.html" class="mx-4 text-blue-400 hover:underline">Kontakt</a>
+<body class="bg-gray-900 text-white font-sans antialiased flex flex-col min-h-screen">
+  <a href="#inhalt" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] bg-blue-600 px-4 py-2 rounded">Zum Inhalt springen</a>
+
+  <!-- Navigation -->
+  <nav class="bg-black/95 backdrop-blur sticky top-0 z-50 shadow-md" aria-label="Hauptnavigation">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center justify-between gap-2">
+      <a href="index.html" class="flex items-center gap-2 font-bold">
+        <img src="logo.png" alt="" width="32" height="32" class="w-8 h-8" />
+        <span>Berben Engineering</span>
+      </a>
+      <div class="flex flex-wrap justify-center gap-x-5 gap-y-1 text-sm md:text-base">
+        <a href="index.html" class="px-1 py-1 text-blue-300 hover:text-white transition">Start</a>
+        <a href="leistungen.html" class="px-1 py-1 text-blue-300 hover:text-white transition">Leistungen</a>
+        <a href="technologien.html" class="px-1 py-1 text-blue-300 hover:text-white transition">Technologien</a>
+        <a href="referenzen.html" class="px-1 py-1 text-blue-300 hover:text-white transition">Referenzen</a>
+        <a href="unternehmen.html" class="px-1 py-1 text-blue-300 hover:text-white transition">Unternehmen</a>
+        <a href="kontakt.html" class="px-1 py-1 text-white font-semibold border-b-2 border-blue-500 transition" aria-current="page">Kontakt</a>
+      </div>
+    </div>
   </nav>
 
-  <main class="max-w-xl mx-auto px-6 py-12">
-    <h1 class="text-4xl font-bold text-center mb-8">Kontakt</h1>
-    <form action="https://formspree.io/f/xanjepyz" method="POST" class="space-y-6">
-      <input type="text" name="name" placeholder="Ihr Name" required class="w-full p-3 rounded bg-gray-800 border border-gray-700">
-      <input type="email" name="email" placeholder="Ihre E-Mail-Adresse" required class="w-full p-3 rounded bg-gray-800 border border-gray-700">
-      <textarea name="message" rows="5" placeholder="Ihre Nachricht" required class="w-full p-3 rounded bg-gray-800 border border-gray-700"></textarea>
-      <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white py-3 rounded font-semibold">Nachricht senden</button>
-    </form>
-    <div class="text-gray-400 mt-8 text-sm text-center">
-      Berben Engineering GmbH · Musterstraße 1 · 12345 Musterstadt<br />
-      Tel: +49 123 456789 · E-Mail: info@berben-engineering.de
+  <main id="inhalt" class="max-w-5xl mx-auto px-6 py-16 w-full">
+    <header class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold">Kontakt</h1>
+      <p class="text-gray-400 mt-3 max-w-2xl mx-auto">Fragen, Anfragen oder Zeichnungen? Schreiben Sie uns – wir antworten schnellstmöglich.</p>
+    </header>
+    <div class="grid md:grid-cols-5 gap-10">
+      <form action="https://formspree.io/f/xanjepyz" method="POST" class="md:col-span-3 space-y-5">
+        <input type="hidden" name="_subject" value="Neue Anfrage über berben-engineering.de" />
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" />
+        <div>
+          <label for="name" class="block mb-1 text-sm text-gray-300">Name *</label>
+          <input id="name" type="text" name="name" autocomplete="name" required class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/40 outline-none" />
+        </div>
+        <div>
+          <label for="firma" class="block mb-1 text-sm text-gray-300">Firma</label>
+          <input id="firma" type="text" name="firma" autocomplete="organization" class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/40 outline-none" />
+        </div>
+        <div>
+          <label for="email" class="block mb-1 text-sm text-gray-300">E-Mail-Adresse *</label>
+          <input id="email" type="email" name="email" autocomplete="email" required class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/40 outline-none" />
+        </div>
+        <div>
+          <label for="message" class="block mb-1 text-sm text-gray-300">Ihre Nachricht *</label>
+          <textarea id="message" name="message" rows="6" required class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/40 outline-none"></textarea>
+        </div>
+        <div class="flex items-start gap-3 text-sm text-gray-400">
+          <input id="datenschutz" type="checkbox" name="datenschutz" value="akzeptiert" required class="mt-1 h-4 w-4 accent-blue-600" />
+          <label for="datenschutz">Ich habe die <a href="datenschutz.html" class="text-blue-400 underline hover:text-white">Datenschutzerklärung</a> gelesen und bin mit der Verarbeitung meiner Angaben zur Bearbeitung der Anfrage einverstanden. *</label>
+        </div>
+        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white py-3 rounded-lg font-semibold transition">Nachricht senden</button>
+        <p class="text-xs text-gray-500">* Pflichtfelder</p>
+      </form>
+
+      <aside class="md:col-span-2 bg-gray-800 rounded-xl p-6 h-fit space-y-4 text-gray-300">
+        <h2 class="text-xl font-semibold text-blue-400">Berben Engineering GmbH</h2>
+        <address class="not-italic">Musterstraße 1<br />12345 Musterstadt</address>
+        <p>Tel: <a href="tel:+49123456789" class="text-blue-400 hover:text-white">+49 123 456789</a></p>
+        <p>E-Mail: <a href="mailto:info@berben-engineering.de" class="text-blue-400 hover:text-white break-all">info@berben-engineering.de</a></p>
+      </aside>
     </div>
   </main>
 
-  <footer class="bg-black text-center py-6 text-gray-500 text-sm mt-12">
-    &copy; 2025 Berben Engineering GmbH
+  <!-- Footer -->
+  <footer class="bg-black text-gray-400 text-sm mt-auto">
+    <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row gap-4 justify-between items-center text-center md:text-left">
+      <p>&copy; <span id="jahr">2025</span> Berben Engineering GmbH · Made with Präzision &amp; Leidenschaft</p>
+      <p class="flex gap-4">
+        <a href="kontakt.html" class="hover:text-white">Kontakt</a>
+        <a href="impressum.html" class="hover:text-white">Impressum</a>
+        <a href="datenschutz.html" class="hover:text-white">Datenschutz</a>
+      </p>
+    </div>
   </footer>
+  <script>document.getElementById('jahr').textContent = new Date().getFullYear();</script>
 </body>
 </html>
