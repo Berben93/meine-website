@@ -6,6 +6,9 @@
   <title>Berben Engineering GmbH – CNC-Präzisionsfertigung, CAD/CAM &amp; Montage</title>
   <meta name="description" content="Berben Engineering GmbH: hochpräzise CNC-Fertigung (5-Achs), CAD/CAM-Entwicklung und Systemmontage für Luftfahrt, Medizintechnik, Pharma und Maschinenbau." />
   <link rel="canonical" href="https://www.berben-engineering.de/" />
+  <link rel="alternate" hreflang="de" href="https://www.berben-engineering.de/" />
+  <link rel="alternate" hreflang="en" href="https://www.berben-engineering.de/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.berben-engineering.de/" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="de_DE" />
   <meta property="og:site_name" content="Berben Engineering GmbH" />
@@ -46,9 +49,13 @@
 <body class="flex min-h-screen flex-col">
   <a href="#inhalt" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-brand-700 focus:px-4 focus:py-2 focus:text-white">Zum Inhalt springen</a>
 
+  <div class="bg-amber-100 text-amber-950 dark:bg-amber-950 dark:text-amber-100">
+    <p class="container-x flex items-start gap-2 py-2 text-xs sm:items-center sm:text-sm"><svg class="h-4 w-4 flex-none mt-0.5 sm:mt-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg><span><strong>Demo-Website:</strong> Die Berben Engineering GmbH ist ein fiktives Unternehmen. Alle Inhalte dienen ausschließlich zu Test- und Präsentationszwecken.</span></p>
+  </div>
+
   <header data-header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur-md transition-shadow dark:border-ink-700 dark:bg-ink-950/90">
-    <div class="container-x flex h-16 items-center justify-between gap-6 lg:h-20">
-      <a href="index.html" class="flex items-center gap-3" aria-label="Berben Engineering – zur Startseite">
+    <div class="container-x flex h-16 items-center justify-between gap-4 lg:h-20">
+      <a href="index.html" class="flex flex-none items-center gap-3" aria-label="Berben Engineering – zur Startseite">
         <img src="assets/img/logo-mark.png" alt="" width="34" height="38" class="h-9 w-auto dark:hidden" />
         <img src="assets/img/logo-mark-white.png" alt="" width="34" height="38" class="hidden h-9 w-auto dark:block" />
         <span class="leading-tight">
@@ -56,38 +63,40 @@
           <span class="block text-[0.62rem] font-semibold tracking-[0.2em] text-slate-500 dark:text-slate-400">ENGINEERING GMBH</span>
         </span>
       </a>
-      <nav class="hidden items-center gap-1 lg:flex" aria-label="Hauptnavigation">
+      <nav class="hidden items-center gap-0.5 xl:flex" aria-label="Hauptnavigation">
           <a href="leistungen.html" class="nav-link">Leistungen</a>
           <a href="technologien.html" class="nav-link">Technologien</a>
           <a href="referenzen.html" class="nav-link">Referenzen</a>
+          <a href="wissen.html" class="nav-link">Wissen</a>
           <a href="unternehmen.html" class="nav-link">Unternehmen</a>
           <a href="kontakt.html" class="nav-link">Kontakt</a>
       </nav>
-      <div class="flex items-center gap-2">
-        <button type="button" data-theme-toggle class="inline-flex h-11 w-11 items-center justify-center rounded-lg text-slate-600 transition hover:bg-slate-100 hover:text-brand-700 dark:text-slate-300 dark:hover:bg-ink-700 dark:hover:text-accent-400" aria-label="Dunkles Design aktivieren" aria-pressed="false" title="Hell/Dunkel umschalten">
+      <div class="flex items-center gap-1 sm:gap-2">
+        <a href="en/index.html" hreflang="en" lang="en" class="inline-flex h-11 items-center gap-1.5 rounded-lg px-2.5 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-brand-700 dark:text-slate-400 dark:hover:bg-ink-700 dark:hover:text-accent-400" aria-label="English version" title="English version"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>EN</a>
+        <button type="button" data-theme-toggle class="inline-flex h-11 w-11 items-center justify-center rounded-lg text-slate-600 transition hover:bg-slate-100 hover:text-brand-700 dark:text-slate-400 dark:hover:bg-ink-700 dark:hover:text-accent-400" aria-label="Dunkles Design aktivieren" aria-pressed="false" title="Hell/Dunkel umschalten">
           <span class="dark:hidden"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span><span class="hidden dark:block"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></span>
         </button>
-        <a href="kontakt.html" class="btn-primary hidden sm:inline-flex">Anfrage stellen <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        <button type="button" data-menu-toggle class="inline-flex h-11 w-11 items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 lg:hidden dark:text-slate-300 dark:hover:bg-ink-700" aria-controls="mobile-menu" aria-expanded="false" aria-label="Menü öffnen">
+        <a href="anfrage.html" class="btn-primary hidden md:inline-flex">Anfrage stellen <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <button type="button" data-menu-toggle class="inline-flex h-11 w-11 items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 xl:hidden dark:text-slate-300 dark:hover:bg-ink-700" aria-controls="mobile-menu" aria-expanded="false" aria-label="Menü öffnen">
           <span data-icon-open><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></span><span data-icon-close class="hidden"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span>
         </button>
       </div>
     </div>
-    <nav id="mobile-menu" class="hidden border-t border-slate-200 bg-white lg:hidden dark:border-ink-700 dark:bg-ink-800" aria-label="Mobile Navigation">
+    <nav id="mobile-menu" class="hidden border-t border-slate-200 bg-white xl:hidden dark:border-ink-700 dark:bg-ink-800" aria-label="Mobile Navigation">
       <div class="container-x space-y-1 py-4">
         <a href="index.html" class="block rounded-lg px-3 py-3 text-base font-medium bg-brand-50 text-brand-700 dark:bg-brand-900/60 dark:text-accent-400" aria-current="page">Start</a>
         <a href="leistungen.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Leistungen</a>
         <a href="technologien.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Technologien</a>
         <a href="referenzen.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Referenzen</a>
+        <a href="wissen.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Wissen</a>
         <a href="unternehmen.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Unternehmen</a>
         <a href="kontakt.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Kontakt</a>
-        <a href="kontakt.html" class="btn-primary mt-3 w-full">Anfrage stellen</a>
+        <a href="anfrage.html" class="btn-primary mt-3 w-full">Anfrage stellen</a>
       </div>
     </nav>
   </header>
 
   <main id="inhalt" class="flex-1">
-    <!-- Hero -->
     <section class="relative overflow-hidden bg-brand-900 text-white">
       <div class="blueprint absolute inset-0" aria-hidden="true"></div>
       <div class="absolute -left-40 top-1/3 h-[28rem] w-[28rem] rounded-full bg-brand-500/30 blur-3xl" aria-hidden="true"></div>
@@ -98,7 +107,7 @@
           <h1 class="mt-5 text-4xl font-bold leading-[1.1] text-white sm:text-5xl lg:text-6xl">Präzision, die passt. <span class="text-accent-400">Vom Modell bis zur Baugruppe.</span></h1>
           <p class="mt-6 max-w-xl text-lg leading-relaxed text-brand-100">Berben Engineering fertigt hochkomplexe Bauteile und Baugruppen für Luftfahrt, Medizintechnik, Pharma und Maschinenbau – mit modernem Maschinenpark, digitaler Prozesskette und Ingenieurwissen aus einer Hand.</p>
           <div class="mt-9 flex flex-col gap-3 sm:flex-row">
-            <a href="kontakt.html" class="btn-light">Projekt anfragen <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <a href="anfrage.html" class="btn-light">Projekt anfragen <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             <a href="leistungen.html" class="btn-ghost-light">Leistungen entdecken</a>
           </div>
           <ul class="mt-10 grid gap-3 text-sm text-brand-100 sm:grid-cols-3">
@@ -113,7 +122,6 @@
       </div>
     </section>
 
-    <!-- Kennzahlen -->
     <section aria-label="Kennzahlen" class="relative z-10 -mt-10">
       <div class="container-x">
         <dl class="grid grid-cols-2 divide-slate-200 rounded-2xl border border-slate-200 bg-white shadow-xl shadow-brand-900/5 lg:grid-cols-4 lg:divide-x [&>div]:flex [&>div]:flex-col dark:divide-ink-700 dark:border-ink-700 dark:bg-ink-800">
@@ -137,7 +145,6 @@
       </div>
     </section>
 
-    <!-- Leistungen -->
     <section class="section">
       <div class="container-x">
         <div class="reveal max-w-2xl mx-auto text-center">
@@ -186,7 +193,6 @@
       </div>
     </section>
 
-    <!-- Warum Berben -->
     <section class="section bg-slate-50 dark:bg-ink-900">
       <div class="container-x grid items-center gap-14 lg:grid-cols-2">
         <div class="reveal overflow-hidden rounded-3xl shadow-2xl shadow-brand-900/10">
@@ -207,7 +213,6 @@
       </div>
     </section>
 
-    <!-- Prozess -->
     <section class="section">
       <div class="container-x">
         <div class="reveal max-w-2xl mx-auto text-center">
@@ -240,7 +245,6 @@
       </div>
     </section>
 
-    <!-- Branchen -->
     <section class="section relative overflow-hidden bg-brand-900">
       <div class="blueprint absolute inset-0" aria-hidden="true"></div>
       <div class="container-x relative">
@@ -269,21 +273,32 @@
       </div>
     </section>
 
-    <!-- Referenz-Highlight -->
     <section class="section">
       <div class="container-x grid items-center gap-14 lg:grid-cols-2">
-        <div class="reveal lg:order-2 overflow-hidden rounded-3xl shadow-2xl shadow-brand-900/10">
+        <div class="reveal overflow-hidden rounded-3xl shadow-2xl shadow-brand-900/10 lg:order-2">
           <img src="assets/img/quality.svg" alt="Illustration: Koordinatenmessung eines Bauteils mit Messprotokoll" width="800" height="400" loading="lazy" class="w-full" />
         </div>
         <div class="reveal lg:order-1">
           <p class="eyebrow">Referenz</p>
           <h2 class="h-section">Pharma-Edelstahl-Serie: mehrere tausend Teile, null Reklamationen</h2>
           <p class="lead">Für einen Hersteller von Injektionssystemen fertigen wir rotationssymmetrische Präzisionsteile aus 1.4404 – mit statistischer Prozesslenkung (SPC) und 100&nbsp;%-Prüfung jedes einzelnen Teils.</p>
-          <div class="mt-8 flex flex-wrap gap-3">
-            <span class="chip">Edelstahl 1.4404</span><span class="chip">SPC</span><span class="chip">100&nbsp;%-Prüfung</span><span class="chip">Cpk &gt; 1,67</span>
-          </div>
+          <div class="mt-8 flex flex-wrap gap-3"><span class="chip">1.4404</span><span class="chip">SPC</span><span class="chip">100&nbsp;%-Prüfung</span><span class="chip">Cpk &gt; 1,67</span></div>
           <a href="referenzen.html" class="btn-outline mt-8">Alle Referenzen <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
+      </div>
+    </section>
+
+    <section class="section pt-0">
+      <div class="container-x">
+        <a href="passungsrechner.html" class="reveal group flex flex-col gap-6 rounded-3xl border border-slate-200 bg-slate-50 p-8 transition hover:border-brand-200 hover:shadow-xl md:flex-row md:items-center md:p-10 dark:border-ink-700 dark:bg-ink-900">
+          <span class="flex h-16 w-16 flex-none items-center justify-center rounded-2xl bg-brand-700 text-white"><svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h4"/></svg></span>
+          <span class="flex-1">
+            <span class="eyebrow">Kostenloses Werkzeug</span>
+            <span class="mt-2 block text-2xl font-bold text-slate-900 dark:text-white">ISO-Passungsrechner</span>
+            <span class="mt-2 block text-slate-600 dark:text-slate-400">Abmaße, Grenzmaße und Spiel bzw. Übermaß für Passungen wie H7/g6 sofort berechnen – direkt im Browser.</span>
+          </span>
+          <span class="inline-flex items-center gap-2 font-semibold text-brand-700 dark:text-accent-400">Zum Rechner <svg class="h-5 w-5 transition group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </a>
       </div>
     </section>
 
@@ -295,10 +310,10 @@
           <div class="relative grid items-center gap-8 lg:grid-cols-3">
             <div class="lg:col-span-2">
               <h2 class="text-3xl font-bold text-white md:text-4xl">Sie haben ein Projekt? Wir haben die Lösung.</h2>
-              <p class="mt-4 max-w-2xl text-lg text-brand-100">Senden Sie uns Ihre Zeichnung oder Ihr 3D-Modell (STEP, IGES, PDF). Sie erhalten innerhalb von 48 Stunden eine fundierte Einschätzung und ein verbindliches Angebot.</p>
+              <p class="mt-4 max-w-2xl text-lg text-brand-100">Beschreiben Sie Ihr Bauteil in drei kurzen Schritten oder senden Sie uns direkt Ihre Zeichnung. Sie erhalten innerhalb von 48 Stunden ein verbindliches Angebot.</p>
             </div>
             <div class="flex flex-col gap-3 sm:flex-row lg:flex-col lg:items-end">
-              <a href="kontakt.html" class="btn-light">Angebot anfordern <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+              <a href="anfrage.html" class="btn-light">Angebot anfordern <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
               <a href="tel:+49123456789" class="btn-ghost-light"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +49 123 456789</a>
             </div>
           </div>
@@ -309,12 +324,13 @@
 
   <footer class="bg-brand-950 text-slate-400">
     <div class="container-x grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
-      <div class="lg:col-span-1">
+      <div>
         <a href="index.html" class="flex items-center gap-3">
           <img src="assets/img/logo-mark-white.png" alt="" width="34" height="38" class="h-9 w-auto" />
           <span class="leading-tight text-white"><span class="block font-extrabold tracking-wide">BERBEN</span><span class="block text-[0.62rem] font-semibold tracking-[0.2em] text-slate-400">ENGINEERING GMBH</span></span>
         </a>
         <p class="mt-5 text-sm leading-relaxed">Präzisionsfertigung, CAD/CAM-Engineering und Systemmontage für anspruchsvolle Branchen – aus einer Hand.</p>
+        <a href="assets/downloads/berben-firmenprofil.pdf" class="mt-5 inline-flex items-center gap-2 text-sm font-medium text-accent-400 hover:text-white" download><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg> Firmenprofil (PDF)</a>
       </div>
       <div>
         <h2 class="text-sm font-semibold uppercase tracking-wider text-white">Leistungen</h2>
@@ -330,10 +346,10 @@
         <h2 class="text-sm font-semibold uppercase tracking-wider text-white">Unternehmen</h2>
         <ul class="mt-4 space-y-2.5 text-sm">
           <li><a href="unternehmen.html" class="hover:text-white">Über uns</a></li>
-          <li><a href="technologien.html" class="hover:text-white">Technologien</a></li>
+          <li><a href="karriere.html" class="hover:text-white">Karriere</a></li>
           <li><a href="referenzen.html" class="hover:text-white">Referenzen</a></li>
-          <li><a href="unternehmen.html#karriere" class="hover:text-white">Karriere</a></li>
-          <li><a href="kontakt.html#faq" class="hover:text-white">Häufige Fragen</a></li>
+          <li><a href="passungsrechner.html" class="hover:text-white">Passungsrechner</a></li>
+          <li><a href="wissen.html" class="hover:text-white">Fachwissen</a></li>
         </ul>
       </div>
       <div>

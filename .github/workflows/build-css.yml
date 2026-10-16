@@ -4,7 +4,7 @@ name: CSS bauen
 on:
   push:
     branches: [main]
-    paths: ['*.html', 'assets/js/**', 'src/**', 'tailwind.config.js', 'package.json']
+    paths: ['*.html', 'en/**', 'assets/js/**', 'src/**', 'tailwind.config.js', 'package.json']
   workflow_dispatch:
 
 permissions:
