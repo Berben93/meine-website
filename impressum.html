@@ -3,80 +3,129 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Impressum – Berben Engineering GmbH</title>
+  <title>Impressum | Berben Engineering GmbH</title>
   <meta name="description" content="Impressum der Berben Engineering GmbH." />
   <link rel="canonical" href="https://www.berben-engineering.de/impressum.html" />
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="de_DE" />
   <meta property="og:site_name" content="Berben Engineering GmbH" />
-  <meta property="og:title" content="Impressum – Berben Engineering GmbH" />
+  <meta property="og:title" content="Impressum | Berben Engineering GmbH" />
   <meta property="og:description" content="Impressum der Berben Engineering GmbH." />
   <meta property="og:url" content="https://www.berben-engineering.de/impressum.html" />
-  <meta property="og:image" content="https://www.berben-engineering.de/cnc.jpg" />
-  <meta name="theme-color" content="#000000" />
+  <meta property="og:image" content="https://www.berben-engineering.de/assets/img/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#003a6d" />
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script src="assets/js/main.js" defer></script>
 </head>
-<body class="bg-gray-900 text-white font-sans antialiased flex flex-col min-h-screen">
-  <a href="#inhalt" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] bg-blue-600 px-4 py-2 rounded">Zum Inhalt springen</a>
+<body class="flex min-h-screen flex-col">
+  <a href="#inhalt" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-brand-700 focus:px-4 focus:py-2 focus:text-white">Zum Inhalt springen</a>
 
-  <!-- Navigation -->
-  <nav class="bg-black/95 backdrop-blur sticky top-0 z-50 shadow-md" aria-label="Hauptnavigation">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center justify-between gap-2">
-      <a href="index.html" class="flex items-center gap-2 font-bold">
-        <img src="logo.png" alt="" width="32" height="32" class="w-8 h-8" />
-        <span>Berben Engineering</span>
+  <header data-header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur-md transition-shadow">
+    <div class="container-x flex h-16 items-center justify-between gap-6 lg:h-20">
+      <a href="index.html" class="flex items-center gap-3" aria-label="Berben Engineering – zur Startseite">
+        <img src="assets/img/logo-mark.png" alt="" width="34" height="38" class="h-9 w-auto" />
+        <span class="leading-tight">
+          <span class="block text-base font-extrabold tracking-wide text-brand-700">BERBEN</span>
+          <span class="block text-[0.62rem] font-semibold tracking-[0.2em] text-slate-500">ENGINEERING GMBH</span>
+        </span>
       </a>
-      <div class="flex flex-wrap justify-center gap-x-5 gap-y-1 text-sm md:text-base">
-        <a href="index.html" class="px-1 py-1 text-blue-300 hover:text-white transition">Start</a>
-        <a href="leistungen.html" class="px-1 py-1 text-blue-300 hover:text-white transition">Leistungen</a>
-        <a href="technologien.html" class="px-1 py-1 text-blue-300 hover:text-white transition">Technologien</a>
-        <a href="referenzen.html" class="px-1 py-1 text-blue-300 hover:text-white transition">Referenzen</a>
-        <a href="unternehmen.html" class="px-1 py-1 text-blue-300 hover:text-white transition">Unternehmen</a>
-        <a href="kontakt.html" class="px-1 py-1 text-blue-300 hover:text-white transition">Kontakt</a>
+      <nav class="hidden items-center gap-1 lg:flex" aria-label="Hauptnavigation">
+          <a href="leistungen.html" class="nav-link">Leistungen</a>
+          <a href="technologien.html" class="nav-link">Technologien</a>
+          <a href="referenzen.html" class="nav-link">Referenzen</a>
+          <a href="unternehmen.html" class="nav-link">Unternehmen</a>
+          <a href="kontakt.html" class="nav-link">Kontakt</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="kontakt.html" class="btn-primary hidden sm:inline-flex">Anfrage stellen <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <button type="button" data-menu-toggle class="inline-flex h-11 w-11 items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 lg:hidden" aria-controls="mobile-menu" aria-expanded="false" aria-label="Menü öffnen">
+          <span data-icon-open><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></span><span data-icon-close class="hidden"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span>
+        </button>
       </div>
     </div>
-  </nav>
+    <nav id="mobile-menu" class="hidden border-t border-slate-200 bg-white lg:hidden" aria-label="Mobile Navigation">
+      <div class="container-x space-y-1 py-4">
+        <a href="index.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50">Start</a>
+        <a href="leistungen.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50">Leistungen</a>
+        <a href="technologien.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50">Technologien</a>
+        <a href="referenzen.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50">Referenzen</a>
+        <a href="unternehmen.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50">Unternehmen</a>
+        <a href="kontakt.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50">Kontakt</a>
+        <a href="kontakt.html" class="btn-primary mt-3 w-full">Anfrage stellen</a>
+      </div>
+    </nav>
+  </header>
 
-  <main id="inhalt" class="max-w-3xl mx-auto px-6 py-16 w-full text-gray-300 space-y-6">
-    <h1 class="text-4xl font-bold text-white mb-8">Impressum</h1>
-    <section>
-      <h2 class="text-xl font-semibold text-blue-400 mb-2">Angaben gemäß § 5 DDG</h2>
-      <p>Berben Engineering GmbH<br />Musterstraße 1<br />12345 Musterstadt</p>
+  <main id="inhalt" class="flex-1">
+    <section class="border-b border-slate-200 bg-slate-50">
+      <div class="container-x max-w-3xl py-14"><h1 class="hyphens-auto break-words text-3xl font-bold sm:text-4xl">Impressum</h1></div>
     </section>
-    <section>
-      <h2 class="text-xl font-semibold text-blue-400 mb-2">Vertreten durch</h2>
-      <p>Geschäftsführer: <span class="bg-yellow-300 text-black px-1 rounded">[bitte ergänzen]</span></p>
-    </section>
-    <section>
-      <h2 class="text-xl font-semibold text-blue-400 mb-2">Kontakt</h2>
-      <p>Telefon: +49 123 456789<br />E-Mail: <a href="mailto:info@berben-engineering.de" class="text-blue-400 hover:text-white">info@berben-engineering.de</a></p>
-    </section>
-    <section>
-      <h2 class="text-xl font-semibold text-blue-400 mb-2">Registereintrag</h2>
-      <p>Registergericht: Amtsgericht <span class="bg-yellow-300 text-black px-1 rounded">[bitte ergänzen]</span><br />Registernummer: HRB <span class="bg-yellow-300 text-black px-1 rounded">[bitte ergänzen]</span></p>
-    </section>
-    <section>
-      <h2 class="text-xl font-semibold text-blue-400 mb-2">Umsatzsteuer-ID</h2>
-      <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: DE <span class="bg-yellow-300 text-black px-1 rounded">[bitte ergänzen]</span></p>
-    </section>
-    <section>
-      <h2 class="text-xl font-semibold text-blue-400 mb-2">Verbraucherstreitbeilegung</h2>
-      <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+    <section class="container-x max-w-3xl py-14">
+      <div class="prose-legal hyphens-auto break-words text-slate-600">
+        <h2>Angaben gemäß § 5 DDG</h2>
+        <p>Berben Engineering GmbH<br />Musterstraße 1<br />12345 Musterstadt</p>
+        <h2>Vertreten durch</h2>
+        <p>Geschäftsführer: <mark class="rounded bg-amber-200 px-1 text-slate-900">[bitte ergänzen]</mark></p>
+        <h2>Kontakt</h2>
+        <p>Telefon: +49 123 456789<br />E-Mail: <a href="mailto:info@berben-engineering.de">info@berben-engineering.de</a></p>
+        <h2>Registereintrag</h2>
+        <p>Registergericht: Amtsgericht <mark class="rounded bg-amber-200 px-1 text-slate-900">[bitte ergänzen]</mark><br />Registernummer: HRB <mark class="rounded bg-amber-200 px-1 text-slate-900">[bitte ergänzen]</mark></p>
+        <h2>Umsatzsteuer-ID</h2>
+        <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: DE <mark class="rounded bg-amber-200 px-1 text-slate-900">[bitte ergänzen]</mark></p>
+        <h2>Verbraucherstreitbeilegung</h2>
+        <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+      </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-black text-gray-400 text-sm mt-auto">
-    <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row gap-4 justify-between items-center text-center md:text-left">
-      <p>&copy; <span id="jahr">2025</span> Berben Engineering GmbH · Made with Präzision &amp; Leidenschaft</p>
-      <p class="flex gap-4">
-        <a href="kontakt.html" class="hover:text-white">Kontakt</a>
-        <a href="impressum.html" class="hover:text-white">Impressum</a>
-        <a href="datenschutz.html" class="hover:text-white">Datenschutz</a>
-      </p>
+  <footer class="bg-brand-950 text-slate-400">
+    <div class="container-x grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
+      <div class="lg:col-span-1">
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="assets/img/logo-mark-white.png" alt="" width="34" height="38" class="h-9 w-auto" />
+          <span class="leading-tight text-white"><span class="block font-extrabold tracking-wide">BERBEN</span><span class="block text-[0.62rem] font-semibold tracking-[0.2em] text-slate-400">ENGINEERING GMBH</span></span>
+        </a>
+        <p class="mt-5 text-sm leading-relaxed">Präzisionsfertigung, CAD/CAM-Engineering und Systemmontage für anspruchsvolle Branchen – aus einer Hand.</p>
+      </div>
+      <div>
+        <h2 class="text-sm font-semibold uppercase tracking-wider text-white">Leistungen</h2>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          <li><a href="leistungen.html#cnc" class="hover:text-white">CNC-Fertigung</a></li>
+          <li><a href="leistungen.html#cadcam" class="hover:text-white">CAD/CAM-Entwicklung</a></li>
+          <li><a href="leistungen.html#montage" class="hover:text-white">Systemmontage</a></li>
+          <li><a href="leistungen.html#prototyping" class="hover:text-white">Rapid Prototyping</a></li>
+          <li><a href="leistungen.html#qualitaet" class="hover:text-white">Qualitätssicherung</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-sm font-semibold uppercase tracking-wider text-white">Unternehmen</h2>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          <li><a href="unternehmen.html" class="hover:text-white">Über uns</a></li>
+          <li><a href="technologien.html" class="hover:text-white">Technologien</a></li>
+          <li><a href="referenzen.html" class="hover:text-white">Referenzen</a></li>
+          <li><a href="unternehmen.html#karriere" class="hover:text-white">Karriere</a></li>
+          <li><a href="kontakt.html#faq" class="hover:text-white">Häufige Fragen</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-sm font-semibold uppercase tracking-wider text-white">Kontakt</h2>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li class="flex gap-3"><svg class="h-5 w-5 flex-none text-accent-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Musterstraße 1<br />12345 Musterstadt</span></li>
+          <li class="flex gap-3"><svg class="h-5 w-5 flex-none text-accent-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+49123456789" class="hover:text-white">+49 123 456789</a></li>
+          <li class="flex gap-3"><svg class="h-5 w-5 flex-none text-accent-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><a href="mailto:info@berben-engineering.de" class="break-all hover:text-white">info@berben-engineering.de</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="container-x flex flex-col items-center justify-between gap-3 py-6 text-xs sm:flex-row">
+        <p>&copy; <span data-year>2026</span> Berben Engineering GmbH. Alle Rechte vorbehalten.</p>
+        <p class="flex gap-5"><a href="impressum.html" class="hover:text-white">Impressum</a><a href="datenschutz.html" class="hover:text-white">Datenschutz</a></p>
+      </div>
     </div>
   </footer>
-  <script>document.getElementById('jahr').textContent = new Date().getFullYear();</script>
 </body>
 </html>
