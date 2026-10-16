@@ -8,6 +8,30 @@
     el.textContent = new Date().getFullYear();
   });
 
+  // Hell/Dunkel-Umschalter (Standard: Einstellung des Geräts)
+  var root = document.documentElement;
+  var themeBtn = document.querySelector('[data-theme-toggle]');
+  var media = window.matchMedia('(prefers-color-scheme: dark)');
+  var stored = function () { try { return localStorage.getItem('theme'); } catch (e) { return null; } };
+  var applyTheme = function (dark) {
+    root.classList.toggle('dark', dark);
+    if (themeBtn) {
+      themeBtn.setAttribute('aria-pressed', String(dark));
+      themeBtn.setAttribute('aria-label', dark ? 'Helles Design aktivieren' : 'Dunkles Design aktivieren');
+    }
+  };
+  applyTheme(root.classList.contains('dark'));
+  if (themeBtn) {
+    themeBtn.addEventListener('click', function () {
+      var dark = !root.classList.contains('dark');
+      applyTheme(dark);
+      try { localStorage.setItem('theme', dark ? 'dark' : 'light'); } catch (e) { /* privater Modus */ }
+    });
+  }
+  media.addEventListener('change', function (e) {
+    if (!stored()) applyTheme(e.matches);
+  });
+
   // Header: Schatten beim Scrollen
   var header = document.querySelector('[data-header]');
   if (header) {
@@ -86,7 +110,7 @@
     var submit = form.querySelector('button[type="submit"]');
     var show = function (ok, text) {
       result.hidden = false;
-      result.className = 'rounded-lg p-4 text-sm ' + (ok ? 'bg-emerald-50 text-emerald-800' : 'bg-red-50 text-red-800');
+      result.className = 'rounded-lg p-4 text-sm ' + (ok ? 'bg-emerald-50 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200' : 'bg-red-50 text-red-800 dark:bg-red-950 dark:text-red-200');
       result.textContent = text;
       result.focus();
     };

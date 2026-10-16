@@ -14,7 +14,10 @@
   <meta property="og:url" content="https://www.berben-engineering.de/leistungen.html" />
   <meta property="og:image" content="https://www.berben-engineering.de/assets/img/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="theme-color" content="#003a6d" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#06111f" media="(prefers-color-scheme: dark)" />
+  <script>try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark')}catch(e){}</script>
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
@@ -24,13 +27,14 @@
 <body class="flex min-h-screen flex-col">
   <a href="#inhalt" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-brand-700 focus:px-4 focus:py-2 focus:text-white">Zum Inhalt springen</a>
 
-  <header data-header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur-md transition-shadow">
+  <header data-header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur-md transition-shadow dark:border-ink-700 dark:bg-ink-950/90">
     <div class="container-x flex h-16 items-center justify-between gap-6 lg:h-20">
       <a href="index.html" class="flex items-center gap-3" aria-label="Berben Engineering – zur Startseite">
-        <img src="assets/img/logo-mark.png" alt="" width="34" height="38" class="h-9 w-auto" />
+        <img src="assets/img/logo-mark.png" alt="" width="34" height="38" class="h-9 w-auto dark:hidden" />
+        <img src="assets/img/logo-mark-white.png" alt="" width="34" height="38" class="hidden h-9 w-auto dark:block" />
         <span class="leading-tight">
-          <span class="block text-base font-extrabold tracking-wide text-brand-700">BERBEN</span>
-          <span class="block text-[0.62rem] font-semibold tracking-[0.2em] text-slate-500">ENGINEERING GMBH</span>
+          <span class="block text-base font-extrabold tracking-wide text-brand-700 dark:text-white">BERBEN</span>
+          <span class="block text-[0.62rem] font-semibold tracking-[0.2em] text-slate-500 dark:text-slate-400">ENGINEERING GMBH</span>
         </span>
       </a>
       <nav class="hidden items-center gap-1 lg:flex" aria-label="Hauptnavigation">
@@ -41,20 +45,23 @@
           <a href="kontakt.html" class="nav-link">Kontakt</a>
       </nav>
       <div class="flex items-center gap-2">
+        <button type="button" data-theme-toggle class="inline-flex h-11 w-11 items-center justify-center rounded-lg text-slate-600 transition hover:bg-slate-100 hover:text-brand-700 dark:text-slate-300 dark:hover:bg-ink-700 dark:hover:text-accent-400" aria-label="Dunkles Design aktivieren" aria-pressed="false" title="Hell/Dunkel umschalten">
+          <span class="dark:hidden"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span><span class="hidden dark:block"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></span>
+        </button>
         <a href="kontakt.html" class="btn-primary hidden sm:inline-flex">Anfrage stellen <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        <button type="button" data-menu-toggle class="inline-flex h-11 w-11 items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 lg:hidden" aria-controls="mobile-menu" aria-expanded="false" aria-label="Menü öffnen">
+        <button type="button" data-menu-toggle class="inline-flex h-11 w-11 items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 lg:hidden dark:text-slate-300 dark:hover:bg-ink-700" aria-controls="mobile-menu" aria-expanded="false" aria-label="Menü öffnen">
           <span data-icon-open><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></span><span data-icon-close class="hidden"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span>
         </button>
       </div>
     </div>
-    <nav id="mobile-menu" class="hidden border-t border-slate-200 bg-white lg:hidden" aria-label="Mobile Navigation">
+    <nav id="mobile-menu" class="hidden border-t border-slate-200 bg-white lg:hidden dark:border-ink-700 dark:bg-ink-800" aria-label="Mobile Navigation">
       <div class="container-x space-y-1 py-4">
-        <a href="index.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50">Start</a>
-        <a href="leistungen.html" class="block rounded-lg px-3 py-3 text-base font-medium bg-brand-50 text-brand-700" aria-current="page">Leistungen</a>
-        <a href="technologien.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50">Technologien</a>
-        <a href="referenzen.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50">Referenzen</a>
-        <a href="unternehmen.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50">Unternehmen</a>
-        <a href="kontakt.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50">Kontakt</a>
+        <a href="index.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Start</a>
+        <a href="leistungen.html" class="block rounded-lg px-3 py-3 text-base font-medium bg-brand-50 text-brand-700 dark:bg-brand-900/60 dark:text-accent-400" aria-current="page">Leistungen</a>
+        <a href="technologien.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Technologien</a>
+        <a href="referenzen.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Referenzen</a>
+        <a href="unternehmen.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Unternehmen</a>
+        <a href="kontakt.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Kontakt</a>
         <a href="kontakt.html" class="btn-primary mt-3 w-full">Anfrage stellen</a>
       </div>
     </nav>
@@ -74,109 +81,109 @@
       </div>
     </section>
 
-    <div class="border-b border-slate-200 bg-white">
+    <div class="border-b border-slate-200 bg-white dark:border-ink-700 dark:bg-ink-800">
       <nav class="container-x flex flex-wrap gap-2 py-5" aria-label="Leistungen auf dieser Seite">
-          <a href="#cnc" class="chip hover:border-brand-700 hover:text-brand-700">CNC-Fertigung</a>
-          <a href="#cadcam" class="chip hover:border-brand-700 hover:text-brand-700">CAD/CAM-Entwicklung</a>
-          <a href="#montage" class="chip hover:border-brand-700 hover:text-brand-700">Systemmontage</a>
-          <a href="#engineering" class="chip hover:border-brand-700 hover:text-brand-700">Engineering &amp; Beratung</a>
-          <a href="#prototyping" class="chip hover:border-brand-700 hover:text-brand-700">Rapid Prototyping</a>
-          <a href="#qualitaet" class="chip hover:border-brand-700 hover:text-brand-700">Qualitätssicherung</a>
+          <a href="#cnc" class="chip hover:border-brand-700 hover:text-brand-700 dark:hover:border-accent-400 dark:hover:text-accent-400">CNC-Fertigung</a>
+          <a href="#cadcam" class="chip hover:border-brand-700 hover:text-brand-700 dark:hover:border-accent-400 dark:hover:text-accent-400">CAD/CAM-Entwicklung</a>
+          <a href="#montage" class="chip hover:border-brand-700 hover:text-brand-700 dark:hover:border-accent-400 dark:hover:text-accent-400">Systemmontage</a>
+          <a href="#engineering" class="chip hover:border-brand-700 hover:text-brand-700 dark:hover:border-accent-400 dark:hover:text-accent-400">Engineering &amp; Beratung</a>
+          <a href="#prototyping" class="chip hover:border-brand-700 hover:text-brand-700 dark:hover:border-accent-400 dark:hover:text-accent-400">Rapid Prototyping</a>
+          <a href="#qualitaet" class="chip hover:border-brand-700 hover:text-brand-700 dark:hover:border-accent-400 dark:hover:text-accent-400">Qualitätssicherung</a>
       </nav>
     </div>
 
-    <section id="cnc" class="section ">
+    <section id="cnc" class="section">
       <div class="container-x grid items-center gap-14 lg:grid-cols-2">
-        <div class="reveal  overflow-hidden rounded-3xl shadow-2xl shadow-brand-900/10"><img src="assets/img/cnc.svg" alt="Illustration: CNC-Fräsbearbeitung" width="800" height="400" loading="lazy" class="w-full" /></div>
+        <div class="reveal overflow-hidden rounded-3xl shadow-2xl shadow-brand-900/10"><img src="assets/img/cnc.svg" alt="Illustration: CNC-Fräsbearbeitung" width="800" height="400" loading="lazy" class="w-full" /></div>
         <div class="reveal">
           <span class="icon-box"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68 1.65 1.65 0 0 0 10 3.17V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span>
           <h2 class="mt-5 text-3xl font-bold">CNC-Fertigung</h2>
           <p class="lead">Hochpräzise 3- und 5-Achs-Zerspanung für Einzelteile und Serien. Moderne Steuerungen, thermisch stabile Maschinen und Präzisionsspanntechnik sorgen für Maßhaltigkeit im µm-Bereich – auch bei komplexen Freiformflächen.</p>
-        <ul class="mt-6 space-y-3 text-slate-700">
-          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>5-Achs-Simultanfräsen und Dreh-Fräs-Bearbeitung</span></li>
-          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Toleranzen bis ±0,005 mm, Oberflächen bis Ra 0,2</span></li>
-          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Werkstücke bis 800 × 600 × 500 mm</span></li>
-          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Losgrößen von 1 bis mehrere tausend Stück</span></li>
+        <ul class="mt-6 space-y-3 text-slate-700 dark:text-slate-300">
+          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700 dark:bg-brand-900/60 dark:text-accent-400"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>5-Achs-Simultanfräsen und Dreh-Fräs-Bearbeitung</span></li>
+          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700 dark:bg-brand-900/60 dark:text-accent-400"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Toleranzen bis ±0,005 mm, Oberflächen bis Ra 0,2</span></li>
+          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700 dark:bg-brand-900/60 dark:text-accent-400"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Werkstücke bis 800 × 600 × 500 mm</span></li>
+          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700 dark:bg-brand-900/60 dark:text-accent-400"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Losgrößen von 1 bis mehrere tausend Stück</span></li>
         </ul>
         </div>
       </div>
     </section>
-    <section id="cadcam" class="section bg-slate-50">
+    <section id="cadcam" class="section bg-slate-50 dark:bg-ink-900">
       <div class="container-x grid items-center gap-14 lg:grid-cols-2">
         <div class="reveal lg:order-2 overflow-hidden rounded-3xl shadow-2xl shadow-brand-900/10"><img src="assets/img/cadcam.svg" alt="Illustration: CAD-Modell mit Bemaßung und NC-Code" width="800" height="400" loading="lazy" class="w-full" /></div>
         <div class="reveal">
           <span class="icon-box"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.3 7 12 12l8.7-5M12 22V12"/></svg></span>
           <h2 class="mt-5 text-3xl font-bold">CAD/CAM-Entwicklung</h2>
           <p class="lead">Von der Idee zur Fertigung: Wir konstruieren Bauteile und Baugruppen in 3D, prüfen sie per Simulation und erzeugen kollisionsgeprüfte NC-Programme – nahtlos integriert in Ihren Workflow.</p>
-        <ul class="mt-6 space-y-3 text-slate-700">
-          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>3D-Konstruktion in SolidWorks und Inventor</span></li>
-          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>FEM-Simulation und Toleranzanalyse</span></li>
-          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>CAM-Programmierung mit Maschinensimulation</span></li>
-          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Datenübernahme in allen gängigen Formaten (STEP, IGES, Parasolid)</span></li>
+        <ul class="mt-6 space-y-3 text-slate-700 dark:text-slate-300">
+          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700 dark:bg-brand-900/60 dark:text-accent-400"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>3D-Konstruktion in SolidWorks und Inventor</span></li>
+          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700 dark:bg-brand-900/60 dark:text-accent-400"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>FEM-Simulation und Toleranzanalyse</span></li>
+          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700 dark:bg-brand-900/60 dark:text-accent-400"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>CAM-Programmierung mit Maschinensimulation</span></li>
+          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700 dark:bg-brand-900/60 dark:text-accent-400"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Datenübernahme in allen gängigen Formaten (STEP, IGES, Parasolid)</span></li>
         </ul>
         </div>
       </div>
     </section>
-    <section id="montage" class="section ">
+    <section id="montage" class="section">
       <div class="container-x grid items-center gap-14 lg:grid-cols-2">
-        <div class="reveal  overflow-hidden rounded-3xl shadow-2xl shadow-brand-900/10"><img src="assets/img/montage.svg" alt="Illustration: Explosionsdarstellung einer Baugruppe" width="800" height="400" loading="lazy" class="w-full" /></div>
+        <div class="reveal overflow-hidden rounded-3xl shadow-2xl shadow-brand-900/10"><img src="assets/img/montage.svg" alt="Illustration: Explosionsdarstellung einer Baugruppe" width="800" height="400" loading="lazy" class="w-full" /></div>
         <div class="reveal">
           <span class="icon-box"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <h2 class="mt-5 text-3xl font-bold">Systemmontage</h2>
           <p class="lead">Komplette Baugruppenmontage inklusive Funktionsprüfung, Dokumentation und Verpackung – ESD-geschützt und auf Wunsch unter Reinraumbedingungen.</p>
-        <ul class="mt-6 space-y-3 text-slate-700">
-          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Mechanische und elektromechanische Baugruppen</span></li>
-          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Montage unter Reinraum- und ESD-Bedingungen</span></li>
-          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Funktions- und Dichtheitsprüfung</span></li>
-          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Seriennummern, Prüfprotokolle und Rückverfolgbarkeit</span></li>
+        <ul class="mt-6 space-y-3 text-slate-700 dark:text-slate-300">
+          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700 dark:bg-brand-900/60 dark:text-accent-400"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Mechanische und elektromechanische Baugruppen</span></li>
+          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700 dark:bg-brand-900/60 dark:text-accent-400"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Montage unter Reinraum- und ESD-Bedingungen</span></li>
+          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700 dark:bg-brand-900/60 dark:text-accent-400"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Funktions- und Dichtheitsprüfung</span></li>
+          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700 dark:bg-brand-900/60 dark:text-accent-400"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Seriennummern, Prüfprotokolle und Rückverfolgbarkeit</span></li>
         </ul>
         </div>
       </div>
     </section>
-    <section id="engineering" class="section bg-slate-50">
+    <section id="engineering" class="section bg-slate-50 dark:bg-ink-900">
       <div class="container-x grid items-center gap-14 lg:grid-cols-2">
         <div class="reveal lg:order-2 flex aspect-[2/1] items-center justify-center overflow-hidden rounded-3xl bg-brand-900 shadow-2xl shadow-brand-900/10 relative"><div class="blueprint absolute inset-0" aria-hidden="true"></div><span class="relative flex h-28 w-28 items-center justify-center rounded-3xl bg-accent-500/15 text-accent-400 ring-1 ring-accent-400/30"><svg class="h-14 w-14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span></div>
         <div class="reveal">
           <span class="icon-box"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
           <h2 class="mt-5 text-3xl font-bold">Engineering &amp; Beratung</h2>
           <p class="lead">Gute Bauteile entstehen am Konstruktionstisch. Unsere Ingenieure optimieren Ihre Konstruktion frühzeitig auf Fertigbarkeit, Funktion und Kosten.</p>
-        <ul class="mt-6 space-y-3 text-slate-700">
-          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Fertigungsgerechtes Redesign (DFM)</span></li>
-          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Werkstoff- und Verfahrensauswahl</span></li>
-          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Festigkeitsnachweise und Bauteilanalyse</span></li>
-          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Kostenreduktion durch Prozessoptimierung</span></li>
+        <ul class="mt-6 space-y-3 text-slate-700 dark:text-slate-300">
+          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700 dark:bg-brand-900/60 dark:text-accent-400"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Fertigungsgerechtes Redesign (DFM)</span></li>
+          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700 dark:bg-brand-900/60 dark:text-accent-400"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Werkstoff- und Verfahrensauswahl</span></li>
+          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700 dark:bg-brand-900/60 dark:text-accent-400"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Festigkeitsnachweise und Bauteilanalyse</span></li>
+          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700 dark:bg-brand-900/60 dark:text-accent-400"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Kostenreduktion durch Prozessoptimierung</span></li>
         </ul>
         </div>
       </div>
     </section>
-    <section id="prototyping" class="section ">
+    <section id="prototyping" class="section">
       <div class="container-x grid items-center gap-14 lg:grid-cols-2">
-        <div class="reveal  flex aspect-[2/1] items-center justify-center overflow-hidden rounded-3xl bg-brand-900 shadow-2xl shadow-brand-900/10 relative"><div class="blueprint absolute inset-0" aria-hidden="true"></div><span class="relative flex h-28 w-28 items-center justify-center rounded-3xl bg-accent-500/15 text-accent-400 ring-1 ring-accent-400/30"><svg class="h-14 w-14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></span></div>
+        <div class="reveal flex aspect-[2/1] items-center justify-center overflow-hidden rounded-3xl bg-brand-900 shadow-2xl shadow-brand-900/10 relative"><div class="blueprint absolute inset-0" aria-hidden="true"></div><span class="relative flex h-28 w-28 items-center justify-center rounded-3xl bg-accent-500/15 text-accent-400 ring-1 ring-accent-400/30"><svg class="h-14 w-14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></span></div>
         <div class="reveal">
           <span class="icon-box"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></span>
           <h2 class="mt-5 text-3xl font-bold">Rapid Prototyping</h2>
           <p class="lead">Kurze Durchlaufzeiten für erste Funktionsmuster – vom 3D-Modell zum gefrästen Einzelstück in wenigen Tagen, im Express-Service innerhalb von 24 Stunden.</p>
-        <ul class="mt-6 space-y-3 text-slate-700">
-          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Express-Fertigung ab 24 Stunden</span></li>
-          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Prototypen aus Serienwerkstoff</span></li>
-          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Schnelle Iterationen mit direktem Feedback</span></li>
-          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Nahtloser Übergang in die Serie</span></li>
+        <ul class="mt-6 space-y-3 text-slate-700 dark:text-slate-300">
+          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700 dark:bg-brand-900/60 dark:text-accent-400"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Express-Fertigung ab 24 Stunden</span></li>
+          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700 dark:bg-brand-900/60 dark:text-accent-400"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Prototypen aus Serienwerkstoff</span></li>
+          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700 dark:bg-brand-900/60 dark:text-accent-400"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Schnelle Iterationen mit direktem Feedback</span></li>
+          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700 dark:bg-brand-900/60 dark:text-accent-400"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Nahtloser Übergang in die Serie</span></li>
         </ul>
         </div>
       </div>
     </section>
-    <section id="qualitaet" class="section bg-slate-50">
+    <section id="qualitaet" class="section bg-slate-50 dark:bg-ink-900">
       <div class="container-x grid items-center gap-14 lg:grid-cols-2">
         <div class="reveal lg:order-2 overflow-hidden rounded-3xl shadow-2xl shadow-brand-900/10"><img src="assets/img/quality.svg" alt="Illustration: Koordinatenmessung mit Messprotokoll" width="800" height="400" loading="lazy" class="w-full" /></div>
         <div class="reveal">
           <span class="icon-box"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3z"/><path d="m9 12 2 2 4-4"/></svg></span>
           <h2 class="mt-5 text-3xl font-bold">Qualitätssicherung</h2>
           <p class="lead">Qualität ist bei uns kein Endkontrollschritt, sondern Teil jedes Prozesses. Messungen erfolgen inline auf der Maschine und abschließend im klimatisierten Messraum.</p>
-        <ul class="mt-6 space-y-3 text-slate-700">
-          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>3D-Koordinatenmessgerät (CMM) und optische Messtechnik</span></li>
-          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Erstmusterprüfberichte (EMPB) nach VDA und PPAP</span></li>
-          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Werkszeugnisse nach DIN EN 10204 3.1</span></li>
-          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Statistische Prozesslenkung (SPC) für Serien</span></li>
+        <ul class="mt-6 space-y-3 text-slate-700 dark:text-slate-300">
+          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700 dark:bg-brand-900/60 dark:text-accent-400"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>3D-Koordinatenmessgerät (CMM) und optische Messtechnik</span></li>
+          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700 dark:bg-brand-900/60 dark:text-accent-400"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Erstmusterprüfberichte (EMPB) nach VDA und PPAP</span></li>
+          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700 dark:bg-brand-900/60 dark:text-accent-400"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Werkszeugnisse nach DIN EN 10204 3.1</span></li>
+          <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-50 text-brand-700 dark:bg-brand-900/60 dark:text-accent-400"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Statistische Prozesslenkung (SPC) für Serien</span></li>
         </ul>
         </div>
       </div>

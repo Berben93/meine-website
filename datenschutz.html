@@ -14,7 +14,10 @@
   <meta property="og:url" content="https://www.berben-engineering.de/datenschutz.html" />
   <meta property="og:image" content="https://www.berben-engineering.de/assets/img/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="theme-color" content="#003a6d" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#06111f" media="(prefers-color-scheme: dark)" />
+  <script>try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark')}catch(e){}</script>
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
@@ -24,13 +27,14 @@
 <body class="flex min-h-screen flex-col">
   <a href="#inhalt" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-brand-700 focus:px-4 focus:py-2 focus:text-white">Zum Inhalt springen</a>
 
-  <header data-header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur-md transition-shadow">
+  <header data-header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur-md transition-shadow dark:border-ink-700 dark:bg-ink-950/90">
     <div class="container-x flex h-16 items-center justify-between gap-6 lg:h-20">
       <a href="index.html" class="flex items-center gap-3" aria-label="Berben Engineering – zur Startseite">
-        <img src="assets/img/logo-mark.png" alt="" width="34" height="38" class="h-9 w-auto" />
+        <img src="assets/img/logo-mark.png" alt="" width="34" height="38" class="h-9 w-auto dark:hidden" />
+        <img src="assets/img/logo-mark-white.png" alt="" width="34" height="38" class="hidden h-9 w-auto dark:block" />
         <span class="leading-tight">
-          <span class="block text-base font-extrabold tracking-wide text-brand-700">BERBEN</span>
-          <span class="block text-[0.62rem] font-semibold tracking-[0.2em] text-slate-500">ENGINEERING GMBH</span>
+          <span class="block text-base font-extrabold tracking-wide text-brand-700 dark:text-white">BERBEN</span>
+          <span class="block text-[0.62rem] font-semibold tracking-[0.2em] text-slate-500 dark:text-slate-400">ENGINEERING GMBH</span>
         </span>
       </a>
       <nav class="hidden items-center gap-1 lg:flex" aria-label="Hauptnavigation">
@@ -41,31 +45,34 @@
           <a href="kontakt.html" class="nav-link">Kontakt</a>
       </nav>
       <div class="flex items-center gap-2">
+        <button type="button" data-theme-toggle class="inline-flex h-11 w-11 items-center justify-center rounded-lg text-slate-600 transition hover:bg-slate-100 hover:text-brand-700 dark:text-slate-300 dark:hover:bg-ink-700 dark:hover:text-accent-400" aria-label="Dunkles Design aktivieren" aria-pressed="false" title="Hell/Dunkel umschalten">
+          <span class="dark:hidden"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span><span class="hidden dark:block"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></span>
+        </button>
         <a href="kontakt.html" class="btn-primary hidden sm:inline-flex">Anfrage stellen <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        <button type="button" data-menu-toggle class="inline-flex h-11 w-11 items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 lg:hidden" aria-controls="mobile-menu" aria-expanded="false" aria-label="Menü öffnen">
+        <button type="button" data-menu-toggle class="inline-flex h-11 w-11 items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 lg:hidden dark:text-slate-300 dark:hover:bg-ink-700" aria-controls="mobile-menu" aria-expanded="false" aria-label="Menü öffnen">
           <span data-icon-open><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></span><span data-icon-close class="hidden"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span>
         </button>
       </div>
     </div>
-    <nav id="mobile-menu" class="hidden border-t border-slate-200 bg-white lg:hidden" aria-label="Mobile Navigation">
+    <nav id="mobile-menu" class="hidden border-t border-slate-200 bg-white lg:hidden dark:border-ink-700 dark:bg-ink-800" aria-label="Mobile Navigation">
       <div class="container-x space-y-1 py-4">
-        <a href="index.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50">Start</a>
-        <a href="leistungen.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50">Leistungen</a>
-        <a href="technologien.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50">Technologien</a>
-        <a href="referenzen.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50">Referenzen</a>
-        <a href="unternehmen.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50">Unternehmen</a>
-        <a href="kontakt.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50">Kontakt</a>
+        <a href="index.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Start</a>
+        <a href="leistungen.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Leistungen</a>
+        <a href="technologien.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Technologien</a>
+        <a href="referenzen.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Referenzen</a>
+        <a href="unternehmen.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Unternehmen</a>
+        <a href="kontakt.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Kontakt</a>
         <a href="kontakt.html" class="btn-primary mt-3 w-full">Anfrage stellen</a>
       </div>
     </nav>
   </header>
 
   <main id="inhalt" class="flex-1">
-    <section class="border-b border-slate-200 bg-slate-50">
+    <section class="border-b border-slate-200 bg-slate-50 dark:border-ink-700 dark:bg-ink-900">
       <div class="container-x max-w-3xl py-14"><h1 class="hyphens-auto break-words text-3xl font-bold sm:text-4xl">Datenschutzerklärung</h1></div>
     </section>
     <section class="container-x max-w-3xl py-14">
-      <div class="prose-legal hyphens-auto break-words text-slate-600">
+      <div class="prose-legal hyphens-auto break-words text-slate-600 dark:text-slate-400">
         <h2>1. Verantwortlicher</h2>
         <p>Berben Engineering GmbH, Musterstraße 1, 12345 Musterstadt<br />E-Mail: <a href="mailto:info@berben-engineering.de">info@berben-engineering.de</a></p>
         <h2>2. Hosting (GitHub Pages)</h2>
@@ -75,10 +82,10 @@
         <h2>4. Kontakt per E-Mail oder Telefon</h2>
         <p>Wenn Sie uns per E-Mail oder Telefon kontaktieren, verarbeiten wir Ihre Angaben ausschließlich zur Bearbeitung Ihres Anliegens (Art. 6 Abs. 1 lit. b bzw. f DSGVO).</p>
         <h2>5. Schriftarten, Cookies und Tracking</h2>
-        <p>Alle Schriftarten, Grafiken und Skripte werden direkt von unserem Server geladen – es werden keine Inhalte von Drittanbietern eingebunden. Diese Website setzt keine Cookies und verwendet keine Analyse- oder Tracking-Werkzeuge.</p>
+        <p>Alle Schriftarten, Grafiken und Skripte werden direkt von unserem Server geladen – es werden keine Inhalte von Drittanbietern eingebunden. Diese Website setzt keine Cookies und verwendet keine Analyse- oder Tracking-Werkzeuge. Wenn Sie zwischen hellem und dunklem Design umschalten, wird diese Auswahl ausschließlich lokal in Ihrem Browser gespeichert (localStorage) und nicht an uns übertragen.</p>
         <h2>6. Ihre Rechte</h2>
         <p>Sie haben das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) sowie Widerspruch (Art. 21). Eine erteilte Einwilligung können Sie jederzeit mit Wirkung für die Zukunft widerrufen. Zudem haben Sie das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren.</p>
-        <p class="text-sm text-slate-500">Stand: Oktober 2026</p>
+        <p class="text-sm text-slate-500 dark:text-slate-400">Stand: Oktober 2026</p>
       </div>
     </section>
   </main>
