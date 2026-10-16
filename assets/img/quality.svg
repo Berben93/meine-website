@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="Koordinatenmessung eines Bauteils">
+  <defs><pattern id="g" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#1e3a5f" stroke-width="1"/></pattern>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#002e57"/><stop offset="1" stop-color="#00152b"/></linearGradient></defs>
+  <rect width="800" height="400" fill="url(#bg)"/><rect width="800" height="400" fill="url(#g)"/>
+  <g fill="none" stroke="#7dd3fc" stroke-width="2.5" stroke-linejoin="round">
+    <path d="M200 60 H600 V90 H200 Z" fill="#003a6d"/>
+    <path d="M230 90 V330 M570 90 V330"/>
+    <path d="M385 90 H415 V200 H385 Z" fill="#0b4a85"/>
+    <path d="M400 200 V245"/>
+    <circle cx="400" cy="252" r="7" fill="#38bdf8"/>
+    <path d="M300 290 H500 L520 330 H280 Z" fill="#0ea5e9" fill-opacity=".14"/>
+    <circle cx="400" cy="300" r="14" fill="#00152b"/>
+  </g>
+  <g fill="#38bdf8"><circle cx="330" cy="292" r="3"/><circle cx="470" cy="292" r="3"/><circle cx="400" cy="286" r="3"/></g>
+  <g font-family="ui-monospace, monospace" font-size="13">
+    <rect x="610" y="150" width="170" height="104" rx="6" fill="#00152b" stroke="#1e3a5f"/>
+    <text x="624" y="176" fill="#7dd3fc">Ø 28,0012  ✓</text>
+    <text x="624" y="198" fill="#7dd3fc">⏥ 0,0018  ✓</text>
+    <text x="624" y="220" fill="#7dd3fc">⌖ 0,0031  ✓</text>
+    <text x="624" y="242" fill="#34d399">IO · Cpk 2,1</text>
+  </g>
+</svg>

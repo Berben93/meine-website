@@ -3,88 +3,215 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Unternehmen – Berben Engineering GmbH</title>
-  <meta name="description" content="Berben Engineering GmbH verbindet Maschinenbauwissen mit modernster Fertigungstechnologie – Mission, Vision und Werte." />
+  <title>Unternehmen | Berben Engineering GmbH</title>
+  <meta name="description" content="Berben Engineering GmbH verbindet Maschinenbauwissen mit modernster Fertigungstechnologie – Mission, Vision, Werte und Karriere." />
   <link rel="canonical" href="https://www.berben-engineering.de/unternehmen.html" />
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="de_DE" />
   <meta property="og:site_name" content="Berben Engineering GmbH" />
-  <meta property="og:title" content="Unternehmen – Berben Engineering GmbH" />
-  <meta property="og:description" content="Berben Engineering GmbH verbindet Maschinenbauwissen mit modernster Fertigungstechnologie – Mission, Vision und Werte." />
+  <meta property="og:title" content="Unternehmen | Berben Engineering GmbH" />
+  <meta property="og:description" content="Berben Engineering GmbH verbindet Maschinenbauwissen mit modernster Fertigungstechnologie – Mission, Vision, Werte und Karriere." />
   <meta property="og:url" content="https://www.berben-engineering.de/unternehmen.html" />
-  <meta property="og:image" content="https://www.berben-engineering.de/cnc.jpg" />
-  <meta name="theme-color" content="#000000" />
+  <meta property="og:image" content="https://www.berben-engineering.de/assets/img/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#003a6d" />
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script src="assets/js/main.js" defer></script>
 </head>
-<body class="bg-gray-900 text-white font-sans antialiased flex flex-col min-h-screen">
-  <a href="#inhalt" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] bg-blue-600 px-4 py-2 rounded">Zum Inhalt springen</a>
+<body class="flex min-h-screen flex-col">
+  <a href="#inhalt" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-brand-700 focus:px-4 focus:py-2 focus:text-white">Zum Inhalt springen</a>
 
-  <!-- Navigation -->
-  <nav class="bg-black/95 backdrop-blur sticky top-0 z-50 shadow-md" aria-label="Hauptnavigation">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center justify-between gap-2">
-      <a href="index.html" class="flex items-center gap-2 font-bold">
-        <img src="logo.png" alt="" width="32" height="32" class="w-8 h-8" />
-        <span>Berben Engineering</span>
+  <header data-header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur-md transition-shadow">
+    <div class="container-x flex h-16 items-center justify-between gap-6 lg:h-20">
+      <a href="index.html" class="flex items-center gap-3" aria-label="Berben Engineering – zur Startseite">
+        <img src="assets/img/logo-mark.png" alt="" width="34" height="38" class="h-9 w-auto" />
+        <span class="leading-tight">
+          <span class="block text-base font-extrabold tracking-wide text-brand-700">BERBEN</span>
+          <span class="block text-[0.62rem] font-semibold tracking-[0.2em] text-slate-500">ENGINEERING GMBH</span>
+        </span>
       </a>
-      <div class="flex flex-wrap justify-center gap-x-5 gap-y-1 text-sm md:text-base">
-        <a href="index.html" class="px-1 py-1 text-blue-300 hover:text-white transition">Start</a>
-        <a href="leistungen.html" class="px-1 py-1 text-blue-300 hover:text-white transition">Leistungen</a>
-        <a href="technologien.html" class="px-1 py-1 text-blue-300 hover:text-white transition">Technologien</a>
-        <a href="referenzen.html" class="px-1 py-1 text-blue-300 hover:text-white transition">Referenzen</a>
-        <a href="unternehmen.html" class="px-1 py-1 text-white font-semibold border-b-2 border-blue-500 transition" aria-current="page">Unternehmen</a>
-        <a href="kontakt.html" class="px-1 py-1 text-blue-300 hover:text-white transition">Kontakt</a>
+      <nav class="hidden items-center gap-1 lg:flex" aria-label="Hauptnavigation">
+          <a href="leistungen.html" class="nav-link">Leistungen</a>
+          <a href="technologien.html" class="nav-link">Technologien</a>
+          <a href="referenzen.html" class="nav-link">Referenzen</a>
+          <a href="unternehmen.html" class="nav-link" aria-current="page">Unternehmen</a>
+          <a href="kontakt.html" class="nav-link">Kontakt</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="kontakt.html" class="btn-primary hidden sm:inline-flex">Anfrage stellen <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <button type="button" data-menu-toggle class="inline-flex h-11 w-11 items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 lg:hidden" aria-controls="mobile-menu" aria-expanded="false" aria-label="Menü öffnen">
+          <span data-icon-open><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></span><span data-icon-close class="hidden"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span>
+        </button>
       </div>
     </div>
-  </nav>
+    <nav id="mobile-menu" class="hidden border-t border-slate-200 bg-white lg:hidden" aria-label="Mobile Navigation">
+      <div class="container-x space-y-1 py-4">
+        <a href="index.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50">Start</a>
+        <a href="leistungen.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50">Leistungen</a>
+        <a href="technologien.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50">Technologien</a>
+        <a href="referenzen.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50">Referenzen</a>
+        <a href="unternehmen.html" class="block rounded-lg px-3 py-3 text-base font-medium bg-brand-50 text-brand-700" aria-current="page">Unternehmen</a>
+        <a href="kontakt.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50">Kontakt</a>
+        <a href="kontakt.html" class="btn-primary mt-3 w-full">Anfrage stellen</a>
+      </div>
+    </nav>
+  </header>
 
-  <main id="inhalt" class="max-w-5xl mx-auto px-6 py-16 w-full">
-    <header class="text-center mb-12">
-      <h1 class="text-4xl md:text-5xl font-bold">Unser Unternehmen</h1>
-    </header>
-    <div class="space-y-12">
-      <section>
-        <p class="text-gray-300 text-lg text-center max-w-3xl mx-auto">Seit unserer Gründung verbinden wir fundiertes Maschinenbauwissen mit modernster Fertigungstechnologie. Unser Fokus liegt auf höchster Präzision, Kundenorientierung und partnerschaftlicher Projektabwicklung.</p>
-      </section>
+  <main id="inhalt" class="flex-1">
+    <section class="relative overflow-hidden bg-brand-900 text-white">
+      <div class="blueprint absolute inset-0" aria-hidden="true"></div>
+      <div class="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-accent-500/20 blur-3xl" aria-hidden="true"></div>
+      <div class="container-x relative py-16 md:py-24">
+        <nav aria-label="Brotkrümelnavigation" class="mb-6 text-sm text-brand-200">
+          <a href="index.html" class="hover:text-white">Start</a> <span class="mx-2" aria-hidden="true">/</span> <span aria-current="page" class="text-white">Unternehmen</span>
+        </nav>
+        <p class="eyebrow eyebrow-light">Unternehmen</p>
+        <h1 class="mt-4 max-w-3xl text-4xl font-bold text-white md:text-5xl">Ingenieurskunst trifft Fertigungskompetenz</h1>
+        <p class="mt-5 max-w-2xl text-lg leading-relaxed text-brand-100">Seit unserer Gründung verbinden wir fundiertes Maschinenbauwissen mit modernster Fertigungstechnologie – für Kunden, die keine Kompromisse bei Qualität machen.</p>
+      </div>
+    </section>
 
-      <section class="grid md:grid-cols-2 gap-6">
-        <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-blue-500">
-          <h2 class="text-xl text-blue-400 font-semibold mb-2">Unsere Mission</h2>
-          <p class="text-gray-300">Wir fertigen nicht nur Bauteile, sondern bieten durchdachte, nachhaltige Lösungen mit maximaler Qualität für anspruchsvolle Kunden weltweit.</p>
+    <section class="section">
+      <div class="container-x grid items-center gap-14 lg:grid-cols-2">
+        <div class="reveal">
+          <p class="eyebrow">Über uns</p>
+          <h2 class="h-section">Wir liefern nicht nur Bauteile – wir liefern Lösungen</h2>
+          <p class="lead">Unser Fokus liegt auf höchster Präzision, Kundenorientierung und partnerschaftlicher Projektabwicklung. Bei uns arbeiten Konstrukteure, Programmierer, Zerspaner und Qualitätsprüfer Hand in Hand – unter einem Dach und mit kurzen Entscheidungswegen.</p>
+          <p class="mt-4 leading-relaxed text-slate-600">Das Ergebnis: weniger Schnittstellen, schnellere Durchlaufzeiten und Bauteile, die beim ersten Mal passen.</p>
         </div>
-        <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-blue-500">
-          <h2 class="text-xl text-blue-400 font-semibold mb-2">Unsere Vision</h2>
-          <p class="text-gray-300">Technologieführerschaft im Mittelstand durch Innovation, Digitalisierung und menschliche Exzellenz im Engineering.</p>
+        <div class="reveal overflow-hidden rounded-3xl shadow-2xl shadow-brand-900/10">
+          <img src="assets/img/montage.svg" alt="Illustration: Explosionsdarstellung einer Baugruppe" width="800" height="400" loading="lazy" class="w-full" />
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section>
-        <h2 class="text-2xl font-bold text-center mb-6">Unsere Werte</h2>
-        <div class="grid sm:grid-cols-3 gap-6 text-center">
-          <div class="bg-gray-800 rounded-xl p-6"><h3 class="text-blue-400 font-semibold text-lg mb-1">Präzision</h3><p class="text-gray-300 text-sm">Mikrometergenau – in der Fertigung wie in der Kommunikation.</p></div>
-          <div class="bg-gray-800 rounded-xl p-6"><h3 class="text-blue-400 font-semibold text-lg mb-1">Partnerschaft</h3><p class="text-gray-300 text-sm">Direkter Draht zu den Ingenieuren, die Ihr Projekt umsetzen.</p></div>
-          <div class="bg-gray-800 rounded-xl p-6"><h3 class="text-blue-400 font-semibold text-lg mb-1">Zuverlässigkeit</h3><p class="text-gray-300 text-sm">Termintreue, dokumentierte Qualität und volle Rückverfolgbarkeit.</p></div>
+    <section class="section bg-slate-50">
+      <div class="container-x grid gap-6 md:grid-cols-2">
+        <div class="reveal rounded-3xl bg-brand-800 p-10 text-white">
+          <p class="eyebrow eyebrow-light">Mission</p>
+          <p class="mt-4 text-2xl font-semibold leading-snug text-white">Wir fertigen nicht nur Bauteile, sondern bieten durchdachte, nachhaltige Lösungen mit maximaler Qualität für anspruchsvolle Kunden weltweit.</p>
         </div>
-      </section>
-    </div>
-    <section class="mt-16 bg-gradient-to-r from-blue-900 to-gray-800 rounded-2xl p-8 md:p-12 text-center">
-      <h2 class="text-2xl md:text-3xl font-bold mb-3">Sie haben ein Projekt?</h2>
-      <p class="text-gray-300 mb-6 max-w-2xl mx-auto">Senden Sie uns Ihre Zeichnung oder Ihr 3D-Modell – wir melden uns schnell mit einer Einschätzung und einem Angebot.</p>
-      <a href="kontakt.html" class="inline-block bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 px-8 rounded-lg transition">Anfrage stellen</a>
+        <div class="reveal rounded-3xl border border-slate-200 bg-white p-10">
+          <p class="eyebrow">Vision</p>
+          <p class="mt-4 text-2xl font-semibold leading-snug text-slate-900">Technologieführerschaft im Mittelstand durch Innovation, Digitalisierung und menschliche Exzellenz im Engineering.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container-x">
+        <div class="reveal max-w-2xl mx-auto text-center">
+          <p class="eyebrow">Unsere Werte</p>
+          <h2 class="h-section">Wofür wir stehen</h2>
+        </div>
+        <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="card reveal hover:translate-y-0">
+            <span class="icon-box"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
+            <h3 class="mt-5 text-lg font-semibold">Präzision</h3>
+            <p class="mt-2 leading-relaxed text-slate-600">Mikrometergenau – in der Fertigung wie in der Kommunikation.</p>
+          </div>
+          <div class="card reveal hover:translate-y-0">
+            <span class="icon-box"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+            <h3 class="mt-5 text-lg font-semibold">Partnerschaft</h3>
+            <p class="mt-2 leading-relaxed text-slate-600">Direkter Draht zu den Ingenieuren, die Ihr Projekt umsetzen.</p>
+          </div>
+          <div class="card reveal hover:translate-y-0">
+            <span class="icon-box"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+            <h3 class="mt-5 text-lg font-semibold">Zuverlässigkeit</h3>
+            <p class="mt-2 leading-relaxed text-slate-600">Termintreue, dokumentierte Qualität und volle Rückverfolgbarkeit.</p>
+          </div>
+          <div class="card reveal hover:translate-y-0">
+            <span class="icon-box"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
+            <h3 class="mt-5 text-lg font-semibold">Verantwortung</h3>
+            <p class="mt-2 leading-relaxed text-slate-600">Ressourcenschonende Prozesse und faire Arbeitsbedingungen.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="karriere" class="section bg-slate-50">
+      <div class="container-x">
+        <div class="reveal grid items-center gap-10 rounded-3xl border border-slate-200 bg-white p-8 md:p-12 lg:grid-cols-3">
+          <div class="lg:col-span-2">
+            <p class="eyebrow">Karriere</p>
+            <h2 class="h-section">Werden Sie Teil unseres Teams</h2>
+            <p class="lead">Wir suchen Menschen mit Leidenschaft für Präzision – z.&nbsp;B. Zerspanungsmechaniker:innen, CNC-Programmierer:innen und Konstrukteur:innen. Auch Initiativbewerbungen sind herzlich willkommen.</p>
+            <div class="mt-6 flex flex-wrap gap-2"><span class="chip">Moderner Maschinenpark</span><span class="chip">Weiterbildung</span><span class="chip">Flache Hierarchien</span><span class="chip">Faire Bezahlung</span></div>
+          </div>
+          <div class="lg:text-right">
+            <a href="mailto:info@berben-engineering.de?subject=Bewerbung" class="btn-primary"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> Jetzt bewerben</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pt-0">
+      <div class="container-x">
+        <div class="reveal relative overflow-hidden rounded-3xl bg-brand-800 px-8 py-14 text-white md:px-16">
+          <div class="blueprint absolute inset-0" aria-hidden="true"></div>
+          <div class="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-accent-500/25 blur-3xl" aria-hidden="true"></div>
+          <div class="relative grid items-center gap-8 lg:grid-cols-3">
+            <div class="lg:col-span-2">
+              <h2 class="text-3xl font-bold text-white md:text-4xl">Sie haben ein Projekt? Wir haben die Lösung.</h2>
+              <p class="mt-4 max-w-2xl text-lg text-brand-100">Senden Sie uns Ihre Zeichnung oder Ihr 3D-Modell (STEP, IGES, PDF). Sie erhalten innerhalb von 48 Stunden eine fundierte Einschätzung und ein verbindliches Angebot.</p>
+            </div>
+            <div class="flex flex-col gap-3 sm:flex-row lg:flex-col lg:items-end">
+              <a href="kontakt.html" class="btn-light">Angebot anfordern <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+              <a href="tel:+49123456789" class="btn-ghost-light"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +49 123 456789</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-black text-gray-400 text-sm mt-auto">
-    <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row gap-4 justify-between items-center text-center md:text-left">
-      <p>&copy; <span id="jahr">2025</span> Berben Engineering GmbH · Made with Präzision &amp; Leidenschaft</p>
-      <p class="flex gap-4">
-        <a href="kontakt.html" class="hover:text-white">Kontakt</a>
-        <a href="impressum.html" class="hover:text-white">Impressum</a>
-        <a href="datenschutz.html" class="hover:text-white">Datenschutz</a>
-      </p>
+  <footer class="bg-brand-950 text-slate-400">
+    <div class="container-x grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
+      <div class="lg:col-span-1">
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="assets/img/logo-mark-white.png" alt="" width="34" height="38" class="h-9 w-auto" />
+          <span class="leading-tight text-white"><span class="block font-extrabold tracking-wide">BERBEN</span><span class="block text-[0.62rem] font-semibold tracking-[0.2em] text-slate-400">ENGINEERING GMBH</span></span>
+        </a>
+        <p class="mt-5 text-sm leading-relaxed">Präzisionsfertigung, CAD/CAM-Engineering und Systemmontage für anspruchsvolle Branchen – aus einer Hand.</p>
+      </div>
+      <div>
+        <h2 class="text-sm font-semibold uppercase tracking-wider text-white">Leistungen</h2>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          <li><a href="leistungen.html#cnc" class="hover:text-white">CNC-Fertigung</a></li>
+          <li><a href="leistungen.html#cadcam" class="hover:text-white">CAD/CAM-Entwicklung</a></li>
+          <li><a href="leistungen.html#montage" class="hover:text-white">Systemmontage</a></li>
+          <li><a href="leistungen.html#prototyping" class="hover:text-white">Rapid Prototyping</a></li>
+          <li><a href="leistungen.html#qualitaet" class="hover:text-white">Qualitätssicherung</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-sm font-semibold uppercase tracking-wider text-white">Unternehmen</h2>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          <li><a href="unternehmen.html" class="hover:text-white">Über uns</a></li>
+          <li><a href="technologien.html" class="hover:text-white">Technologien</a></li>
+          <li><a href="referenzen.html" class="hover:text-white">Referenzen</a></li>
+          <li><a href="unternehmen.html#karriere" class="hover:text-white">Karriere</a></li>
+          <li><a href="kontakt.html#faq" class="hover:text-white">Häufige Fragen</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-sm font-semibold uppercase tracking-wider text-white">Kontakt</h2>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li class="flex gap-3"><svg class="h-5 w-5 flex-none text-accent-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Musterstraße 1<br />12345 Musterstadt</span></li>
+          <li class="flex gap-3"><svg class="h-5 w-5 flex-none text-accent-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+49123456789" class="hover:text-white">+49 123 456789</a></li>
+          <li class="flex gap-3"><svg class="h-5 w-5 flex-none text-accent-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><a href="mailto:info@berben-engineering.de" class="break-all hover:text-white">info@berben-engineering.de</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="container-x flex flex-col items-center justify-between gap-3 py-6 text-xs sm:flex-row">
+        <p>&copy; <span data-year>2026</span> Berben Engineering GmbH. Alle Rechte vorbehalten.</p>
+        <p class="flex gap-5"><a href="impressum.html" class="hover:text-white">Impressum</a><a href="datenschutz.html" class="hover:text-white">Datenschutz</a></p>
+      </div>
     </div>
   </footer>
-  <script>document.getElementById('jahr').textContent = new Date().getFullYear();</script>
 </body>
 </html>
