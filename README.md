@@ -8,10 +8,15 @@ Statische Website, veröffentlicht über **GitHub Pages** unter www.berben-engin
 | --- | --- |
 | `*.html` | Die einzelnen Seiten (Start, Leistungen, Technologien, Referenzen, Unternehmen, Kontakt, Impressum, Datenschutz, 404) |
 | `assets/css/styles.css` | Fertiges Stylesheet – **nicht von Hand bearbeiten**, wird automatisch erzeugt |
-| `assets/js/main.js` | Handy-Menü, Einblend-Animationen, Referenzen-Filter, Kontaktformular |
+| `assets/js/main.js` | Hell/Dunkel-Umschalter, Handy-Menü, Einblend-Animationen, Referenzen-Filter, Kontaktformular |
 | `assets/img/` | Logo-Varianten, Illustrationen (SVG) und Vorschaubild für geteilte Links |
 | `assets/fonts/` | Schrift „Inter“ (lokal eingebunden, keine Verbindung zu Google) |
 | `src/styles.css`, `tailwind.config.js` | Quelle des Designs (Farben, Buttons, Karten …) |
+
+## Hell / Dunkel
+
+Die Seite folgt automatisch der Einstellung des Geräts (helles oder dunkles Design). Über den Knopf ☀️/🌙 im Header
+können Besucher umschalten – die Wahl wird im Browser gespeichert. Dunkle Farben stehen in `tailwind.config.js` unter `ink`.
 
 ## Texte ändern
 

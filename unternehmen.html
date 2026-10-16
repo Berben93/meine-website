@@ -14,7 +14,10 @@
   <meta property="og:url" content="https://www.berben-engineering.de/unternehmen.html" />
   <meta property="og:image" content="https://www.berben-engineering.de/assets/img/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="theme-color" content="#003a6d" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#06111f" media="(prefers-color-scheme: dark)" />
+  <script>try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark')}catch(e){}</script>
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
@@ -24,13 +27,14 @@
 <body class="flex min-h-screen flex-col">
   <a href="#inhalt" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-brand-700 focus:px-4 focus:py-2 focus:text-white">Zum Inhalt springen</a>
 
-  <header data-header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur-md transition-shadow">
+  <header data-header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur-md transition-shadow dark:border-ink-700 dark:bg-ink-950/90">
     <div class="container-x flex h-16 items-center justify-between gap-6 lg:h-20">
       <a href="index.html" class="flex items-center gap-3" aria-label="Berben Engineering – zur Startseite">
-        <img src="assets/img/logo-mark.png" alt="" width="34" height="38" class="h-9 w-auto" />
+        <img src="assets/img/logo-mark.png" alt="" width="34" height="38" class="h-9 w-auto dark:hidden" />
+        <img src="assets/img/logo-mark-white.png" alt="" width="34" height="38" class="hidden h-9 w-auto dark:block" />
         <span class="leading-tight">
-          <span class="block text-base font-extrabold tracking-wide text-brand-700">BERBEN</span>
-          <span class="block text-[0.62rem] font-semibold tracking-[0.2em] text-slate-500">ENGINEERING GMBH</span>
+          <span class="block text-base font-extrabold tracking-wide text-brand-700 dark:text-white">BERBEN</span>
+          <span class="block text-[0.62rem] font-semibold tracking-[0.2em] text-slate-500 dark:text-slate-400">ENGINEERING GMBH</span>
         </span>
       </a>
       <nav class="hidden items-center gap-1 lg:flex" aria-label="Hauptnavigation">
@@ -41,20 +45,23 @@
           <a href="kontakt.html" class="nav-link">Kontakt</a>
       </nav>
       <div class="flex items-center gap-2">
+        <button type="button" data-theme-toggle class="inline-flex h-11 w-11 items-center justify-center rounded-lg text-slate-600 transition hover:bg-slate-100 hover:text-brand-700 dark:text-slate-300 dark:hover:bg-ink-700 dark:hover:text-accent-400" aria-label="Dunkles Design aktivieren" aria-pressed="false" title="Hell/Dunkel umschalten">
+          <span class="dark:hidden"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span><span class="hidden dark:block"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></span>
+        </button>
         <a href="kontakt.html" class="btn-primary hidden sm:inline-flex">Anfrage stellen <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        <button type="button" data-menu-toggle class="inline-flex h-11 w-11 items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 lg:hidden" aria-controls="mobile-menu" aria-expanded="false" aria-label="Menü öffnen">
+        <button type="button" data-menu-toggle class="inline-flex h-11 w-11 items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 lg:hidden dark:text-slate-300 dark:hover:bg-ink-700" aria-controls="mobile-menu" aria-expanded="false" aria-label="Menü öffnen">
           <span data-icon-open><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></span><span data-icon-close class="hidden"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span>
         </button>
       </div>
     </div>
-    <nav id="mobile-menu" class="hidden border-t border-slate-200 bg-white lg:hidden" aria-label="Mobile Navigation">
+    <nav id="mobile-menu" class="hidden border-t border-slate-200 bg-white lg:hidden dark:border-ink-700 dark:bg-ink-800" aria-label="Mobile Navigation">
       <div class="container-x space-y-1 py-4">
-        <a href="index.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50">Start</a>
-        <a href="leistungen.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50">Leistungen</a>
-        <a href="technologien.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50">Technologien</a>
-        <a href="referenzen.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50">Referenzen</a>
-        <a href="unternehmen.html" class="block rounded-lg px-3 py-3 text-base font-medium bg-brand-50 text-brand-700" aria-current="page">Unternehmen</a>
-        <a href="kontakt.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50">Kontakt</a>
+        <a href="index.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Start</a>
+        <a href="leistungen.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Leistungen</a>
+        <a href="technologien.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Technologien</a>
+        <a href="referenzen.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Referenzen</a>
+        <a href="unternehmen.html" class="block rounded-lg px-3 py-3 text-base font-medium bg-brand-50 text-brand-700 dark:bg-brand-900/60 dark:text-accent-400" aria-current="page">Unternehmen</a>
+        <a href="kontakt.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Kontakt</a>
         <a href="kontakt.html" class="btn-primary mt-3 w-full">Anfrage stellen</a>
       </div>
     </nav>
@@ -80,7 +87,7 @@
           <p class="eyebrow">Über uns</p>
           <h2 class="h-section">Wir liefern nicht nur Bauteile – wir liefern Lösungen</h2>
           <p class="lead">Unser Fokus liegt auf höchster Präzision, Kundenorientierung und partnerschaftlicher Projektabwicklung. Bei uns arbeiten Konstrukteure, Programmierer, Zerspaner und Qualitätsprüfer Hand in Hand – unter einem Dach und mit kurzen Entscheidungswegen.</p>
-          <p class="mt-4 leading-relaxed text-slate-600">Das Ergebnis: weniger Schnittstellen, schnellere Durchlaufzeiten und Bauteile, die beim ersten Mal passen.</p>
+          <p class="mt-4 leading-relaxed text-slate-600 dark:text-slate-400">Das Ergebnis: weniger Schnittstellen, schnellere Durchlaufzeiten und Bauteile, die beim ersten Mal passen.</p>
         </div>
         <div class="reveal overflow-hidden rounded-3xl shadow-2xl shadow-brand-900/10">
           <img src="assets/img/montage.svg" alt="Illustration: Explosionsdarstellung einer Baugruppe" width="800" height="400" loading="lazy" class="w-full" />
@@ -88,15 +95,15 @@
       </div>
     </section>
 
-    <section class="section bg-slate-50">
+    <section class="section bg-slate-50 dark:bg-ink-900">
       <div class="container-x grid gap-6 md:grid-cols-2">
         <div class="reveal rounded-3xl bg-brand-800 p-10 text-white">
           <p class="eyebrow eyebrow-light">Mission</p>
           <p class="mt-4 text-2xl font-semibold leading-snug text-white">Wir fertigen nicht nur Bauteile, sondern bieten durchdachte, nachhaltige Lösungen mit maximaler Qualität für anspruchsvolle Kunden weltweit.</p>
         </div>
-        <div class="reveal rounded-3xl border border-slate-200 bg-white p-10">
+        <div class="reveal rounded-3xl border border-slate-200 bg-white p-10 dark:border-ink-700 dark:bg-ink-800">
           <p class="eyebrow">Vision</p>
-          <p class="mt-4 text-2xl font-semibold leading-snug text-slate-900">Technologieführerschaft im Mittelstand durch Innovation, Digitalisierung und menschliche Exzellenz im Engineering.</p>
+          <p class="mt-4 text-2xl font-semibold leading-snug text-slate-900 dark:text-white">Technologieführerschaft im Mittelstand durch Innovation, Digitalisierung und menschliche Exzellenz im Engineering.</p>
         </div>
       </div>
     </section>
@@ -111,30 +118,30 @@
           <div class="card reveal hover:translate-y-0">
             <span class="icon-box"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
             <h3 class="mt-5 text-lg font-semibold">Präzision</h3>
-            <p class="mt-2 leading-relaxed text-slate-600">Mikrometergenau – in der Fertigung wie in der Kommunikation.</p>
+            <p class="mt-2 leading-relaxed text-slate-600 dark:text-slate-400">Mikrometergenau – in der Fertigung wie in der Kommunikation.</p>
           </div>
           <div class="card reveal hover:translate-y-0">
             <span class="icon-box"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
             <h3 class="mt-5 text-lg font-semibold">Partnerschaft</h3>
-            <p class="mt-2 leading-relaxed text-slate-600">Direkter Draht zu den Ingenieuren, die Ihr Projekt umsetzen.</p>
+            <p class="mt-2 leading-relaxed text-slate-600 dark:text-slate-400">Direkter Draht zu den Ingenieuren, die Ihr Projekt umsetzen.</p>
           </div>
           <div class="card reveal hover:translate-y-0">
             <span class="icon-box"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
             <h3 class="mt-5 text-lg font-semibold">Zuverlässigkeit</h3>
-            <p class="mt-2 leading-relaxed text-slate-600">Termintreue, dokumentierte Qualität und volle Rückverfolgbarkeit.</p>
+            <p class="mt-2 leading-relaxed text-slate-600 dark:text-slate-400">Termintreue, dokumentierte Qualität und volle Rückverfolgbarkeit.</p>
           </div>
           <div class="card reveal hover:translate-y-0">
             <span class="icon-box"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
             <h3 class="mt-5 text-lg font-semibold">Verantwortung</h3>
-            <p class="mt-2 leading-relaxed text-slate-600">Ressourcenschonende Prozesse und faire Arbeitsbedingungen.</p>
+            <p class="mt-2 leading-relaxed text-slate-600 dark:text-slate-400">Ressourcenschonende Prozesse und faire Arbeitsbedingungen.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="karriere" class="section bg-slate-50">
+    <section id="karriere" class="section bg-slate-50 dark:bg-ink-900">
       <div class="container-x">
-        <div class="reveal grid items-center gap-10 rounded-3xl border border-slate-200 bg-white p-8 md:p-12 lg:grid-cols-3">
+        <div class="reveal grid items-center gap-10 rounded-3xl border border-slate-200 bg-white p-8 md:p-12 lg:grid-cols-3 dark:border-ink-700 dark:bg-ink-800">
           <div class="lg:col-span-2">
             <p class="eyebrow">Karriere</p>
             <h2 class="h-section">Werden Sie Teil unseres Teams</h2>

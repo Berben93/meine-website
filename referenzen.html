@@ -14,7 +14,10 @@
   <meta property="og:url" content="https://www.berben-engineering.de/referenzen.html" />
   <meta property="og:image" content="https://www.berben-engineering.de/assets/img/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="theme-color" content="#003a6d" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#06111f" media="(prefers-color-scheme: dark)" />
+  <script>try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark')}catch(e){}</script>
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
@@ -24,13 +27,14 @@
 <body class="flex min-h-screen flex-col">
   <a href="#inhalt" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-brand-700 focus:px-4 focus:py-2 focus:text-white">Zum Inhalt springen</a>
 
-  <header data-header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur-md transition-shadow">
+  <header data-header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur-md transition-shadow dark:border-ink-700 dark:bg-ink-950/90">
     <div class="container-x flex h-16 items-center justify-between gap-6 lg:h-20">
       <a href="index.html" class="flex items-center gap-3" aria-label="Berben Engineering – zur Startseite">
-        <img src="assets/img/logo-mark.png" alt="" width="34" height="38" class="h-9 w-auto" />
+        <img src="assets/img/logo-mark.png" alt="" width="34" height="38" class="h-9 w-auto dark:hidden" />
+        <img src="assets/img/logo-mark-white.png" alt="" width="34" height="38" class="hidden h-9 w-auto dark:block" />
         <span class="leading-tight">
-          <span class="block text-base font-extrabold tracking-wide text-brand-700">BERBEN</span>
-          <span class="block text-[0.62rem] font-semibold tracking-[0.2em] text-slate-500">ENGINEERING GMBH</span>
+          <span class="block text-base font-extrabold tracking-wide text-brand-700 dark:text-white">BERBEN</span>
+          <span class="block text-[0.62rem] font-semibold tracking-[0.2em] text-slate-500 dark:text-slate-400">ENGINEERING GMBH</span>
         </span>
       </a>
       <nav class="hidden items-center gap-1 lg:flex" aria-label="Hauptnavigation">
@@ -41,20 +45,23 @@
           <a href="kontakt.html" class="nav-link">Kontakt</a>
       </nav>
       <div class="flex items-center gap-2">
+        <button type="button" data-theme-toggle class="inline-flex h-11 w-11 items-center justify-center rounded-lg text-slate-600 transition hover:bg-slate-100 hover:text-brand-700 dark:text-slate-300 dark:hover:bg-ink-700 dark:hover:text-accent-400" aria-label="Dunkles Design aktivieren" aria-pressed="false" title="Hell/Dunkel umschalten">
+          <span class="dark:hidden"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span><span class="hidden dark:block"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></span>
+        </button>
         <a href="kontakt.html" class="btn-primary hidden sm:inline-flex">Anfrage stellen <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        <button type="button" data-menu-toggle class="inline-flex h-11 w-11 items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 lg:hidden" aria-controls="mobile-menu" aria-expanded="false" aria-label="Menü öffnen">
+        <button type="button" data-menu-toggle class="inline-flex h-11 w-11 items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 lg:hidden dark:text-slate-300 dark:hover:bg-ink-700" aria-controls="mobile-menu" aria-expanded="false" aria-label="Menü öffnen">
           <span data-icon-open><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></span><span data-icon-close class="hidden"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span>
         </button>
       </div>
     </div>
-    <nav id="mobile-menu" class="hidden border-t border-slate-200 bg-white lg:hidden" aria-label="Mobile Navigation">
+    <nav id="mobile-menu" class="hidden border-t border-slate-200 bg-white lg:hidden dark:border-ink-700 dark:bg-ink-800" aria-label="Mobile Navigation">
       <div class="container-x space-y-1 py-4">
-        <a href="index.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50">Start</a>
-        <a href="leistungen.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50">Leistungen</a>
-        <a href="technologien.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50">Technologien</a>
-        <a href="referenzen.html" class="block rounded-lg px-3 py-3 text-base font-medium bg-brand-50 text-brand-700" aria-current="page">Referenzen</a>
-        <a href="unternehmen.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50">Unternehmen</a>
-        <a href="kontakt.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50">Kontakt</a>
+        <a href="index.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Start</a>
+        <a href="leistungen.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Leistungen</a>
+        <a href="technologien.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Technologien</a>
+        <a href="referenzen.html" class="block rounded-lg px-3 py-3 text-base font-medium bg-brand-50 text-brand-700 dark:bg-brand-900/60 dark:text-accent-400" aria-current="page">Referenzen</a>
+        <a href="unternehmen.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Unternehmen</a>
+        <a href="kontakt.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Kontakt</a>
         <a href="kontakt.html" class="btn-primary mt-3 w-full">Anfrage stellen</a>
       </div>
     </nav>
@@ -78,72 +85,72 @@
       <div class="container-x">
         <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div class="flex flex-wrap gap-2" role="group" aria-label="Referenzen nach Branche filtern">
-          <button type="button" data-filter="alle" aria-pressed="true" class="rounded-full border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-brand-700 aria-pressed:border-brand-700 aria-pressed:bg-brand-700 aria-pressed:text-white">Alle</button>
-          <button type="button" data-filter="luftfahrt" aria-pressed="false" class="rounded-full border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-brand-700 aria-pressed:border-brand-700 aria-pressed:bg-brand-700 aria-pressed:text-white">Luftfahrt</button>
-          <button type="button" data-filter="medizintechnik" aria-pressed="false" class="rounded-full border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-brand-700 aria-pressed:border-brand-700 aria-pressed:bg-brand-700 aria-pressed:text-white">Medizintechnik</button>
-          <button type="button" data-filter="pharma" aria-pressed="false" class="rounded-full border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-brand-700 aria-pressed:border-brand-700 aria-pressed:bg-brand-700 aria-pressed:text-white">Pharma</button>
-          <button type="button" data-filter="maschinenbau" aria-pressed="false" class="rounded-full border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-brand-700 aria-pressed:border-brand-700 aria-pressed:bg-brand-700 aria-pressed:text-white">Maschinenbau</button>
+          <button type="button" data-filter="alle" aria-pressed="true" class="rounded-full border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-brand-700 aria-pressed:border-brand-700 aria-pressed:bg-brand-700 aria-pressed:text-white dark:border-ink-700 dark:text-slate-300 dark:hover:border-accent-400">Alle</button>
+          <button type="button" data-filter="luftfahrt" aria-pressed="false" class="rounded-full border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-brand-700 aria-pressed:border-brand-700 aria-pressed:bg-brand-700 aria-pressed:text-white dark:border-ink-700 dark:text-slate-300 dark:hover:border-accent-400">Luftfahrt</button>
+          <button type="button" data-filter="medizintechnik" aria-pressed="false" class="rounded-full border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-brand-700 aria-pressed:border-brand-700 aria-pressed:bg-brand-700 aria-pressed:text-white dark:border-ink-700 dark:text-slate-300 dark:hover:border-accent-400">Medizintechnik</button>
+          <button type="button" data-filter="pharma" aria-pressed="false" class="rounded-full border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-brand-700 aria-pressed:border-brand-700 aria-pressed:bg-brand-700 aria-pressed:text-white dark:border-ink-700 dark:text-slate-300 dark:hover:border-accent-400">Pharma</button>
+          <button type="button" data-filter="maschinenbau" aria-pressed="false" class="rounded-full border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-brand-700 aria-pressed:border-brand-700 aria-pressed:bg-brand-700 aria-pressed:text-white dark:border-ink-700 dark:text-slate-300 dark:hover:border-accent-400">Maschinenbau</button>
           </div>
-          <p data-filter-status class="text-sm text-slate-500" aria-live="polite">6 Projekte angezeigt</p>
+          <p data-filter-status class="text-sm text-slate-500 dark:text-slate-400" aria-live="polite">6 Projekte angezeigt</p>
         </div>
         <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <article data-branche="pharma" class="card reveal flex flex-col hover:translate-y-0">
             <span class="tag self-start">Pharma</span>
             <h2 class="mt-4 text-xl font-semibold">Pharma-Edelstahl-Serie</h2>
-            <p class="mt-2 text-slate-600">Mehrere tausend rotationssymmetrische Präzisionsteile für Injektionssysteme.</p>
-            <dl class="mt-5 space-y-3 border-t border-slate-200 pt-5 text-sm">
-              <div><dt class="font-semibold text-slate-900">Herausforderung</dt><dd class="mt-0.5 text-slate-600">Enge Toleranzen bei hoher Stückzahl und lückenloser Dokumentation.</dd></div>
-              <div><dt class="font-semibold text-slate-900">Lösung</dt><dd class="mt-0.5 text-slate-600">Dreh-Fräs-Komplettbearbeitung, SPC und 100&nbsp;%-Prüfung.</dd></div>
+            <p class="mt-2 text-slate-600 dark:text-slate-400">Mehrere tausend rotationssymmetrische Präzisionsteile für Injektionssysteme.</p>
+            <dl class="mt-5 space-y-3 border-t border-slate-200 pt-5 text-sm dark:border-ink-700">
+              <div><dt class="font-semibold text-slate-900 dark:text-white">Herausforderung</dt><dd class="mt-0.5 text-slate-600 dark:text-slate-400">Enge Toleranzen bei hoher Stückzahl und lückenloser Dokumentation.</dd></div>
+              <div><dt class="font-semibold text-slate-900 dark:text-white">Lösung</dt><dd class="mt-0.5 text-slate-600 dark:text-slate-400">Dreh-Fräs-Komplettbearbeitung, SPC und 100&nbsp;%-Prüfung.</dd></div>
             </dl>
             <div class="mt-auto flex flex-wrap gap-2 pt-6"><span class="chip text-xs">1.4404</span><span class="chip text-xs">SPC</span><span class="chip text-xs">Cpk &gt; 1,67</span></div>
           </article>
           <article data-branche="medizintechnik" class="card reveal flex flex-col hover:translate-y-0">
             <span class="tag self-start">Medizintechnik</span>
             <h2 class="mt-4 text-xl font-semibold">Titan-Frästeile für OP-Werkzeuge</h2>
-            <p class="mt-2 text-slate-600">Hochkomplexe Einzelteile für chirurgische Instrumente.</p>
-            <dl class="mt-5 space-y-3 border-t border-slate-200 pt-5 text-sm">
-              <div><dt class="font-semibold text-slate-900">Herausforderung</dt><dd class="mt-0.5 text-slate-600">Filigrane Geometrien in Titan Grade 5 mit gratfreien Kanten.</dd></div>
-              <div><dt class="font-semibold text-slate-900">Lösung</dt><dd class="mt-0.5 text-slate-600">5-Achs-Strategie, Entgratung und Oberflächenfinish aus einer Hand.</dd></div>
+            <p class="mt-2 text-slate-600 dark:text-slate-400">Hochkomplexe Einzelteile für chirurgische Instrumente.</p>
+            <dl class="mt-5 space-y-3 border-t border-slate-200 pt-5 text-sm dark:border-ink-700">
+              <div><dt class="font-semibold text-slate-900 dark:text-white">Herausforderung</dt><dd class="mt-0.5 text-slate-600 dark:text-slate-400">Filigrane Geometrien in Titan Grade 5 mit gratfreien Kanten.</dd></div>
+              <div><dt class="font-semibold text-slate-900 dark:text-white">Lösung</dt><dd class="mt-0.5 text-slate-600 dark:text-slate-400">5-Achs-Strategie, Entgratung und Oberflächenfinish aus einer Hand.</dd></div>
             </dl>
             <div class="mt-auto flex flex-wrap gap-2 pt-6"><span class="chip text-xs">Titan Grade 5</span><span class="chip text-xs">5-Achs</span><span class="chip text-xs">Ra 0,4</span></div>
           </article>
           <article data-branche="maschinenbau" class="card reveal flex flex-col hover:translate-y-0">
             <span class="tag self-start">Maschinenbau</span>
             <h2 class="mt-4 text-xl font-semibold">Prüfadapter &amp; ESD-Baugruppen</h2>
-            <p class="mt-2 text-slate-600">Prüfadapter, Fixtures und ESD-Baugruppen in Serie.</p>
-            <dl class="mt-5 space-y-3 border-t border-slate-200 pt-5 text-sm">
-              <div><dt class="font-semibold text-slate-900">Herausforderung</dt><dd class="mt-0.5 text-slate-600">Mechanik und Elektronik müssen im Prüfling exakt zusammenspielen.</dd></div>
-              <div><dt class="font-semibold text-slate-900">Lösung</dt><dd class="mt-0.5 text-slate-600">Konstruktion, Fertigung und ESD-Montage inkl. Elektroniktest.</dd></div>
+            <p class="mt-2 text-slate-600 dark:text-slate-400">Prüfadapter, Fixtures und ESD-Baugruppen in Serie.</p>
+            <dl class="mt-5 space-y-3 border-t border-slate-200 pt-5 text-sm dark:border-ink-700">
+              <div><dt class="font-semibold text-slate-900 dark:text-white">Herausforderung</dt><dd class="mt-0.5 text-slate-600 dark:text-slate-400">Mechanik und Elektronik müssen im Prüfling exakt zusammenspielen.</dd></div>
+              <div><dt class="font-semibold text-slate-900 dark:text-white">Lösung</dt><dd class="mt-0.5 text-slate-600 dark:text-slate-400">Konstruktion, Fertigung und ESD-Montage inkl. Elektroniktest.</dd></div>
             </dl>
             <div class="mt-auto flex flex-wrap gap-2 pt-6"><span class="chip text-xs">ESD</span><span class="chip text-xs">Baugruppe</span><span class="chip text-xs">Serie</span></div>
           </article>
           <article data-branche="maschinenbau" class="card reveal flex flex-col hover:translate-y-0">
             <span class="tag self-start">Maschinenbau</span>
             <h2 class="mt-4 text-xl font-semibold">Engineering-Support für OEM</h2>
-            <p class="mt-2 text-slate-600">Partnerentwicklung mit einem Sondermaschinenbauer.</p>
-            <dl class="mt-5 space-y-3 border-t border-slate-200 pt-5 text-sm">
-              <div><dt class="font-semibold text-slate-900">Herausforderung</dt><dd class="mt-0.5 text-slate-600">Bauteil versagte im Dauerbetrieb, Bauraum war stark begrenzt.</dd></div>
-              <div><dt class="font-semibold text-slate-900">Lösung</dt><dd class="mt-0.5 text-slate-600">Bauraumdefinition, Festigkeitsnachweis und fertigungsgerechtes Redesign.</dd></div>
+            <p class="mt-2 text-slate-600 dark:text-slate-400">Partnerentwicklung mit einem Sondermaschinenbauer.</p>
+            <dl class="mt-5 space-y-3 border-t border-slate-200 pt-5 text-sm dark:border-ink-700">
+              <div><dt class="font-semibold text-slate-900 dark:text-white">Herausforderung</dt><dd class="mt-0.5 text-slate-600 dark:text-slate-400">Bauteil versagte im Dauerbetrieb, Bauraum war stark begrenzt.</dd></div>
+              <div><dt class="font-semibold text-slate-900 dark:text-white">Lösung</dt><dd class="mt-0.5 text-slate-600 dark:text-slate-400">Bauraumdefinition, Festigkeitsnachweis und fertigungsgerechtes Redesign.</dd></div>
             </dl>
             <div class="mt-auto flex flex-wrap gap-2 pt-6"><span class="chip text-xs">FEM</span><span class="chip text-xs">DFM</span><span class="chip text-xs">–30&nbsp;% Kosten</span></div>
           </article>
           <article data-branche="luftfahrt" class="card reveal flex flex-col hover:translate-y-0">
             <span class="tag self-start">Luftfahrt</span>
             <h2 class="mt-4 text-xl font-semibold">Strukturteile für Kabinensysteme</h2>
-            <p class="mt-2 text-slate-600">Leichtbau-Frästeile aus hochfestem Aluminium.</p>
-            <dl class="mt-5 space-y-3 border-t border-slate-200 pt-5 text-sm">
-              <div><dt class="font-semibold text-slate-900">Herausforderung</dt><dd class="mt-0.5 text-slate-600">Dünnwandige Strukturen ohne Verzug bei voller Dokumentationspflicht.</dd></div>
-              <div><dt class="font-semibold text-slate-900">Lösung</dt><dd class="mt-0.5 text-slate-600">Spannungsarme Frässtrategie, Erstmusterprüfbericht und Materialrückverfolgung.</dd></div>
+            <p class="mt-2 text-slate-600 dark:text-slate-400">Leichtbau-Frästeile aus hochfestem Aluminium.</p>
+            <dl class="mt-5 space-y-3 border-t border-slate-200 pt-5 text-sm dark:border-ink-700">
+              <div><dt class="font-semibold text-slate-900 dark:text-white">Herausforderung</dt><dd class="mt-0.5 text-slate-600 dark:text-slate-400">Dünnwandige Strukturen ohne Verzug bei voller Dokumentationspflicht.</dd></div>
+              <div><dt class="font-semibold text-slate-900 dark:text-white">Lösung</dt><dd class="mt-0.5 text-slate-600 dark:text-slate-400">Spannungsarme Frässtrategie, Erstmusterprüfbericht und Materialrückverfolgung.</dd></div>
             </dl>
             <div class="mt-auto flex flex-wrap gap-2 pt-6"><span class="chip text-xs">Al 7075</span><span class="chip text-xs">Leichtbau</span><span class="chip text-xs">EMPB</span></div>
           </article>
           <article data-branche="medizintechnik" class="card reveal flex flex-col hover:translate-y-0">
             <span class="tag self-start">Medizintechnik</span>
             <h2 class="mt-4 text-xl font-semibold">CNC-Prototyping Express</h2>
-            <p class="mt-2 text-slate-600">High-End-Musterteile innerhalb von 24 Stunden.</p>
-            <dl class="mt-5 space-y-3 border-t border-slate-200 pt-5 text-sm">
-              <div><dt class="font-semibold text-slate-900">Herausforderung</dt><dd class="mt-0.5 text-slate-600">Funktionsmuster für eine Messe in extrem kurzer Zeit.</dd></div>
-              <div><dt class="font-semibold text-slate-900">Lösung</dt><dd class="mt-0.5 text-slate-600">Express-Fertigung aus Serienwerkstoff inklusive Messprotokoll.</dd></div>
+            <p class="mt-2 text-slate-600 dark:text-slate-400">High-End-Musterteile innerhalb von 24 Stunden.</p>
+            <dl class="mt-5 space-y-3 border-t border-slate-200 pt-5 text-sm dark:border-ink-700">
+              <div><dt class="font-semibold text-slate-900 dark:text-white">Herausforderung</dt><dd class="mt-0.5 text-slate-600 dark:text-slate-400">Funktionsmuster für eine Messe in extrem kurzer Zeit.</dd></div>
+              <div><dt class="font-semibold text-slate-900 dark:text-white">Lösung</dt><dd class="mt-0.5 text-slate-600 dark:text-slate-400">Express-Fertigung aus Serienwerkstoff inklusive Messprotokoll.</dd></div>
             </dl>
             <div class="mt-auto flex flex-wrap gap-2 pt-6"><span class="chip text-xs">24 h</span><span class="chip text-xs">PEEK</span><span class="chip text-xs">Prototyp</span></div>
           </article>

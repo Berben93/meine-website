@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: ['./*.html', './assets/js/*.js'],
   theme: {
     extend: {
@@ -10,6 +11,8 @@ module.exports = {
           500: '#2566a8', 600: '#0f4f8e', 700: '#003a6d', 800: '#002e57', 900: '#002244', 950: '#00152b',
         },
         accent: { 400: '#38bdf8', 500: '#0ea5e9' },
+        // Flächen im dunklen Modus
+        ink: { 700: '#1c2f47', 800: '#0c1b2e', 900: '#091626', 950: '#06111f' },
       },
       fontFamily: {
         sans: ['"Inter var"', 'Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
