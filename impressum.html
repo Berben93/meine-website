@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impressum – Berben Engineering GmbH</title>
+  <meta name="description" content="Impressum der Berben Engineering GmbH." />
+  <link rel="canonical" href="https://www.berben-engineering.de/impressum.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Berben Engineering GmbH" />
+  <meta property="og:title" content="Impressum – Berben Engineering GmbH" />
+  <meta property="og:description" content="Impressum der Berben Engineering GmbH." />
+  <meta property="og:url" content="https://www.berben-engineering.de/impressum.html" />
+  <meta property="og:image" content="https://www.berben-engineering.de/cnc.jpg" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans antialiased flex flex-col min-h-screen">
+  <a href="#inhalt" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] bg-blue-600 px-4 py-2 rounded">Zum Inhalt springen</a>
+
+  <!-- Navigation -->
+  <nav class="bg-black/95 backdrop-blur sticky top-0 z-50 shadow-md" aria-label="Hauptnavigation">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center justify-between gap-2">
+      <a href="index.html" class="flex items-center gap-2 font-bold">
+        <img src="logo.png" alt="" width="32" height="32" class="w-8 h-8" />
+        <span>Berben Engineering</span>
+      </a>
+      <div class="flex flex-wrap justify-center gap-x-5 gap-y-1 text-sm md:text-base">
+        <a href="index.html" class="px-1 py-1 text-blue-300 hover:text-white transition">Start</a>
+        <a href="leistungen.html" class="px-1 py-1 text-blue-300 hover:text-white transition">Leistungen</a>
+        <a href="technologien.html" class="px-1 py-1 text-blue-300 hover:text-white transition">Technologien</a>
+        <a href="referenzen.html" class="px-1 py-1 text-blue-300 hover:text-white transition">Referenzen</a>
+        <a href="unternehmen.html" class="px-1 py-1 text-blue-300 hover:text-white transition">Unternehmen</a>
+        <a href="kontakt.html" class="px-1 py-1 text-blue-300 hover:text-white transition">Kontakt</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="inhalt" class="max-w-3xl mx-auto px-6 py-16 w-full text-gray-300 space-y-6">
+    <h1 class="text-4xl font-bold text-white mb-8">Impressum</h1>
+    <section>
+      <h2 class="text-xl font-semibold text-blue-400 mb-2">Angaben gemäß § 5 DDG</h2>
+      <p>Berben Engineering GmbH<br />Musterstraße 1<br />12345 Musterstadt</p>
+    </section>
+    <section>
+      <h2 class="text-xl font-semibold text-blue-400 mb-2">Vertreten durch</h2>
+      <p>Geschäftsführer: <span class="bg-yellow-300 text-black px-1 rounded">[bitte ergänzen]</span></p>
+    </section>
+    <section>
+      <h2 class="text-xl font-semibold text-blue-400 mb-2">Kontakt</h2>
+      <p>Telefon: +49 123 456789<br />E-Mail: <a href="mailto:info@berben-engineering.de" class="text-blue-400 hover:text-white">info@berben-engineering.de</a></p>
+    </section>
+    <section>
+      <h2 class="text-xl font-semibold text-blue-400 mb-2">Registereintrag</h2>
+      <p>Registergericht: Amtsgericht <span class="bg-yellow-300 text-black px-1 rounded">[bitte ergänzen]</span><br />Registernummer: HRB <span class="bg-yellow-300 text-black px-1 rounded">[bitte ergänzen]</span></p>
+    </section>
+    <section>
+      <h2 class="text-xl font-semibold text-blue-400 mb-2">Umsatzsteuer-ID</h2>
+      <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: DE <span class="bg-yellow-300 text-black px-1 rounded">[bitte ergänzen]</span></p>
+    </section>
+    <section>
+      <h2 class="text-xl font-semibold text-blue-400 mb-2">Verbraucherstreitbeilegung</h2>
+      <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black text-gray-400 text-sm mt-auto">
+    <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row gap-4 justify-between items-center text-center md:text-left">
+      <p>&copy; <span id="jahr">2025</span> Berben Engineering GmbH · Made with Präzision &amp; Leidenschaft</p>
+      <p class="flex gap-4">
+        <a href="kontakt.html" class="hover:text-white">Kontakt</a>
+        <a href="impressum.html" class="hover:text-white">Impressum</a>
+        <a href="datenschutz.html" class="hover:text-white">Datenschutz</a>
+      </p>
+    </div>
+  </footer>
+  <script>document.getElementById('jahr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
