@@ -153,7 +153,7 @@
     var summarize = function () {
       var box = wizard.querySelector('[data-summary]');
       var list = wizard.querySelector('[data-summary-list]');
-      var checked = wizard.querySelector('input[name="leistung"]:checked');
+      var checked = wizard.querySelector('input[name="Leistung"]:checked');
       var extras = Array.prototype.map.call(wizard.querySelectorAll('[data-step="2"] input[type="checkbox"]:checked'), function (c) {
         return c.parentElement.textContent.trim();
       }).join(', ');

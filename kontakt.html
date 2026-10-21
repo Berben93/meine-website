@@ -103,26 +103,26 @@
           <input type="hidden" name="_subject" value="Neue Kontaktanfrage über berben-engineering.de" />
           <div class="hidden" aria-hidden="true"><label>Bitte leer lassen <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" /></label></div>
           <div class="grid gap-6 sm:grid-cols-2">
-            <div><label for="name" class="field-label">Name *</label><input id="name" name="name" type="text" autocomplete="name" required class="field" /></div>
-            <div><label for="firma" class="field-label">Firma</label><input id="firma" name="firma" type="text" autocomplete="organization" class="field" /></div>
+            <div><label for="name" class="field-label">Name *</label><input id="name" name="Name" type="text" autocomplete="name" required class="field" /></div>
+            <div><label for="firma" class="field-label">Firma</label><input id="firma" name="Firma" type="text" autocomplete="organization" class="field" /></div>
             <div><label for="email" class="field-label">E-Mail *</label><input id="email" name="email" type="email" autocomplete="email" required class="field" /></div>
-            <div><label for="telefon" class="field-label">Telefon</label><input id="telefon" name="telefon" type="tel" autocomplete="tel" class="field" /></div>
+            <div><label for="telefon" class="field-label">Telefon</label><input id="telefon" name="Telefon" type="tel" autocomplete="tel" class="field" /></div>
           </div>
           <div data-callback class="rounded-xl border border-slate-200 bg-slate-50 p-4 dark:border-ink-700 dark:bg-ink-900">
-            <label class="flex items-center gap-3 text-sm font-medium text-slate-800 dark:text-slate-200"><input type="checkbox" name="rueckruf" value="ja" data-callback-toggle class="h-4 w-4 accent-brand-700" /> Bitte rufen Sie mich zurück</label>
+            <label class="flex items-center gap-3 text-sm font-medium text-slate-800 dark:text-slate-200"><input type="checkbox" name="Rückruf gewünscht" value="ja" data-callback-toggle class="h-4 w-4 accent-brand-700" /> Bitte rufen Sie mich zurück</label>
             <div data-callback-time class="mt-4 max-w-xs">
               <label for="rueckruf-zeit" class="field-label">Am besten erreichbar</label>
-              <select id="rueckruf-zeit" name="rueckruf_zeit" class="field"><option>Egal</option><option>Vormittags (8–12 Uhr)</option><option>Nachmittags (12–17 Uhr)</option></select>
+              <select id="rueckruf-zeit" name="Rückruf-Zeit" class="field"><option>Egal</option><option>Vormittags (8–12 Uhr)</option><option>Nachmittags (12–17 Uhr)</option></select>
               <p class="mt-1.5 text-xs text-slate-500 dark:text-slate-400">Dafür benötigen wir Ihre Telefonnummer.</p>
             </div>
           </div>
           <div>
             <label for="message" class="field-label">Nachricht *</label>
-            <textarea id="message" name="message" rows="6" required class="field"></textarea>
+            <textarea id="message" name="Nachricht" rows="6" required class="field"></textarea>
             <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">Zeichnungen und 3D-Modelle senden Sie bitte direkt per E-Mail an <a href="mailto:info@berben-engineering.de" class="font-medium text-brand-700 underline underline-offset-2 dark:text-accent-400">info@berben-engineering.de</a>.</p>
           </div>
           <div class="flex items-start gap-3">
-            <input id="datenschutz" name="datenschutz" type="checkbox" value="akzeptiert" required class="mt-1 h-4 w-4 rounded border-slate-300 accent-brand-700 dark:border-ink-700" />
+            <input id="datenschutz" name="Datenschutz" type="checkbox" value="akzeptiert" required class="mt-1 h-4 w-4 rounded border-slate-300 accent-brand-700 dark:border-ink-700" />
             <label for="datenschutz" class="text-sm text-slate-600 dark:text-slate-400">Ich habe die <a href="datenschutz.html" class="font-medium text-brand-700 underline underline-offset-2 dark:text-accent-400">Datenschutzerklärung</a> gelesen und bin mit der Verarbeitung meiner Angaben zur Bearbeitung meiner Anfrage einverstanden. *</label>
           </div>
           <div data-form-result tabindex="-1" hidden></div>

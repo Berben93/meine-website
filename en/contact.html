@@ -103,26 +103,26 @@
           <input type="hidden" name="_subject" value="New contact request via berben-engineering.de (EN)" />
           <div class="hidden" aria-hidden="true"><label>Leave empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" /></label></div>
           <div class="grid gap-6 sm:grid-cols-2">
-            <div><label for="name" class="field-label">Name *</label><input id="name" name="name" type="text" autocomplete="name" required class="field" /></div>
-            <div><label for="firma" class="field-label">Company</label><input id="firma" name="firma" type="text" autocomplete="organization" class="field" /></div>
+            <div><label for="name" class="field-label">Name *</label><input id="name" name="Name" type="text" autocomplete="name" required class="field" /></div>
+            <div><label for="firma" class="field-label">Company</label><input id="firma" name="Firma" type="text" autocomplete="organization" class="field" /></div>
             <div><label for="email" class="field-label">Email *</label><input id="email" name="email" type="email" autocomplete="email" required class="field" /></div>
-            <div><label for="telefon" class="field-label">Phone</label><input id="telefon" name="telefon" type="tel" autocomplete="tel" class="field" /></div>
+            <div><label for="telefon" class="field-label">Phone</label><input id="telefon" name="Telefon" type="tel" autocomplete="tel" class="field" /></div>
           </div>
           <div data-callback class="rounded-xl border border-slate-200 bg-slate-50 p-4 dark:border-ink-700 dark:bg-ink-900">
-            <label class="flex items-center gap-3 text-sm font-medium text-slate-800 dark:text-slate-200"><input type="checkbox" name="rueckruf" value="ja" data-callback-toggle class="h-4 w-4 accent-brand-700" /> Please call me back</label>
+            <label class="flex items-center gap-3 text-sm font-medium text-slate-800 dark:text-slate-200"><input type="checkbox" name="Rückruf gewünscht" value="ja" data-callback-toggle class="h-4 w-4 accent-brand-700" /> Please call me back</label>
             <div data-callback-time class="mt-4 max-w-xs">
               <label for="rueckruf-zeit" class="field-label">Best time to reach me</label>
-              <select id="rueckruf-zeit" name="rueckruf_zeit" class="field"><option>Any time</option><option>Morning (8 am–12 pm)</option><option>Afternoon (12–5 pm)</option></select>
+              <select id="rueckruf-zeit" name="Rückruf-Zeit" class="field"><option>Any time</option><option>Morning (8 am–12 pm)</option><option>Afternoon (12–5 pm)</option></select>
               <p class="mt-1.5 text-xs text-slate-500 dark:text-slate-400">We need your phone number for this.</p>
             </div>
           </div>
           <div>
             <label for="message" class="field-label">Message *</label>
-            <textarea id="message" name="message" rows="6" required class="field"></textarea>
+            <textarea id="message" name="Nachricht" rows="6" required class="field"></textarea>
             <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">Please send drawings and 3D models directly by email to <a href="mailto:info@berben-engineering.de" class="font-medium text-brand-700 underline underline-offset-2 dark:text-accent-400">info@berben-engineering.de</a>.</p>
           </div>
           <div class="flex items-start gap-3">
-            <input id="datenschutz" name="datenschutz" type="checkbox" value="akzeptiert" required class="mt-1 h-4 w-4 rounded border-slate-300 accent-brand-700 dark:border-ink-700" />
+            <input id="datenschutz" name="Datenschutz" type="checkbox" value="akzeptiert" required class="mt-1 h-4 w-4 rounded border-slate-300 accent-brand-700 dark:border-ink-700" />
             <label for="datenschutz" class="text-sm text-slate-600 dark:text-slate-400">I have read the <a href="../datenschutz.html" hreflang="de" class="font-medium text-brand-700 underline underline-offset-2 dark:text-accent-400">privacy policy</a> (German) and agree to my details being processed to handle my enquiry. *</label>
           </div>
           <div data-form-result tabindex="-1" hidden></div>
