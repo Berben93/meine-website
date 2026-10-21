@@ -48,7 +48,7 @@
           <a href="services.html" class="nav-link">Services</a>
           <a href="technologies.html" class="nav-link">Technologies</a>
           <a href="references.html" class="nav-link">References</a>
-          <a href="fit-calculator.html" class="nav-link">Fit Calculator</a>
+          <a href="knowledge.html" class="nav-link">Knowledge</a>
           <a href="company.html" class="nav-link">Company</a>
           <a href="contact.html" class="nav-link" aria-current="page">Contact</a>
       </nav>
@@ -69,7 +69,7 @@
         <a href="services.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Services</a>
         <a href="technologies.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Technologies</a>
         <a href="references.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">References</a>
-        <a href="fit-calculator.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Fit Calculator</a>
+        <a href="knowledge.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Knowledge</a>
         <a href="company.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Company</a>
         <a href="contact.html" class="block rounded-lg px-3 py-3 text-base font-medium bg-brand-50 text-brand-700 dark:bg-brand-900/60 dark:text-accent-400" aria-current="page">Contact</a>
         <a href="request.html" class="btn-primary mt-3 w-full">Request a quote</a>
@@ -107,6 +107,14 @@
             <div><label for="firma" class="field-label">Company</label><input id="firma" name="firma" type="text" autocomplete="organization" class="field" /></div>
             <div><label for="email" class="field-label">Email *</label><input id="email" name="email" type="email" autocomplete="email" required class="field" /></div>
             <div><label for="telefon" class="field-label">Phone</label><input id="telefon" name="telefon" type="tel" autocomplete="tel" class="field" /></div>
+          </div>
+          <div data-callback class="rounded-xl border border-slate-200 bg-slate-50 p-4 dark:border-ink-700 dark:bg-ink-900">
+            <label class="flex items-center gap-3 text-sm font-medium text-slate-800 dark:text-slate-200"><input type="checkbox" name="rueckruf" value="ja" data-callback-toggle class="h-4 w-4 accent-brand-700" /> Please call me back</label>
+            <div data-callback-time class="mt-4 max-w-xs">
+              <label for="rueckruf-zeit" class="field-label">Best time to reach me</label>
+              <select id="rueckruf-zeit" name="rueckruf_zeit" class="field"><option>Any time</option><option>Morning (8 am–12 pm)</option><option>Afternoon (12–5 pm)</option></select>
+              <p class="mt-1.5 text-xs text-slate-500 dark:text-slate-400">We need your phone number for this.</p>
+            </div>
           </div>
           <div>
             <label for="message" class="field-label">Message *</label>

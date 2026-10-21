@@ -11,13 +11,15 @@
     project: 'project', projects: 'projects', showing: 'Showing ',
     sending: 'Sending …', ok: 'Thank you! Your message has been received. We will get back to you within one working day.',
     fail: 'Sorry, something went wrong. Please try again or email us directly at info@berben-engineering.de.',
-    service: 'Service', material: 'Material', quantity: 'Quantity', date: 'Desired date', size: 'Dimensions', extras: 'Requirements'
+    service: 'Service', material: 'Material', quantity: 'Quantity', date: 'Desired date', size: 'Dimensions', extras: 'Requirements', files: 'Files',
+    tooMany: 'Please select a maximum of 10 files.', tooBig: 'Each file may be at most 25 MB. Please send larger files by email.'
   } : {
     darkOn: 'Dunkles Design aktivieren', lightOn: 'Helles Design aktivieren', menuOpen: 'Menü öffnen', menuClose: 'Menü schließen',
     project: 'Projekt', projects: 'Projekte', showing: '',
     sending: 'Wird gesendet …', ok: 'Vielen Dank! Ihre Nachricht ist bei uns eingegangen. Wir melden uns innerhalb eines Werktags.',
     fail: 'Leider ist beim Senden ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an info@berben-engineering.de.',
-    service: 'Leistung', material: 'Werkstoff', quantity: 'Stückzahl', date: 'Wunschtermin', size: 'Abmessungen', extras: 'Anforderungen'
+    service: 'Leistung', material: 'Werkstoff', quantity: 'Stückzahl', date: 'Wunschtermin', size: 'Abmessungen', extras: 'Anforderungen', files: 'Dateien',
+    tooMany: 'Bitte maximal 10 Dateien auswählen.', tooBig: 'Jede Datei darf höchstens 25 MB groß sein. Größere Dateien bitte per E-Mail senden.'
   };
 
   // Aktuelles Jahr im Footer
@@ -161,7 +163,10 @@
         [TXT.quantity, wizard.querySelector('#stueckzahl').value],
         [TXT.date, wizard.querySelector('#termin').value],
         [TXT.size, wizard.querySelector('#abmessungen').value],
-        [TXT.extras, extras]
+        [TXT.extras, extras],
+        [TXT.files, Array.prototype.map.call(wizard.querySelectorAll('input[type="file"]'), function (f) {
+          return Array.prototype.map.call(f.files, function (x) { return x.name; }).join(', ');
+        }).join('')]
       ];
       list.textContent = '';
       rows.forEach(function (r) {
@@ -184,6 +189,44 @@
     });
     go(0, false);
   }
+
+  // Rückruf gewünscht: Zeitfenster einblenden, Telefonnummer wird Pflicht
+  document.querySelectorAll('[data-callback]').forEach(function (box) {
+    var check = box.querySelector('[data-callback-toggle]');
+    var time = box.querySelector('[data-callback-time]');
+    var tel = box.closest('form').querySelector('input[type="tel"]');
+    var sync = function () {
+      time.hidden = !check.checked;
+      if (tel) tel.required = check.checked;
+    };
+    check.addEventListener('change', sync);
+    box.closest('form').addEventListener('reset', function () { setTimeout(sync, 0); });
+    sync();
+  });
+
+  // Datei-Upload im Anfrage-Assistenten: nur aktiv mit data-uploads="on" (benötigt einen Formspree-Tarif mit Datei-Upload)
+  document.querySelectorAll('[data-upload-template]').forEach(function (tpl) {
+    var form = tpl.closest('form');
+    if (form.getAttribute('data-uploads') !== 'on') return;
+    tpl.parentNode.insertBefore(tpl.content.cloneNode(true), tpl);
+    form.querySelectorAll('[data-upload-fallback]').forEach(function (p) { p.hidden = true; });
+    var input = form.querySelector('input[type="file"]');
+    input.addEventListener('change', function () {
+      var files = Array.prototype.slice.call(input.files);
+      var tooBig = files.some(function (f) { return f.size > 25 * 1024 * 1024; });
+      input.setCustomValidity(files.length > 10 ? TXT.tooMany : tooBig ? TXT.tooBig : '');
+      input.reportValidity();
+    });
+  });
+
+  // Karriere: "Jetzt bewerben" wählt die Stelle in der Kurzbewerbung vor
+  document.querySelectorAll('[data-apply]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var select = document.getElementById('kb-stelle');
+      if (select) select.value = btn.getAttribute('data-apply');
+      setTimeout(function () { var n = document.getElementById('kb-name'); if (n) n.focus({ preventScroll: true }); }, 400);
+    });
+  });
 
   // Formulare per Fetch absenden (ohne JavaScript: normaler Formularversand)
   document.querySelectorAll('[data-ajax-form]').forEach(function (form) {

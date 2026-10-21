@@ -65,7 +65,7 @@
     </div>
     <nav id="mobile-menu" class="hidden border-t border-slate-200 bg-white xl:hidden dark:border-ink-700 dark:bg-ink-800" aria-label="Mobile Navigation">
       <div class="container-x space-y-1 py-4">
-        <a href="index.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Start</a>
+        <a href="index.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Startseite</a>
         <a href="leistungen.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Leistungen</a>
         <a href="technologien.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Technologien</a>
         <a href="referenzen.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Referenzen</a>
@@ -83,7 +83,7 @@
       <div class="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-accent-500/20 blur-3xl" aria-hidden="true"></div>
       <div class="container-x relative py-16 md:py-24">
         <nav aria-label="Brotkrümelnavigation" class="mb-6 text-sm text-brand-200">
-          <a href="index.html" class="hover:text-white">Start</a> <span class="mx-2" aria-hidden="true">/</span> <span aria-current="page" class="text-white">Anfrage</span>
+          <a href="index.html" class="hover:text-white">Startseite</a> <span class="mx-2" aria-hidden="true">/</span> <span aria-current="page" class="text-white">Anfrage</span>
         </nav>
         <p class="eyebrow eyebrow-light">Anfrage</p>
         <h1 class="mt-4 max-w-3xl text-4xl font-bold text-white md:text-5xl">Ihr Angebot in drei Schritten</h1>
@@ -93,7 +93,7 @@
 
     <section class="section">
       <div class="container-x max-w-3xl">
-        <ol class="mb-10 flex gap-4" aria-label="Fortschritt">
+        <nav aria-label="Fortschritt"><ol class="mb-10 flex gap-4">
           <li data-step-indicator="1" class="flex flex-1 items-center gap-3 text-sm font-medium text-slate-500 aria-[current=step]:text-brand-700 dark:text-slate-400">
             <span class="flex h-9 w-9 flex-none items-center justify-center rounded-full border-2 border-current font-bold">1</span><span class="hidden sm:inline">Projekt</span>
           </li>
@@ -103,8 +103,8 @@
           <li data-step-indicator="3" class="flex flex-1 items-center gap-3 text-sm font-medium text-slate-500 aria-[current=step]:text-brand-700 dark:text-slate-400">
             <span class="flex h-9 w-9 flex-none items-center justify-center rounded-full border-2 border-current font-bold">3</span><span class="hidden sm:inline">Kontakt</span>
           </li>
-        </ol>
-        <form action="https://formspree.io/f/xanjepyz" method="POST" data-ajax-form data-wizard class="space-y-10">
+        </ol></nav>
+        <form action="https://formspree.io/f/xanjepyz" method="POST" data-ajax-form data-wizard data-uploads="off" class="space-y-10">
           <input type="hidden" name="_subject" value="Neue Angebotsanfrage (Assistent) über berben-engineering.de" />
           <div class="hidden" aria-hidden="true"><label>Bitte leer lassen <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" /></label></div>
 
@@ -158,8 +158,15 @@
             <div>
               <label for="beschreibung" class="field-label">Beschreibung</label>
               <textarea id="beschreibung" name="beschreibung" rows="4" class="field" placeholder="Funktion, Toleranzen, Besonderheiten …"></textarea>
-              <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">Zeichnungen und 3D-Modelle senden Sie im Anschluss einfach per E-Mail an <a href="mailto:info@berben-engineering.de" class="font-medium text-brand-700 underline underline-offset-2 dark:text-accent-400">info@berben-engineering.de</a>.</p>
+              <p data-upload-fallback class="mt-2 text-sm text-slate-500 dark:text-slate-400">Zeichnungen und 3D-Modelle senden Sie im Anschluss einfach per E-Mail an <a href="mailto:info@berben-engineering.de" class="font-medium text-brand-700 underline underline-offset-2 dark:text-accent-400">info@berben-engineering.de</a>.</p>
             </div>
+            <template data-upload-template>
+              <div>
+                <label for="dateien" class="field-label">Zeichnungen und 3D-Modelle</label>
+                <input id="dateien" name="dateien" type="file" multiple accept=".pdf,.step,.stp,.igs,.iges,.dxf,.dwg,.x_t,.sldprt,.ipt,.zip,.jpg,.jpeg,.png" class="field cursor-pointer py-2.5 file:mr-4 file:cursor-pointer file:rounded-md file:border-0 file:bg-brand-50 file:px-3 file:py-1.5 file:text-sm file:font-semibold file:text-brand-700 dark:file:bg-brand-900/70 dark:file:text-accent-400" />
+                <p class="mt-1.5 text-xs text-slate-500 dark:text-slate-400">PDF, STEP, IGES, DXF oder ZIP · bis zu 10 Dateien, je max. 25 MB</p>
+              </div>
+            </template>
           </fieldset>
 
           <fieldset data-step="3" class="space-y-5">
@@ -169,6 +176,14 @@
               <div><label for="w-firma" class="field-label">Firma</label><input id="w-firma" name="firma" type="text" autocomplete="organization" class="field" /></div>
               <div><label for="w-email" class="field-label">E-Mail *</label><input id="w-email" name="email" type="email" autocomplete="email" required class="field" /></div>
               <div><label for="w-tel" class="field-label">Telefon</label><input id="w-tel" name="telefon" type="tel" autocomplete="tel" class="field" /></div>
+            </div>
+            <div data-callback class="rounded-xl border border-slate-200 bg-slate-50 p-4 dark:border-ink-700 dark:bg-ink-900">
+              <label class="flex items-center gap-3 text-sm font-medium text-slate-800 dark:text-slate-200"><input type="checkbox" name="rueckruf" value="ja" data-callback-toggle class="h-4 w-4 accent-brand-700" /> Bitte rufen Sie mich zurück</label>
+              <div data-callback-time class="mt-4 max-w-xs">
+                <label for="w-rueckruf-zeit" class="field-label">Am besten erreichbar</label>
+                <select id="w-rueckruf-zeit" name="rueckruf_zeit" class="field"><option>Egal</option><option>Vormittags (8–12 Uhr)</option><option>Nachmittags (12–17 Uhr)</option></select>
+                <p class="mt-1.5 text-xs text-slate-500 dark:text-slate-400">Dafür benötigen wir Ihre Telefonnummer.</p>
+              </div>
             </div>
             <div data-summary hidden class="rounded-2xl border border-slate-200 bg-slate-50 p-5 text-sm dark:border-ink-700 dark:bg-ink-900">
               <p class="font-semibold text-slate-900 dark:text-white">Ihre Angaben im Überblick</p>

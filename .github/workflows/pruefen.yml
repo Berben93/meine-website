@@ -1,0 +1,44 @@
+# Prüft bei jeder Änderung: kaputte Links, fehlerhaftes HTML, Barrierefreiheit, SEO und Ladezeit.
+# Ergebnis: grüner Haken oder rotes Kreuz am Commit bzw. Pull Request (Reiter „Actions“).
+name: Website prüfen
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  links-und-html:
+    name: Links und HTML
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci --no-audit --no-fund
+      - name: Interne Links, Bilder und Sprungmarken
+        run: npm run check:links
+      - name: HTML-Fehler
+        run: npm run check:html
+
+  lighthouse:
+    name: Barrierefreiheit, SEO, Ladezeit (Lighthouse)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci --no-audit --no-fund
+      - run: npm run check:lighthouse
+      - name: Berichte speichern
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-berichte
+          path: .lighthouseci/berichte
