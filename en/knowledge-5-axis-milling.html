@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5-axis milling: when is it really worth it? | Berben Engineering GmbH</title>
+  <meta name="description" content="When 5-axis simultaneous milling pays off, how it differs from 3+2 machining and how designers can benefit." />
+  <link rel="canonical" href="https://www.berben-engineering.de/en/knowledge-5-axis-milling.html" />
+  <link rel="alternate" hreflang="de" href="https://www.berben-engineering.de/wissen-5-achs-fraesen.html" />
+  <link rel="alternate" hreflang="en" href="https://www.berben-engineering.de/en/knowledge-5-axis-milling.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.berben-engineering.de/wissen-5-achs-fraesen.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:site_name" content="Berben Engineering GmbH" />
+  <meta property="og:title" content="5-axis milling: when is it really worth it? | Berben Engineering GmbH" />
+  <meta property="og:description" content="When 5-axis simultaneous milling pays off, how it differs from 3+2 machining and how designers can benefit." />
+  <meta property="og:url" content="https://www.berben-engineering.de/en/knowledge-5-axis-milling.html" />
+  <meta property="og:image" content="https://www.berben-engineering.de/assets/img/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#06111f" media="(prefers-color-scheme: dark)" />
+  <script>try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark')}catch(e){}</script>
+  <link rel="icon" type="image/png" href="../favicon.png" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="preload" href="../assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <script src="../assets/js/main.js" defer></script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "5-axis milling: when is it really worth it?", "description": "When 5-axis simultaneous milling pays off, how it differs from 3+2 machining and how designers can benefit.", "inLanguage": "en", "datePublished": "2026-10-21", "author": {"@type": "Organization", "name": "Berben Engineering GmbH"}, "publisher": {"@type": "Organization", "name": "Berben Engineering GmbH", "logo": {"@type": "ImageObject", "url": "https://www.berben-engineering.de/logo.png"}}}</script>
+</head>
+<body class="flex min-h-screen flex-col">
+  <a href="#inhalt" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-brand-700 focus:px-4 focus:py-2 focus:text-white">Skip to content</a>
+
+  <div class="bg-amber-100 text-amber-950 dark:bg-amber-950 dark:text-amber-100">
+    <p class="container-x flex items-start gap-2 py-2 text-xs sm:items-center sm:text-sm"><svg class="h-4 w-4 flex-none mt-0.5 sm:mt-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg><span><strong>Demo website:</strong> Berben Engineering GmbH is a fictitious company. All content is for testing and presentation purposes only.</span></p>
+  </div>
+
+  <header data-header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur-md transition-shadow dark:border-ink-700 dark:bg-ink-950/90">
+    <div class="container-x flex h-16 items-center justify-between gap-4 lg:h-20">
+      <a href="index.html" class="flex flex-none items-center gap-3" aria-label="Berben Engineering – home">
+        <img src="../assets/img/logo-mark.png" alt="" width="34" height="38" class="h-9 w-auto dark:hidden" />
+        <img src="../assets/img/logo-mark-white.png" alt="" width="34" height="38" class="hidden h-9 w-auto dark:block" />
+        <span class="leading-tight">
+          <span class="block text-base font-extrabold tracking-wide text-brand-700 dark:text-white">BERBEN</span>
+          <span class="block text-[0.62rem] font-semibold tracking-[0.2em] text-slate-500 dark:text-slate-400">ENGINEERING GMBH</span>
+        </span>
+      </a>
+      <nav class="hidden items-center gap-0.5 xl:flex" aria-label="Main navigation">
+          <a href="services.html" class="nav-link">Services</a>
+          <a href="technologies.html" class="nav-link">Technologies</a>
+          <a href="references.html" class="nav-link">References</a>
+          <a href="knowledge.html" class="nav-link" aria-current="page">Knowledge</a>
+          <a href="company.html" class="nav-link">Company</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="flex items-center gap-1 sm:gap-2">
+        <a href="../wissen-5-achs-fraesen.html" hreflang="de" lang="de" class="inline-flex h-11 items-center gap-1.5 rounded-lg px-2.5 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-brand-700 dark:text-slate-400 dark:hover:bg-ink-700 dark:hover:text-accent-400" aria-label="Deutsche Version" title="Deutsche Version"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>DE</a>
+        <button type="button" data-theme-toggle class="inline-flex h-11 w-11 items-center justify-center rounded-lg text-slate-600 transition hover:bg-slate-100 hover:text-brand-700 dark:text-slate-400 dark:hover:bg-ink-700 dark:hover:text-accent-400" aria-label="Enable dark mode" aria-pressed="false" title="Toggle light/dark">
+          <span class="dark:hidden"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span><span class="hidden dark:block"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></span>
+        </button>
+        <a href="request.html" class="btn-primary hidden md:inline-flex">Request a quote <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <button type="button" data-menu-toggle class="inline-flex h-11 w-11 items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 xl:hidden dark:text-slate-300 dark:hover:bg-ink-700" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+          <span data-icon-open><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></span><span data-icon-close class="hidden"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span>
+        </button>
+      </div>
+    </div>
+    <nav id="mobile-menu" class="hidden border-t border-slate-200 bg-white xl:hidden dark:border-ink-700 dark:bg-ink-800" aria-label="Mobile navigation">
+      <div class="container-x space-y-1 py-4">
+        <a href="index.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Home</a>
+        <a href="services.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Services</a>
+        <a href="technologies.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Technologies</a>
+        <a href="references.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">References</a>
+        <a href="knowledge.html" class="block rounded-lg px-3 py-3 text-base font-medium bg-brand-50 text-brand-700 dark:bg-brand-900/60 dark:text-accent-400" aria-current="page">Knowledge</a>
+        <a href="company.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Company</a>
+        <a href="contact.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Contact</a>
+        <a href="request.html" class="btn-primary mt-3 w-full">Request a quote</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="inhalt" class="flex-1">
+    <section class="relative overflow-hidden bg-brand-900 text-white">
+      <div class="blueprint absolute inset-0" aria-hidden="true"></div>
+      <div class="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-accent-500/20 blur-3xl" aria-hidden="true"></div>
+      <div class="container-x relative py-16 md:py-24">
+        <nav aria-label="Breadcrumb" class="mb-6 text-sm text-brand-200">
+          <a href="index.html" class="hover:text-white">Home</a> <span class="mx-2" aria-hidden="true">/</span> <a href="knowledge.html" class="hover:text-white">Knowledge</a> <span class="mx-2" aria-hidden="true">/</span> <span aria-current="page" class="text-white">5-axis milling: when is it really worth it?</span>
+        </nav>
+        <p class="eyebrow eyebrow-light">Article · 6 min read</p>
+        <h1 class="mt-4 max-w-3xl text-4xl font-bold text-white md:text-5xl">5-axis milling: when is it really worth it?</h1>
+        <p class="mt-5 max-w-2xl text-lg leading-relaxed text-brand-100">When 5-axis simultaneous milling pays off, how it differs from 3+2 machining and how designers can benefit.</p>
+      </div>
+    </section>
+
+    <article class="container-x max-w-3xl py-16">
+      <div class="prose-article">
+        <p>Five axes, one set-up, perfect freeform surfaces – 5-axis milling is considered the supreme discipline of machining. But not every part benefits from it. This article shows what matters and when the effort pays off.</p>
+        <h2>3 axes, 3+2 or 5-axis simultaneous?</h2>
+        <p>A conventional milling machine moves the tool along three linear axes (X, Y, Z). To machine holes or faces on other sides, the workpiece has to be re-clamped. 5-axis machines add two rotary axes that tilt the workpiece or the milling head. There are two ways of working:</p>
+        <ul>
+          <li><strong>3+2 machining</strong> (positional machining): the workpiece is tilted into a position and locked there, then milled with three axes. Ideal for prismatic parts with features on several sides.</li>
+          <li><strong>5-axis simultaneous machining:</strong> all five axes move at the same time. Freeform surfaces, turbine blades or undercuts can be machined in one go.</li>
+        </ul>
+        <h2>The advantages at a glance</h2>
+        <ul>
+          <li><strong>Fewer set-ups:</strong> every re-clamping costs time and risks positioning errors. Often a single set-up is enough for almost all sides.</li>
+          <li><strong>Higher accuracy:</strong> positional tolerances between features on different sides can be held more reliably.</li>
+          <li><strong>Shorter tools:</strong> tilting the tool allows short, rigid cutters – which improves surface finish and tool life.</li>
+          <li><strong>Complex geometries:</strong> freeform surfaces, undercuts and angled holes become economical to produce in the first place.</li>
+        </ul>
+        <h2>When does 5-axis milling pay off?</h2>
+        <p>As a rule of thumb: the more sides of a part need machining and the tighter the positional tolerances between them, the more likely 5-axis machining pays off. Typical examples are housings with holes on several sides, implants and surgical instruments, aerospace structural parts or mould inserts with freeform surfaces.</p>
+        <p>For simple prismatic parts that are only machined from the top – such as plates or covers – a 3-axis machine is usually cheaper. Machine hourly rates are lower and programming is simpler.</p>
+        <h2>Tips for designers</h2>
+        <ul>
+          <li>Plan enough clamping area or agree on clamping spigots with the manufacturer early on.</li>
+          <li>Avoid unnecessarily deep, narrow pockets – they require long tools, even on 5-axis machines.</li>
+          <li>Define a clear datum system (A-B-C) so positional tolerances can be measured properly.</li>
+          <li>Ask for a DFM check early: small changes often save 20–30&nbsp;% of the manufacturing costs.</li>
+        </ul>
+        <h2>Conclusion</h2>
+        <p>5-axis milling is not an end in itself but a tool for complex, multi-sided parts with high accuracy requirements. Used correctly, it saves set-ups, increases precision and ultimately lowers unit costs.</p>
+      </div>
+      <aside class="mt-12 rounded-2xl border border-slate-200 bg-slate-50 p-6 text-sm text-slate-600 dark:border-ink-700 dark:bg-ink-900 dark:text-slate-400">
+        <p class="font-semibold text-slate-900 dark:text-white">Questions about your project?</p>
+        <p class="mt-1">Our engineers are happy to help – <a href="request.html" class="font-medium text-brand-700 underline underline-offset-2 dark:text-accent-400">request a quote</a> or call us on <a href="tel:+49123456789" class="font-medium text-brand-700 underline underline-offset-2 dark:text-accent-400">+49 123 456789</a>.</p>
+      </aside>
+    </article>
+
+    <section class="section bg-slate-50 pt-16 dark:bg-ink-900">
+      <div class="container-x max-w-3xl">
+        <h2 class="text-2xl font-bold">More articles</h2>
+        <div class="mt-6 grid gap-6 sm:grid-cols-2">
+          <a href="knowledge-materials.html" class="card group block"><h3 class="font-semibold">Materials for precision parts compared</h3><span class="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700 dark:text-accent-400">Read <svg class="h-4 w-4 transition group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+          <a href="knowledge-fits.html" class="card group block"><h3 class="font-semibold">ISO 286 fits explained simply</h3><span class="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700 dark:text-accent-400">Read <svg class="h-4 w-4 transition group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-brand-950 text-slate-400">
+    <div class="container-x grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="../assets/img/logo-mark-white.png" alt="" width="34" height="38" class="h-9 w-auto" />
+          <span class="leading-tight text-white"><span class="block font-extrabold tracking-wide">BERBEN</span><span class="block text-[0.62rem] font-semibold tracking-[0.2em] text-slate-400">ENGINEERING GMBH</span></span>
+        </a>
+        <p class="mt-5 text-sm leading-relaxed">Precision manufacturing, CAD/CAM engineering and system assembly for demanding industries – from a single source.</p>
+        <a href="../assets/downloads/berben-firmenprofil.pdf" class="mt-5 inline-flex items-center gap-2 text-sm font-medium text-accent-400 hover:text-white" download><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg> Company profile (PDF, German)</a>
+      </div>
+      <div>
+        <h2 class="text-sm font-semibold uppercase tracking-wider text-white">Services</h2>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          <li><a href="services.html#cnc" class="hover:text-white">CNC machining</a></li>
+          <li><a href="services.html#cadcam" class="hover:text-white">CAD/CAM development</a></li>
+          <li><a href="services.html#montage" class="hover:text-white">System assembly</a></li>
+          <li><a href="services.html#prototyping" class="hover:text-white">Rapid Prototyping</a></li>
+          <li><a href="services.html#qualitaet" class="hover:text-white">Quality assurance</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-sm font-semibold uppercase tracking-wider text-white">Company</h2>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          <li><a href="company.html" class="hover:text-white">About us</a></li>
+          <li><a href="careers.html" class="hover:text-white">Careers</a></li>
+          <li><a href="references.html" class="hover:text-white">References</a></li>
+          <li><a href="fit-calculator.html" class="hover:text-white">Fit calculator</a></li>
+          <li><a href="contact.html#faq" class="hover:text-white">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-sm font-semibold uppercase tracking-wider text-white">Contact</h2>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li class="flex gap-3"><svg class="h-5 w-5 flex-none text-accent-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Musterstraße 1<br />12345 Musterstadt<br />Germany</span></li>
+          <li class="flex gap-3"><svg class="h-5 w-5 flex-none text-accent-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+49123456789" class="hover:text-white">+49 123 456789</a></li>
+          <li class="flex gap-3"><svg class="h-5 w-5 flex-none text-accent-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><a href="mailto:info@berben-engineering.de" class="break-all hover:text-white">info@berben-engineering.de</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="container-x flex flex-col items-center justify-between gap-3 py-6 text-xs sm:flex-row">
+        <p>&copy; <span data-year>2026</span> Berben Engineering GmbH. All rights reserved.</p>
+        <p class="flex gap-5"><a href="../impressum.html" class="hover:text-white" hreflang="de">Legal notice</a><a href="../datenschutz.html" class="hover:text-white" hreflang="de">Privacy policy</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

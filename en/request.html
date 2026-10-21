@@ -48,7 +48,7 @@
           <a href="services.html" class="nav-link">Services</a>
           <a href="technologies.html" class="nav-link">Technologies</a>
           <a href="references.html" class="nav-link">References</a>
-          <a href="fit-calculator.html" class="nav-link">Fit Calculator</a>
+          <a href="knowledge.html" class="nav-link">Knowledge</a>
           <a href="company.html" class="nav-link">Company</a>
           <a href="contact.html" class="nav-link">Contact</a>
       </nav>
@@ -69,7 +69,7 @@
         <a href="services.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Services</a>
         <a href="technologies.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Technologies</a>
         <a href="references.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">References</a>
-        <a href="fit-calculator.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Fit Calculator</a>
+        <a href="knowledge.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Knowledge</a>
         <a href="company.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Company</a>
         <a href="contact.html" class="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-ink-700">Contact</a>
         <a href="request.html" class="btn-primary mt-3 w-full">Request a quote</a>
@@ -93,7 +93,7 @@
 
     <section class="section">
       <div class="container-x max-w-3xl">
-        <ol class="mb-10 flex gap-4" aria-label="Progress">
+        <nav aria-label="Progress"><ol class="mb-10 flex gap-4">
           <li data-step-indicator="1" class="flex flex-1 items-center gap-3 text-sm font-medium text-slate-500 aria-[current=step]:text-brand-700 dark:text-slate-400">
             <span class="flex h-9 w-9 flex-none items-center justify-center rounded-full border-2 border-current font-bold">1</span><span class="hidden sm:inline">Project</span>
           </li>
@@ -103,8 +103,8 @@
           <li data-step-indicator="3" class="flex flex-1 items-center gap-3 text-sm font-medium text-slate-500 aria-[current=step]:text-brand-700 dark:text-slate-400">
             <span class="flex h-9 w-9 flex-none items-center justify-center rounded-full border-2 border-current font-bold">3</span><span class="hidden sm:inline">Contact</span>
           </li>
-        </ol>
-        <form action="https://formspree.io/f/xanjepyz" method="POST" data-ajax-form data-wizard class="space-y-10">
+        </ol></nav>
+        <form action="https://formspree.io/f/xanjepyz" method="POST" data-ajax-form data-wizard data-uploads="off" class="space-y-10">
           <input type="hidden" name="_subject" value="New quote request (assistant, EN) via berben-engineering.de" />
           <div class="hidden" aria-hidden="true"><label>Leave empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" /></label></div>
 
@@ -158,8 +158,15 @@
             <div>
               <label for="beschreibung" class="field-label">Description</label>
               <textarea id="beschreibung" name="beschreibung" rows="4" class="field" placeholder="Function, tolerances, special features …"></textarea>
-              <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">Afterwards, simply email drawings and 3D models to <a href="mailto:info@berben-engineering.de" class="font-medium text-brand-700 underline underline-offset-2 dark:text-accent-400">info@berben-engineering.de</a>.</p>
+              <p data-upload-fallback class="mt-2 text-sm text-slate-500 dark:text-slate-400">Afterwards, simply email drawings and 3D models to <a href="mailto:info@berben-engineering.de" class="font-medium text-brand-700 underline underline-offset-2 dark:text-accent-400">info@berben-engineering.de</a>.</p>
             </div>
+            <template data-upload-template>
+              <div>
+                <label for="dateien" class="field-label">Drawings and 3D models</label>
+                <input id="dateien" name="dateien" type="file" multiple accept=".pdf,.step,.stp,.igs,.iges,.dxf,.dwg,.x_t,.sldprt,.ipt,.zip,.jpg,.jpeg,.png" class="field cursor-pointer py-2.5 file:mr-4 file:cursor-pointer file:rounded-md file:border-0 file:bg-brand-50 file:px-3 file:py-1.5 file:text-sm file:font-semibold file:text-brand-700 dark:file:bg-brand-900/70 dark:file:text-accent-400" />
+                <p class="mt-1.5 text-xs text-slate-500 dark:text-slate-400">PDF, STEP, IGES, DXF or ZIP · up to 10 files, max. 25 MB each</p>
+              </div>
+            </template>
           </fieldset>
 
           <fieldset data-step="3" class="space-y-5">
@@ -169,6 +176,14 @@
               <div><label for="w-firma" class="field-label">Company</label><input id="w-firma" name="firma" type="text" autocomplete="organization" class="field" /></div>
               <div><label for="w-email" class="field-label">Email *</label><input id="w-email" name="email" type="email" autocomplete="email" required class="field" /></div>
               <div><label for="w-tel" class="field-label">Phone</label><input id="w-tel" name="telefon" type="tel" autocomplete="tel" class="field" /></div>
+            </div>
+            <div data-callback class="rounded-xl border border-slate-200 bg-slate-50 p-4 dark:border-ink-700 dark:bg-ink-900">
+              <label class="flex items-center gap-3 text-sm font-medium text-slate-800 dark:text-slate-200"><input type="checkbox" name="rueckruf" value="ja" data-callback-toggle class="h-4 w-4 accent-brand-700" /> Please call me back</label>
+              <div data-callback-time class="mt-4 max-w-xs">
+                <label for="w-rueckruf-zeit" class="field-label">Best time to reach me</label>
+                <select id="w-rueckruf-zeit" name="rueckruf_zeit" class="field"><option>Any time</option><option>Morning (8 am–12 pm)</option><option>Afternoon (12–5 pm)</option></select>
+                <p class="mt-1.5 text-xs text-slate-500 dark:text-slate-400">We need your phone number for this.</p>
+              </div>
             </div>
             <div data-summary hidden class="rounded-2xl border border-slate-200 bg-slate-50 p-5 text-sm dark:border-ink-700 dark:bg-ink-900">
               <p class="font-semibold text-slate-900 dark:text-white">Summary of your request</p>

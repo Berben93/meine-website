@@ -12,12 +12,15 @@ Website der (fiktiven) **Berben Engineering GmbH** – veröffentlicht über **G
 | `leistungen.html` | `services.html` | Leistungen |
 | `technologien.html` | `technologies.html` | Technologien & Maschinenpark |
 | `referenzen.html` | `references.html` | Referenzen mit Branchenfilter |
+| `referenz-*.html` | `reference-*.html` | Fallstudien (je Referenz eine Seite) |
 | `unternehmen.html` | `company.html` | Über uns, Werte |
-| `karriere.html` | `careers.html` | Stellenangebote |
+| `karriere.html` | `careers.html` | Stellenangebote, Kurzbewerbung |
 | `kontakt.html` | `contact.html` | Kontaktformular, FAQ |
 | `anfrage.html` | `request.html` | Anfrage-Assistent (3 Schritte) |
 | `passungsrechner.html` | `fit-calculator.html` | ISO-286-Passungsrechner |
-| `wissen.html` + `wissen-*.html` | – | Fachartikel |
+| `kernlochrechner.html` | `tap-drill-calculator.html` | Kernlochrechner für metrische Gewinde |
+| `schnittwerte-rechner.html` | `cutting-speed-calculator.html` | Drehzahl und Vorschub fürs Fräsen und Bohren |
+| `wissen.html` + `wissen-*.html` | `knowledge.html` + `knowledge-*.html` | Fachartikel und Rechner |
 | `impressum.html`, `datenschutz.html`, `404.html` | – | Rechtliches, Fehlerseite |
 
 ## Ordner
@@ -27,10 +30,13 @@ Website der (fiktiven) **Berben Engineering GmbH** – veröffentlicht über **G
 | `assets/css/styles.css` | Fertiges Stylesheet – **nicht von Hand bearbeiten**, wird automatisch erzeugt |
 | `assets/js/main.js` | Hell/Dunkel, Handy-Menü, Animationen, Filter, Formulare, Anfrage-Assistent |
 | `assets/js/fit-calculator.js` | Rechenlogik des Passungsrechners (Tabellen nach ISO 286) |
+| `assets/js/calculators.js` | Rechenlogik von Kernloch- und Schnittwerte-Rechner |
+| `assets/img/fotos/` | Platzhalter-Fotos – durch echte Fotos ersetzen (siehe unten) |
 | `assets/img/` | Logo-Varianten, Illustrationen, Vorschaubild |
 | `assets/downloads/` | Firmenprofil als PDF |
 | `assets/fonts/` | Schrift „Inter“ (lokal, keine Verbindung zu Google) |
 | `src/styles.css`, `tailwind.config.js` | Quelle des Designs (Farben, Buttons, Karten …) |
+| `scripts/check-links.mjs`, `.htmlvalidate.json`, `lighthouserc.json` | Automatische Prüfung (siehe unten) |
 
 ## Texte ändern
 
@@ -47,6 +53,33 @@ npm install
 npm run build   # einmalig bauen
 npm run watch   # bei jeder Änderung automatisch neu bauen
 ```
+
+## Fotos austauschen
+
+Alle Fotos liegen als Platzhalter in `assets/img/fotos/`. Auf jedem Platzhalter steht, welches Motiv dort hingehört.
+Zum Austauschen auf GitHub den Ordner öffnen → „Add file“ → „Upload files“ → das echte Foto **mit genau demselben Dateinamen** hochladen → „Commit changes“.
+Am besten im Querformat 16:10 (1600 × 1000 Pixel) als JPG, möglichst unter 300 KB. An den Seiten muss nichts geändert werden.
+
+| Datei | Motiv | Verwendet auf |
+| --- | --- | --- |
+| `halle.jpg` | Fertigungshalle | Startseite, Karriere |
+| `maschine-5achs.jpg` | 5-Achs-Bearbeitungszentrum | Startseite, Technologien |
+| `messraum.jpg` | Messraum / Koordinatenmessmaschine | Startseite, Technologien |
+| `team.jpg` | Teamfoto | Unternehmen |
+| `ausbildung.jpg` | Fachkraft oder Azubi an der Maschine | Karriere |
+| `referenz-*.jpg` | Bauteil der jeweiligen Fallstudie | Fallstudien |
+
+## Zeichnungen im Anfrage-Assistenten hochladen
+
+Das Upload-Feld ist eingebaut, aber **ausgeschaltet**, weil Formspree Datei-Uploads nur in bezahlten Tarifen (ab „Personal“) annimmt.
+Zum Einschalten: Formspree-Tarif upgraden, dann in `anfrage.html` und `en/request.html` im `<form …>`-Tag `data-uploads="off"` in `data-uploads="on"` ändern.
+Erlaubt sind bis zu 10 Dateien mit je max. 25 MB. Solange es aus ist, steht dort wie bisher der Hinweis auf den E-Mail-Versand.
+
+## Automatische Prüfung
+
+Bei jeder Änderung prüft die GitHub Action **„Website prüfen“**, ob Links, Bilder und Sprungmarken funktionieren, ob das HTML fehlerfrei ist
+und ob Barrierefreiheit, SEO und Best Practices bei Lighthouse mindestens 90–95 von 100 Punkten erreichen. Ein rotes Kreuz am Commit
+zeigt, dass etwas kaputt ist; die Details stehen im Reiter „Actions“. Lokal: `npm run check` (Links + HTML) und `npm run check:lighthouse`.
 
 ## Hell / Dunkel
 
